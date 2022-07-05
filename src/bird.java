@@ -1,3 +1,4 @@
-public class bird {
-    //just trying to publish something to git
+public interface bird {
+    //interface for bird parent class
+
 }
