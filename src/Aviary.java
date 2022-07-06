@@ -6,7 +6,7 @@ public interface Aviary {
   // methods:
   // Add Bird (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
   // UPDATES numOfBirds
-  public void addBird(Bird bird);
+  public void addBird(BirdClass bird);
   
   // printSign prints bird info to user for that aviary
   public void printSign();
