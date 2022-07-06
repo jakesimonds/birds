@@ -6,7 +6,7 @@ public interface Conservatory {
   
   // Guest Lookup
   // print an error message if bird does not exist
-  public String guestLookup(Bird bird);
+  public String guestLookup(BirdClass bird);
   
   // Print Index
   public void printIndex();
