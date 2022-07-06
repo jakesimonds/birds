@@ -1,4 +1,4 @@
-public class Parrot extends birdClass {
+public class Parrot extends BirdClass {
     
     // Member fields: SHOULD THESE BE INCLUDED HERE IF THEY ARE INHERITED FROM BIRD CLASS?
     String name;
