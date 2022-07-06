@@ -1,3 +1,3 @@
-public class Owl extends Bird {
+public class Owl extends BirdClass {
   
 }
