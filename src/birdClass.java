@@ -8,29 +8,29 @@ public class birdClass implements bird  {
 
 
 
-    public birdClass(String name, int wingNum ) {
+    public birdClass(String name, int wingNum) {
         this.name = name;
         this.wingNum = wingNum;
 
     }
     @Override
     public int getNumberOfWings() {
-        return 0;
+        return this.wingNum;
     }
 
     @Override
     public String getBirdType() {
-        return null;
+        return this.birdType;
     }
 
     @Override
     public String getCharacteristic() {
-        return null;
+        return this.description;
     }
 
     @Override
     public boolean getExtinct() {
-        return false;
+        return this.extinct;
     }
 
     @Override
