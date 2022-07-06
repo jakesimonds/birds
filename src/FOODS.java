@@ -1,5 +1,5 @@
 public enum FOODS {
-  
+  // Possible foods for a bird to prefer:
   BERRIES, 
   SEEDS, 
   FRUIT,
