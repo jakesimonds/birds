@@ -1,4 +1,4 @@
-public class WaterBird extends Bird {
+public class WaterBird extends BirdClass {
   
   // Member fields:
   String bodyOfWater;
