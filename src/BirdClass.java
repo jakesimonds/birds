@@ -1,4 +1,4 @@
-public class birdClass implements bird  {
+public class BirdClass implements Bird  {
 
     private String name;
     private int wingNum;
@@ -8,7 +8,7 @@ public class birdClass implements bird  {
 
 
 
-    public birdClass(String name, int wingNum) {
+    public BirdClass(String name, int wingNum) {
         this.name = name;
         this.wingNum = wingNum;
 
