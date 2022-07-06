@@ -1,4 +1,4 @@
-public interface bird {
+public interface Bird {
     //interface for bird parent class
 
 
