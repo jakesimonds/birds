@@ -1,3 +1,3 @@
-public class conservatoryClass implements Conservatory {
+public class ConservatoryClass implements Conservatory {
 
 }
