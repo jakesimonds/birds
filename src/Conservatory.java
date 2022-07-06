@@ -2,10 +2,7 @@
 // which house rescued birds
 
 public interface Conservatory {
-  
-  // Constructor:
-  // Should be initialized with 0 aviaries, empty aviaryList
-  public Conservatory();
+
   
   // Guest Lookup
   // print an error message if bird does not exist
