@@ -1,16 +1,17 @@
 public enum FOODS {
+  
   // Possible foods for a bird to prefer:
   BERRIES, 
   SEEDS, 
   FRUIT,
   INSECTS,
-  OTHER BIRDS,
+  OTHER_BIRDS,
   EGGS,
-  SMALL MAMMALS,
+  SMALL_MAMMALS,
   FISH,
   BUDS,
   LARVAE,
-  AQUATIC INVERTEBRATES,
+  AQUATIC_INVERTEBRATES,
   NUTS,
   VEGETATION
 }
