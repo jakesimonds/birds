@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="feel free to delete/change stuff, was just messing around to familiarize myself with things">
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Conservatory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Conservatory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -34,13 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_directory_selection": "/Users/bicknarnes/Desktop/CS 5004/birds/test/Birds",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,14 +69,35 @@
       <option name="project" value="LOCAL" />
       <updated>1657060788054</updated>
     </task>
-    <task id="LOCAL-00003" summary="feel free to delete/change stuff, was just messing around to familiarize myself with things">
-      <created>1657063670796</created>
+    <task id="LOCAL-00003" summary="Added files to package 'Birds'">
+      <created>1657375191117</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1657063670796</updated>
+      <updated>1657375191117</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657379156546</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657379156546</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657379402047</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657379402047</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657381604524</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657381604524</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,7 +114,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trying to commit" />
     <MESSAGE value="just added a couple more files to make sure github is working" />
-    <MESSAGE value="feel free to delete/change stuff, was just messing around to familiarize myself with things" />
-    <option name="LAST_COMMIT_MESSAGE" value="feel free to delete/change stuff, was just messing around to familiarize myself with things" />
+    <MESSAGE value="Added files to package 'Birds'" />
+    <MESSAGE value="Added &amp; edited files in package 'Birds'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &amp; edited files in package 'Birds'" />
   </component>
 </project>

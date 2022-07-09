@@ -1,3 +1,6 @@
+package Birds;
+import java.util.ArrayList;
+
 public class Parrot extends BirdClass {
     
     // Member fields: SHOULD THESE BE INCLUDED HERE IF THEY ARE INHERITED FROM BIRD CLASS?
