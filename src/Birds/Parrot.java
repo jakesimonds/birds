@@ -16,7 +16,7 @@ public class Parrot extends BirdClass {
    
     // Constructor:
     public Parrot(String name, int wingNum, int knownWords, String favoritePhrase) {
-        super(name, wingNum);
+        super(name, wingNum, );
         
         this.description = "Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds.";
         this.knownWords = knownWords;
