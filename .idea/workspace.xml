@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="just added a couple more files to make sure github is working">
-      <change beforePath="$PROJECT_DIR$/src/Aviary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Aviary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BirdOfPrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conservatory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Conservatory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FOODS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FOOD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlightlessBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Owl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Owl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Parrot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pigeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Pigeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shorebird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Shorebird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WATER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WATER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WaterBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WaterBird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Waterfowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Waterfowl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/birdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/constructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/constructorTest.java" afterDir="false" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added files to package 'Birds'">
+      <change afterPath="$PROJECT_DIR$/src/Birds/AVIARY_TYPE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Aviary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Aviary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +22,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -83,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657060788054</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added files to package 'Birds'">
+      <created>1657375191117</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657375191117</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +95,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trying to commit" />
     <MESSAGE value="just added a couple more files to make sure github is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="just added a couple more files to make sure github is working" />
+    <MESSAGE value="Added files to package 'Birds'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files to package 'Birds'" />
   </component>
 </project>

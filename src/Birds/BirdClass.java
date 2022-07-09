@@ -5,45 +5,71 @@ public class BirdClass implements Bird  {
 
     private String name;
     private int wingNum;
-    private String birdType;        // these attributes are both kind of specific to children classes --
-    private String description;     // not sure if/how to make them make sense here. 
+    //private String birdType;        // these attributes are both kind of specific to children classes --
+    //private String description;     // not sure if/how to make them make sense here.
     private boolean extinct;
+    private ArrayList<FOOD> foodPreference;
 
 
+    //===================================== CONSTRUCTORS =========================================
 
 
-    
-    // TODO: Should this be abstract? Because we can't really construct a typeless bird object... if this were an 
-    // abstract method, then we could implement it in each child class.... but that's a bunch of code duplication... hm
-    
-    public BirdClass(String name, int wingNum, boolean extinct) {
+    public BirdClass(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference) {
+        // check that 2-4 food preferences selected:
+        if (foodPreference.size()<2 || foodPreference.size() > 4) {
+            throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
+        }
+
         this.name = name;
         this.wingNum = wingNum;
         this.extinct = extinct;
+        this.foodPreference = foodPreference;
     }
-    
+
     // Overloading the constructor (if we can assume a bird is not extinct):
-        public BirdClass(String name, int wingNum) {
+    public BirdClass(String name, int wingNum, ArrayList<FOOD> foodPreference) {
+        // check that 2-4 food preferences selected:
+        if (foodPreference.size()<2 || foodPreference.size() > 4) {
+            throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
+        }
+
         this.name = name;
         this.wingNum = wingNum;
         this.extinct = false;
+        this.foodPreference = foodPreference;
     }
-    
+
     // Overloading the constructor (if we can assume a bird has 2 wings):
-    public BirdClass(String name, boolean extinct) {
+    public BirdClass(String name, boolean extinct, ArrayList<FOOD> foodPreference) {
+        // check that 2-4 food preferences selected:
+        if (foodPreference.size()<2 || foodPreference.size() > 4) {
+            throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
+        }
+
         this.name = name;
         this.wingNum = 2;
         this.extinct = extinct;
+        this.foodPreference = foodPreference;
     }
-    
+
     // Overloading the constructor (if we can assume a bird has 2 wings and is not extinct):
-    public BirdClass(String name) {
+    public BirdClass(String name, ArrayList<FOOD> foodPreference) {
+        // check that 2-4 food preferences selected:
+        if (foodPreference.size()<2 || foodPreference.size() > 4) {
+            throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
+        }
+
         this.name = name;
         this.wingNum = 2;
         this.extinct = false;
+        this.foodPreference = foodPreference;
     }
-    
-    
+
+
+    //===================================== METHODS =========================================
+
+
+
     @Override
     public int getNumberOfWings() {
         return this.wingNum;
@@ -71,7 +97,6 @@ public class BirdClass implements Bird  {
 
     @Override
     public String toString() {
-
         return null;
     }
 

@@ -9,27 +9,22 @@ public interface Aviary {
   // methods:
   // Add Bird (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
   // UPDATES numOfBirds
-  public void addBird(BirdClass bird);
+  public Aviary addBird(BirdClass bird);
   
   // printSign prints bird info to user for that aviary
-  public void printSign();
+  public String printSign();
   
   // getAviaryLocation returns a string for that aviary's location
   public String getAviaryLocation();
-  
-  // getBirdList is a private method which returns a list of the bird objects in that aviary
-  // SHOULD WE USE A LINKED LIST FOR STORING THESE LISTS OF BIRD/AVIARY OBJECTS???????? * * * * * * * * * * * * 
-  private Bird[] getBirdList();
+
   
   // isFull return true if the aviary already has 5 birds, false if there is room to add another bird:
   public boolean isFull();
+
+  // getSize returns the number of birds in the aviary
+  public int getSize();
   
-  
-  
-  // other ideas we haven't talked about:
-  // getSize (returns int number of birds in aviary)
-  // getType (get the specific type of birds stored there (ie general, birdOfPrey, waterfowl, or shorebird) 
-   //   THEN BIRD TYPE COULD ALSO BE AN ATTRIBUTE OF AVIARY (ie. what bird type is stored in this aviary?)
-  // 
+// getType returns the type of birds stored in the aviary (from AVIARY_TYPE enum)
+  public AVIARY_TYPE getType();
   
 }
