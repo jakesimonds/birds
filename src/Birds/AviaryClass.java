@@ -10,9 +10,9 @@ public class AviaryClass implements Aviary {
   private int numBirds;                   // number of birds stored in it
   private ArrayList<BirdClass> birdList;  // list of the bird objects stored there
   private AVIARY_TYPE aviaryType;         // type of bird(s) stored there
-
   private String aviaryLocation;          // location of this aviary
                                           // TODO : is this useful?
+
 
 
   //===================================== CONSTRUCTORS =========================================
@@ -25,9 +25,8 @@ public class AviaryClass implements Aviary {
     this.birdList = new ArrayList<BirdClass>();
   }
   // TODO : Should there be other constructors?
-  //  Or does every aviary need to be initialized with name/type?
-
-
+  //  Or does every aviary need to be initialized with name/type/location?
+  //  (leaning towards the latter)
 
   //===================================== METHODS =========================================
 
@@ -80,9 +79,9 @@ public class AviaryClass implements Aviary {
   // getAviaryLocation returns a string for that aviary's location
   public String getAviaryLocation(){
     // TODO : implement me!
+
     return null;
   }
-
 
   // getSize returns the number of birds in the aviary
   public int getSize() {
@@ -135,7 +134,6 @@ public class AviaryClass implements Aviary {
       return true;
     }
     else { return false; }
-
   }
 
 

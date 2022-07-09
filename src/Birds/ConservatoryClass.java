@@ -146,18 +146,22 @@ public class ConservatoryClass implements Conservatory {
 
   // Rescue New Bird
   // FAILS if conservatory is full
-  public void rescueBird() {
+  public Conservatory rescueBird(BirdClass bird) {
     // TODO : Implement me!
 
 
 
 
+
+
     // FIRST iterate through existing aviaries to see if there's room/compatibility
-    // (for each aviary, check aviaryName.isCompatible(bird))
+    // (for each aviary, check !aviary.isFUll() and aviaryName.isCompatible(bird))
     // if no space in existing aviaries, and if fewer than 20 aviaries, create a new aviary
     // and designate its type according to the bird we're rescuing (GENERAL, FLIGHTLESS, etc.)
     // Update numAviaries, aviaryList, and within the specific aviary,
     //                                numBirds and birdList as well.
+
+    return this;
   }
 
 
@@ -189,10 +193,10 @@ public class ConservatoryClass implements Conservatory {
   }
 
   // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
-  // TODO: SHOULD THIS CHECK WHETHER THERE ARE 100 BIRDS, OR 20 AVIARIES??
   public boolean isFull() {
-    // TODO : Implement me!
-    return false;
+    if (this.numAviaries == 20) {
+      return true;
+    } else { return false; }
   }
 
 
