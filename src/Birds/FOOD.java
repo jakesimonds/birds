@@ -1,4 +1,6 @@
-public enum FOODS {
+package Birds;
+
+public enum FOOD {
   
   // Possible foods for a bird to prefer:
   BERRIES, 

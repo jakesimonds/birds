@@ -1,3 +1,6 @@
+package Birds;
+import java.util.ArrayList;
+
 public enum WATER {
   // Possible bodies of water for water birds to live near
   

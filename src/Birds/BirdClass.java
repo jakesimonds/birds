@@ -1,3 +1,6 @@
+package Birds;
+import java.util.ArrayList;
+
 public class BirdClass implements Bird  {
 
     private String name;
@@ -5,6 +8,8 @@ public class BirdClass implements Bird  {
     private String birdType;        // these attributes are both kind of specific to children classes --
     private String description;     // not sure if/how to make them make sense here. 
     private boolean extinct;
+
+
 
 
     

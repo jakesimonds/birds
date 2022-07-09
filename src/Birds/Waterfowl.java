@@ -1,4 +1,7 @@
-public class Shorebird extends WaterBird {
+package Birds;
+import java.util.ArrayList;
+
+public class Waterfowl extends WaterBird {
   
   // Member fields (?)
   private String name;
@@ -8,7 +11,7 @@ public class Shorebird extends WaterBird {
   private String bodyOfWater;
   
   // Constructor:
-  public Shorebird(String name, int wingNum, String bodyOfWater) {
+  public Waterfowl(String name, int wingNum, String bodyOfWater) {
       super(name, wingNum);
       
       this.name = name;

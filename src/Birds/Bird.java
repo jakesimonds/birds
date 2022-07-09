@@ -1,3 +1,6 @@
+package Birds;
+import java.util.ArrayList;
+
 public interface Bird {
     //interface for bird parent class
 
@@ -14,7 +17,7 @@ public interface Bird {
     public boolean getExtinct();
 
     // return an array of FOOD types (enum class in its own file) (2-4)
-    public FOOD[] getFoodPreference();
+    public ArrayList<FOOD> getFoodPreference();
 
 
 

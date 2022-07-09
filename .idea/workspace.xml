@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="just added a couple more files to make sure github is working">
-      <change afterPath="$PROJECT_DIR$/src/Aviary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Conservatory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aviaryClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/conservatoryClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/aviaryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/constructorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parrot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/birdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/birdClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aviary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Aviary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BirdOfPrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Conservatory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Conservatory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FOODS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FOOD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlightlessBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Owl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Owl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Parrot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pigeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Pigeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shorebird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Shorebird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WATER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WATER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WaterBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WaterBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Waterfowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Waterfowl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/birdTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/constructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/constructorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +52,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_directory_selection": "/Users/bicknarnes/Desktop/CS 5004/birds/test/Birds",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
