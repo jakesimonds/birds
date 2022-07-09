@@ -30,7 +30,6 @@ public interface Conservatory {
 
 
 
-  
   // Print Map
   public void printMap();
 
@@ -42,14 +41,8 @@ public interface Conservatory {
   // Rescue New Bird
   // FAILS if conservatory is full
   public void rescueBird();
-  
-  // (Private) Add Aviary -- Adds a new Aviary to the Conservatory
-  // FAILS if there are already 20 aviaries
-  private void addAviary();
-  
-  // (Private) Get Aviary List -- 
-  // TODO : WHAT TYPE DOES THIS RETURN (Aviary Array? Aviary[] ?)
-  private getAviaryList();
+
+
   
   // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
   // TODO: SHOULD THIS CHECK WHETHER THERE ARE 100 BIRDS, OR 20 AVIARIES??

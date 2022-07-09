@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class AviaryClass implements Aviary {
 
   // Member Fields:
+  private String aviaryName;  // TODO : idk if this is useful? for map/location things?
   private int numBirds;                   // number of birds stored in it
   private ArrayList<BirdClass> birdList;  // list of the bird objects stored there
   private AVIARY_TYPE aviaryType;         // type of bird(s) stored there
