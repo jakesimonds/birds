@@ -26,5 +26,7 @@ public interface Aviary {
   
 // getType returns the type of birds stored in the aviary (from AVIARY_TYPE enum)
   public AVIARY_TYPE getType();
+
+  public ArrayList<BirdClass> getBirdList();
   
 }

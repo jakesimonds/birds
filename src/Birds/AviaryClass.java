@@ -5,21 +5,27 @@ import java.util.ArrayList;
 public class AviaryClass implements Aviary {
 
   // Member Fields:
-  private String aviaryName;  // TODO : idk if this is useful? for map/location things?
+  private String aviaryName;              // name of aviary
+                                          // TODO : is this useful?
   private int numBirds;                   // number of birds stored in it
   private ArrayList<BirdClass> birdList;  // list of the bird objects stored there
   private AVIARY_TYPE aviaryType;         // type of bird(s) stored there
 
+  private String aviaryLocation;          // location of this aviary
+                                          // TODO : is this useful?
 
-  // TODO : Should Aviary Location be an attribute?
 
   //===================================== CONSTRUCTORS =========================================
-
-
-
-
-
-
+  public AviaryClass(String aviaryName, AVIARY_TYPE aviaryType, String aviaryLocation) {
+    this.aviaryName = aviaryName;
+    this.aviaryType = aviaryType;
+    this.aviaryLocation = aviaryLocation;
+    // initialized with 0 birds:
+    this.numBirds = 0;
+    this.birdList = new ArrayList<BirdClass>();
+  }
+  // TODO : Should there be other constructors?
+  //  Or does every aviary need to be initialized with name/type?
 
 
 
@@ -27,7 +33,7 @@ public class AviaryClass implements Aviary {
 
   // getBirdList() -- private method which returns a
   //          list of the bird objects in that aviary
-  private ArrayList<BirdClass> getBirdList(){
+  public ArrayList<BirdClass> getBirdList(){
     return this.birdList;
   }
 
@@ -127,6 +133,8 @@ public class AviaryClass implements Aviary {
     else { return false; }
 
   }
+
+
 
 
 
