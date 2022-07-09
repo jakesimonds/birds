@@ -14,19 +14,49 @@ public class ConservatoryClass implements Conservatory {
   // Guest Lookup (returns which aviary that bird is housed in)
   //       print/return an error message if bird does not exist
   public String guestLookup(String birdName) {
-    // TODO : Implement me!
-    // iterate through aviaries -> iterate through each aviary's birdList
-    // check whether birdName.toUpperCase() == currentBird.getName().toUpperCase()
-    // when we find the bird, return its location (that aviary)
-    // if not found, print error404: not found
-    return null;
+    String output = "";
+    ArrayList<String> birdsFound = new ArrayList<String>();
+    // Iterate through all Aviaries in aviaryList:
+    for (int i = 0; i < this.numAviaries; i++) {
+      // each aviary can now be accessed using   this.aviaryList.get(i)
+      AviaryClass currentAviary = this.aviaryList.get(i);
+      // Iterate through all Birds in birdList
+      for (int j = 0; j < currentAviary.getSize(); j++) {
+        // each bird can now be accessed using  currentAviary.getBirdList().get(j)
+        BirdClass currentBird = currentAviary.getBirdList().get(j);
+        if (currentBird.getBirdName().toUpperCase() == birdName.toUpperCase()) {
+          // it's a match! record current bird & aviary in birdsFound :
+          // check that aviary isn't already in the list:
+          if (!birdsFound.contains(currentAviary.getAviaryName())) {
+            birdsFound.add(currentAviary.getAviaryName());
+          }
+        }
+      }
+    }
+    if (birdsFound.size() == 0) {
+      // Error 404 : Bird not found
+      return "Error 404: Bird not found.\n" + birdName + " does not exist in the conservatory.";
+    }
+    else {
+      // IF ONE BIRD FOUND:
+      if (birdsFound.size() == 1) {
+        output += birdName + " was found in the following Aviary:\n";
+      }
+      else {
+        // IF MORE THAN ONE BIRD FOUND
+        output += birdName + " was found in the following Aviaries:\n";
+      }
+      for (int i = 0; i < birdsFound.size(); i++) {
+        output += birdsFound.get(i) + "\n";
+      }
+    }
+    return output;
   }
 
 
 
   // printIndex() --
   // List all birds in conservatory in alphabetical order, and their location
-
   public String printIndex() {
     ArrayList<String> birdIndex = new ArrayList<String>();
     // Iterate through all Aviaries in aviaryList:
@@ -37,7 +67,6 @@ public class ConservatoryClass implements Conservatory {
       for (int j = 0; j < currentAviary.getSize(); j++) {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
-        // TODO : implement a getName method in BirdClass :
         birdIndex.add(currentBird.getBirdName() + " -- " + currentAviary.getAviaryName() + "\n");
       }
     }
@@ -66,12 +95,52 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-  // Calculate Food
+  // calculateFood() print what food needs to be kept & in what quantities
   public String calculateFood() {
-    // TODO : Implement me!
     // iterate through each aviary -> iterate through each bird list ->
     //                                            keep a tally for each FOOD enum
-    return null;
+    FOOD[] foodList = {
+            FOOD.AQUATIC_INVERTEBRATES,
+            FOOD.BERRIES,
+            FOOD.BUDS,
+            FOOD.EGGS,
+            FOOD.FISH,
+            FOOD.FRUIT,
+            FOOD.INSECTS,
+            FOOD.LARVAE,
+            FOOD.NUTS,
+            FOOD.OTHER_BIRDS,
+            FOOD.SEEDS,
+            FOOD.SMALL_MAMMALS,
+            FOOD.VEGETATION
+            };
+    int[] foodCounter = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+    final int SIZE = 13;
+
+    // Iterate through all Aviaries in aviaryList:
+    for (int i = 0; i < this.numAviaries; i++) {
+      // each aviary can now be accessed using   this.aviaryList.get(i)
+      AviaryClass currentAviary = this.aviaryList.get(i);
+      // Iterate through all Birds in birdList
+      for (int j = 0; j < currentAviary.getSize(); j++) {
+        // each bird can now be accessed using  currentAviary.getBirdList().get(j)
+        BirdClass currentBird = currentAviary.getBirdList().get(j);
+        // iterate through foodList, checking whether each element is in currentBird.getFoodPreference()
+        for (int k = 0; k < SIZE; k++) {
+          if (currentBird.getFoodPreference().contains(foodList[k])) {
+            // add one to the foodCounter at the given index
+            foodCounter[k] ++;
+          }
+        }
+      }
+    }
+    String output = "FOOD TYPE \t\t NUMBER OF BIRDS\n";
+    for (int i = 0; i < SIZE; i++) {
+      if (foodCounter[i] > 0) {
+        output += foodList[i].toString() + "\t\t" + foodCounter[i] + "\n";
+      }
+    }
+    return output;
   }
 
 
@@ -90,6 +159,12 @@ public class ConservatoryClass implements Conservatory {
     // Update numAviaries, aviaryList, and within the specific aviary,
     //                                numBirds and birdList as well.
   }
+
+
+
+
+
+
 
   // (Private) Add Aviary -- Adds a new Aviary to the Conservatory
   // FAILS if there are already 20 aviaries
