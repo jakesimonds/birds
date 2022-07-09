@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="just added a couple more files to make sure github is working">
-      <change afterPath="$PROJECT_DIR$/src/Aviary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Conservatory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aviaryClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/conservatoryClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/aviaryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/constructorTest.java" afterDir="false" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="feel free to delete/change stuff, was just messing around to familiarize myself with things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parrot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/birdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/birdClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657060788054</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feel free to delete/change stuff, was just messing around to familiarize myself with things">
+      <created>1657063670796</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657063670796</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trying to commit" />
     <MESSAGE value="just added a couple more files to make sure github is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="just added a couple more files to make sure github is working" />
+    <MESSAGE value="feel free to delete/change stuff, was just messing around to familiarize myself with things" />
+    <option name="LAST_COMMIT_MESSAGE" value="feel free to delete/change stuff, was just messing around to familiarize myself with things" />
   </component>
 </project>
