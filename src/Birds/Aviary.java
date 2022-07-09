@@ -10,6 +10,9 @@ public interface Aviary {
   // Add Bird (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
   // UPDATES numOfBirds
   public Aviary addBird(BirdClass bird);
+
+  // getAviaryName returns the name of that aviary
+  public String getAviaryName();
   
   // printSign prints bird info to user for that aviary
   public String printSign();
@@ -26,5 +29,7 @@ public interface Aviary {
   
 // getType returns the type of birds stored in the aviary (from AVIARY_TYPE enum)
   public AVIARY_TYPE getType();
+
+  public ArrayList<BirdClass> getBirdList();
   
 }

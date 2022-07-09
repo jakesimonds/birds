@@ -3,17 +3,17 @@ package Birds;
 public enum FOOD {
   
   // Possible foods for a bird to prefer:
-  BERRIES, 
-  SEEDS, 
+  AQUATIC_INVERTEBRATES,
+  BERRIES,
+  BUDS,
+  EGGS,
+  FISH,
   FRUIT,
   INSECTS,
-  OTHER_BIRDS,
-  EGGS,
-  SMALL_MAMMALS,
-  FISH,
-  BUDS,
   LARVAE,
-  AQUATIC_INVERTEBRATES,
   NUTS,
+  OTHER_BIRDS,
+  SEEDS,
+  SMALL_MAMMALS,
   VEGETATION
 }
