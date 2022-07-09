@@ -26,6 +26,9 @@ public class BirdClass implements Bird  {
         this.foodPreference = foodPreference;
     }
 
+    /*
+
+
     // Overloading the constructor (if we can assume a bird is not extinct):
     public BirdClass(String name, int wingNum, ArrayList<FOOD> foodPreference) {
         // check that 2-4 food preferences selected:
@@ -65,6 +68,8 @@ public class BirdClass implements Bird  {
         this.foodPreference = foodPreference;
     }
 
+    */
+
 
     //===================================== METHODS =========================================
 
@@ -75,15 +80,18 @@ public class BirdClass implements Bird  {
         return this.wingNum;
     }
 
+    /*
     @Override
     public String getBirdType() {
         return this.birdType;
     }
 
+
     @Override
     public String getCharacteristic() {
         return this.description;
     }
+    */
 
     @Override
     public boolean getExtinct() {
@@ -91,7 +99,7 @@ public class BirdClass implements Bird  {
     }
 
     @Override
-    public String getFoodPreference() {
+    public ArrayList<FOOD> getFoodPreference() {
         return null;
     }
 

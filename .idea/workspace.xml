@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added files to package 'Birds'">
-      <change afterPath="$PROJECT_DIR$/src/Birds/AVIARY_TYPE.java" afterDir="false" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/Aviary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Aviary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Bird.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Conservatory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Conservatory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Owl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Owl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Pigeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Pigeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Shorebird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Shorebird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/WaterBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WaterBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Waterfowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Waterfowl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +83,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657375191117</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657379156546</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657379156546</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657379402047</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657379402047</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +115,7 @@
     <MESSAGE value="trying to commit" />
     <MESSAGE value="just added a couple more files to make sure github is working" />
     <MESSAGE value="Added files to package 'Birds'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added files to package 'Birds'" />
+    <MESSAGE value="Added &amp; edited files in package 'Birds'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &amp; edited files in package 'Birds'" />
   </component>
 </project>

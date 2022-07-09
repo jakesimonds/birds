@@ -2,24 +2,12 @@ package Birds;
 import java.util.ArrayList;
 
 public class Waterfowl extends WaterBird {
-  
-  // Member fields (?)
-  private String name;
-  private int numWings;
-  // etc.
-  
-  private String bodyOfWater;
+
+  private String description;
   
   // Constructor:
-  public Waterfowl(String name, int wingNum, String bodyOfWater) {
-      super(name, wingNum);
-      
-      this.name = name;
-      this.wingNum = wingNum;
-        
-      this.description = "Shorebirds live near water sources including wetlands, freshwater and saltwater shorelands, even the ocean.";
-      this.bodyOfWater = bodyOfWater;
+  public Waterfowl(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater) {
+      super(name, wingNum, extinct, foodPreference, bodyOfWater);
+      this.description = "Waterfowl are another classification that live near water sources (fresh or salt).";
     }
-  
-  // PARENT CLASS WATERBIRD HAS METHOD FOR GETBODYOFWATER... does it need to go in here at all?
 }

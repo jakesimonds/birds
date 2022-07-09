@@ -8,10 +8,10 @@ public interface Bird {
     public int getNumberOfWings();
 
     //return the type of bird (ie. kiwi, moa, etc.)
-    public String getBirdType();
+    // public String getBirdType();
 
     // get a description/characteristic of that bird/family of birds
-    public String getCharacteristic();
+    // public String getCharacteristic();
 
     // return true if bird is extinct, false otherwise
     public boolean getExtinct();
