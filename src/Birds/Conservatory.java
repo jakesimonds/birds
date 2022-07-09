@@ -9,7 +9,7 @@ public interface Conservatory {
   
   // Guest Lookup (returns which aviary that bird is housed in)
   //       print/return an error message if bird does not exist
-  public String guestLookup(BirdClass bird);
+  public String guestLookup(String birdName);
 
 
 
@@ -25,7 +25,7 @@ public interface Conservatory {
   // for each aviary in the conservatory,
   // we can iterate through that aviary's bird list,
   // for each adding "BirdName -- AviaryName" to a master list which can then be sorted alphabetically and printed
-  public void printIndex();
+  public String printIndex();
 
 
 

@@ -37,6 +37,10 @@ public class AviaryClass implements Aviary {
     return this.birdList;
   }
 
+  public String getAviaryName() {
+    return this.aviaryName;
+  }
+
   // isCompatible(BirdClass bird) checks whether the
   //       given bird is compatible with this aviary
   private boolean isCompatible(BirdClass bird) {

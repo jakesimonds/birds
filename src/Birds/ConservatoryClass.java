@@ -1,5 +1,6 @@
 package Birds;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class ConservatoryClass implements Conservatory {
@@ -12,9 +13,10 @@ public class ConservatoryClass implements Conservatory {
 
   // Guest Lookup (returns which aviary that bird is housed in)
   //       print/return an error message if bird does not exist
-  public String guestLookup(BirdClass bird) {
+  public String guestLookup(String birdName) {
     // TODO : Implement me!
     // iterate through aviaries -> iterate through each aviary's birdList
+    // check whether birdName.toUpperCase() == currentBird.getName().toUpperCase()
     // when we find the bird, return its location (that aviary)
     // if not found, print error404: not found
     return null;
@@ -22,21 +24,11 @@ public class ConservatoryClass implements Conservatory {
 
 
 
-  // Print Index
+  // printIndex() --
   // List all birds in conservatory in alphabetical order, and their location
-  //
-  // TODO : compile all aviary birdLists into one master list,
-  // sort that list alphabetically by bird name and then print every bird and its respective location
-  // TODO should birds have an aviary attribute that stores what aviary they're put in?
-  // adding a bird to an aviary could automatically call setAviary for the bird
-  //
-  // TODO :
-  // for each aviary in the conservatory,
-  // we can iterate through that aviary's bird list,
-  // for each adding "BirdName -- AviaryName" to a master list which can then be sorted alphabetically and printed
-  public void printIndex() {
-    // TODO : Implement me!
-    ArrayList<String> output;
+
+  public String printIndex() {
+    ArrayList<String> birdIndex = new ArrayList<String>();
     // Iterate through all Aviaries in aviaryList:
     for (int i = 0; i < this.numAviaries; i++) {
       // each aviary can now be accessed using   this.aviaryList.get(i)
@@ -45,12 +37,18 @@ public class ConservatoryClass implements Conservatory {
       for (int j = 0; j < currentAviary.getSize(); j++) {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
-        // TODO : implement a getName method in BirdClass
-        // output.add(currentBird.getName() + " -- " + currentAviary.getName() + "\n");
+        // TODO : implement a getName method in BirdClass :
+        birdIndex.add(currentBird.getBirdName() + " -- " + currentAviary.getAviaryName() + "\n");
       }
-
     }
-    return;
+    // Sort the list of birds alphabetically:
+    Collections.sort(birdIndex);
+    // Add each element to a String for output:
+    String output = "";
+    for (int i = 0; i < birdIndex.size(); i++) {
+      output += birdIndex.get(i) + "\n";
+    }
+    return output;
   }
 
 
@@ -58,6 +56,10 @@ public class ConservatoryClass implements Conservatory {
 
 
   // Print Map
+  // print a "map" that lists all aviaries by location, and the birds they house
+  //
+  // iterate through each aviary, add to ArrayList "locationName - aviaryName - bird1, bird2, bird3, etc. "
+  // then sort list alphabetically and add all to String for output
   public void printMap() {
     // TODO : Implement me!
     return;

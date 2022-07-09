@@ -80,6 +80,12 @@ public class BirdClass implements Bird  {
         return this.wingNum;
     }
 
+
+    @Override
+    public String getBirdName() {
+        return this.name;
+    }
+
     /*
     @Override
     public String getBirdType() {

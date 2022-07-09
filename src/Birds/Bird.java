@@ -4,6 +4,10 @@ import java.util.ArrayList;
 public interface Bird {
     //interface for bird parent class
 
+
+    // return the name of the bird
+    public String getBirdName();
+
     //return the number of wings that bird has
     public int getNumberOfWings();
 
