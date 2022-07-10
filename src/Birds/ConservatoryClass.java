@@ -141,14 +141,6 @@ public class ConservatoryClass implements Conservatory {
             };
     int[] foodCounter = {0,0,0,0,0,0,0,0,0,0,0,0,0};
     final int SIZE = 13;
-
-    ArrayList<FOOD> foodPref = new ArrayList<>();
-    foodPref.add(FOOD.BERRIES);
-    foodPref.add(FOOD.BUDS);
-
-
-
-
     // Iterate through all Aviaries in aviaryList:
     for (int i = 0; i < this.numAviaries; i++) {
       // each aviary can now be accessed using   this.aviaryList.get(i)
