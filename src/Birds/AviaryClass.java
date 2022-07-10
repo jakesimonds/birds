@@ -40,46 +40,11 @@ public class AviaryClass implements Aviary {
     return this.aviaryName;
   }
 
-  // isCompatible(BirdClass bird) checks whether the
-  //       given bird is compatible with this aviary
-  private boolean isCompatible(BirdClass bird) {
-    boolean compatible = false;
-    switch (this.aviaryType) {
-      case GENERAL:
-        if(bird instanceof BirdOfPrey ||
-                bird instanceof WaterBird ||
-                bird instanceof FlightlessBird) {
-          compatible = false;
-        } else { compatible = true; }
-        break;
-
-      case FLIGHTLESS:
-        if (bird instanceof FlightlessBird) {
-          compatible = true;
-        } else { compatible = false; }
-        break;
-
-      case WATER_BIRDS:
-        if (bird instanceof WaterBird) {
-          compatible = true;
-        } else { compatible = false; }
-        break;
-
-      case BIRDS_OF_PREY:
-        if (bird  instanceof BirdOfPrey) {
-          compatible = true;
-        } else {compatible = false; }
-        break;
-    }
-    return compatible;
-  }
-
   // ACCESSOR METHODS
 
   // getAviaryLocation returns a string for that aviary's location
   public String getAviaryLocation(){
     // TODO : implement me!
-
     return null;
   }
 
@@ -137,6 +102,41 @@ public class AviaryClass implements Aviary {
   }
 
 
+
+
+  // isCompatible(BirdClass bird) checks whether the
+  //       given bird is compatible with this aviary
+  private boolean isCompatible(BirdClass bird) {
+    boolean compatible = false;
+    switch (this.aviaryType) {
+      case GENERAL:
+        if(bird instanceof BirdOfPrey ||
+                bird instanceof WaterBird ||
+                bird instanceof FlightlessBird) {
+          compatible = false;
+        } else { compatible = true; }
+        break;
+
+      case FLIGHTLESS:
+        if (bird instanceof FlightlessBird) {
+          compatible = true;
+        } else { compatible = false; }
+        break;
+
+      case WATER_BIRDS:
+        if (bird instanceof WaterBird) {
+          compatible = true;
+        } else { compatible = false; }
+        break;
+
+      case BIRDS_OF_PREY:
+        if (bird  instanceof BirdOfPrey) {
+          compatible = true;
+        } else {compatible = false; }
+        break;
+    }
+    return compatible;
+  }
 
 
 
