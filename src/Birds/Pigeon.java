@@ -10,4 +10,9 @@ public class Pigeon extends BirdClass {
             "very similar to the milk of mammals. Found all over the world, " +
             "there are several varieties that are extinct.";
   }
+
+  @Override
+  public String toString(){
+    return this.getBirdName() + " " + this.getNumberOfWings() + " " + this.getFoodPreference() + " " + this.description;
+  }
 }

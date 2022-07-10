@@ -111,7 +111,21 @@ public class BirdClass implements Bird  {
 
     @Override
     public String toString() {
-        return null;
+        return "This bird is named: " + this.name + "Wing number = " + this.wingNum + " " + this.foodPreference ;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Bird == false) {
+            System.out.println("Not a bird!");
+            return false;
+        }
+
+        Bird other = (Bird) obj;
+        //can add food preference once that is built out
+        if (this.name == other.getBirdName()) { return true; }
+        else {return false; }
+
     }
 
 
