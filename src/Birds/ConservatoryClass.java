@@ -92,12 +92,31 @@ public class ConservatoryClass implements Conservatory {
 
   // Print Map
   // print a "map" that lists all aviaries by location, and the birds they house
-  //
-  // iterate through each aviary, add to ArrayList "locationName - aviaryName - bird1, bird2, bird3, etc. "
-  // then sort list alphabetically and add all to String for output
-  public void printMap() {
-    // TODO : Implement me!
-    return;
+  public String printMap() {
+    ArrayList<String> mapIndex = new ArrayList<>();
+    // Iterate through all Aviaries in aviaryList:
+    for (int i = 0; i < this.numAviaries; i++) {
+      // each aviary can now be accessed using   this.aviaryList.get(i)
+      AviaryClass currentAviary = this.aviaryList.get(i);
+      // Create a string to store aviary location, name, and birds housed there
+      String thisAviaryListing = currentAviary.getAviaryLocation() + " -- " +
+              currentAviary.getAviaryName() + " Houses:\n";
+      // Iterate through all Birds in that birdList, adding them to the string:
+      for (int j = 0; j < currentAviary.getSize(); j++) {
+        // each bird can now be accessed using  currentAviary.getBirdList().get(j)
+        BirdClass currentBird = currentAviary.getBirdList().get(j);
+        thisAviaryListing += "\t" + currentBird.getBirdName() + "\n";
+      }
+      mapIndex.add(thisAviaryListing);
+    }
+    // Sort the list of birds alphabetically:
+    Collections.sort(mapIndex);
+    // Add each String in the sorted list to a single String for output:
+    String output = "";
+    for (int i = 0; i < mapIndex.size(); i++) {
+      output += mapIndex.get(i) + "\n";
+    }
+    return output;
   }
 
 

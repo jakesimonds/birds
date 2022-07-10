@@ -7,46 +7,24 @@ import java.util.ArrayList;
 public interface Conservatory {
 
   
-  // Guest Lookup (returns which aviary that bird is housed in)
-  //       print/return an error message if bird does not exist
+  // guestLookup(bird) -- returns which aviary that bird is housed in
   public String guestLookup(String birdName);
 
-
-
-  // Print Index
-  // List all birds in conservatory in alphabetical order, and their location
-  //
-  // TODO : compile all aviary birdLists into one master list,
-  // sort that list alphabetically by bird name and then print every bird and its respective location
-  // TODO should birds have an aviary attribute that stores what aviary they're put in?
-  // adding a bird to an aviary could automatically call setAviary for the bird
-  //
-  // TODO :
-  // for each aviary in the conservatory,
-  // we can iterate through that aviary's bird list,
-  // for each adding "BirdName -- AviaryName" to a master list which can then be sorted alphabetically and printed
+  // printIndex() -- lists all birds in conservatory in alphabetical order, and their location
   public String printIndex();
 
+  // printMap() -- prints a "map" of the conservatory -
+  public String printMap();
 
-
-
-  // Print Map
-  public void printMap();
-
-
-  // Calculate Food
+  // calculateFood() -- returns a String detailing what food/quantities are
+  //                    required for the birds currently housed in the conservatory
   public String calculateFood();
 
-  
-  // Rescue New Bird
-  // FAILS if conservatory is full
+  // rescueNewBird(bird) -- adds new bird to the conservatory if/where
+  //                        there is room for it (in a compatible aviary)
   public Conservatory rescueBird(Bird bird);
 
-
-  
-  // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
-  // TODO: SHOULD THIS CHECK WHETHER THERE ARE 100 BIRDS, OR 20 AVIARIES??
+  // isFUll() -- Returns true if the conservatory already has 20 Aviaries, false otherwise
   public boolean isFull();
-  
-  
+
 }
