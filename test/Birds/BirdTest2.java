@@ -8,7 +8,7 @@ public class BirdTest2 {
 
 
     public static void main(String[] args) {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 

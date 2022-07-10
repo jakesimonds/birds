@@ -21,7 +21,7 @@ public class birdTest {
         //test constructor, bird with 3/no wings
         @Test
         public void TestIllegalArg () throws Exception {
-            ArrayList<FOOD> foodPref = new ArrayList();
+            ArrayList<FOOD> foodPref = new ArrayList<>();
             foodPref.add(FOOD.BERRIES);
             foodPref.add(FOOD.BUDS);
 
