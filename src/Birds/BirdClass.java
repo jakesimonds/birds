@@ -106,7 +106,7 @@ public class BirdClass implements Bird  {
 
     @Override
     public ArrayList<FOOD> getFoodPreference() {
-        return null;
+        return this.foodPreference;
     }
 
     @Override
