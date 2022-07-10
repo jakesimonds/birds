@@ -10,7 +10,7 @@ public class Pigeon extends BirdClass {
     this.description = "Pigeons (or doves) are known for feeding their young \"bird milk\" " +
             "very similar to the milk of mammals. Found all over the world, " +
             "there are several varieties that are extinct.";
-    this.birdType = "Pigeon";
+    setBirdType("Pigeon");
   }
 
   @Override

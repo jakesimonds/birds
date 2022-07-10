@@ -10,7 +10,7 @@ public class BirdClass implements Bird  {
     private boolean extinct;
     private ArrayList<FOOD> foodPreference;
 
-    public String birdType;
+    private String birdType;
 
 
     //===================================== CONSTRUCTORS =========================================
@@ -114,6 +114,12 @@ public class BirdClass implements Bird  {
     public ArrayList<FOOD> getFoodPreference() {
         return this.foodPreference;
     }
+
+    @Override
+    public void setBirdType(String birdType) {
+        this.birdType = birdType;
+    }
+
 
     @Override
     public String toString() {

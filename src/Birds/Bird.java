@@ -23,7 +23,7 @@ public interface Bird {
     // return an array of FOOD types (enum class in its own file) (2-4)
     public ArrayList<FOOD> getFoodPreference();
 
-
+    public void setBirdType(String birdType);
 
 
 }

@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test/Birds/aviaryTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Owl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Owl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Parrot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Pigeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Pigeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Shorebird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Shorebird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Waterfowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Waterfowl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/BirdTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/BirdTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +73,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="aviaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="birds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Birds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Birds" />
+      <option name="MAIN_CLASS_NAME" value="Birds.aviaryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="birdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="birds" />
       <extension name="coverage">
@@ -77,6 +106,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.birdTest" />
+        <item itemvalue="JUnit.aviaryTest" />
         <item itemvalue="Application.BirdTest2" />
       </list>
     </recent_temporary>
