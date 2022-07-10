@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="committing just so it will let me pull again">
-      <change afterPath="$PROJECT_DIR$/test/Birds/BirdTest2.java" afterDir="false" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="started making some tests, also made temporary toString() for birds &amp; pigeons (thinking we may want to overwrite toStrings for all our children classes), and temporary equals (just so some tests can be done)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/birds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/birds.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Parrot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/Pigeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Pigeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/birdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657392860322</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="started making some tests, also made temporary toString() for birds &amp; pigeons (thinking we may want to overwrite toStrings for all our children classes), and temporary equals (just so some tests can be done)">
+      <created>1657421952749</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657421952749</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +190,7 @@
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="committing just so it will let me pull" />
     <MESSAGE value="committing just so it will let me pull again" />
-    <option name="LAST_COMMIT_MESSAGE" value="committing just so it will let me pull again" />
+    <MESSAGE value="started making some tests, also made temporary toString() for birds &amp; pigeons (thinking we may want to overwrite toStrings for all our children classes), and temporary equals (just so some tests can be done)" />
+    <option name="LAST_COMMIT_MESSAGE" value="started making some tests, also made temporary toString() for birds &amp; pigeons (thinking we may want to overwrite toStrings for all our children classes), and temporary equals (just so some tests can be done)" />
   </component>
 </project>
