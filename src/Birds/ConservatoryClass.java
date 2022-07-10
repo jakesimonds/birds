@@ -15,7 +15,7 @@ public class ConservatoryClass implements Conservatory {
   //       print/return an error message if bird does not exist
   public String guestLookup(String birdName) {
     String output = "";
-    ArrayList<String> birdsFound = new ArrayList<String>();
+    ArrayList<String> birdsFound = new ArrayList<>();
     // Iterate through all Aviaries in aviaryList:
     for (int i = 0; i < this.numAviaries; i++) {
       // each aviary can now be accessed using   this.aviaryList.get(i)
@@ -58,7 +58,7 @@ public class ConservatoryClass implements Conservatory {
   // printIndex() --
   // List all birds in conservatory in alphabetical order, and their location
   public String printIndex() {
-    ArrayList<String> birdIndex = new ArrayList<String>();
+    ArrayList<String> birdIndex = new ArrayList<>();
     // Iterate through all Aviaries in aviaryList:
     for (int i = 0; i < this.numAviaries; i++) {
       // each aviary can now be accessed using   this.aviaryList.get(i)
@@ -117,7 +117,7 @@ public class ConservatoryClass implements Conservatory {
     int[] foodCounter = {0,0,0,0,0,0,0,0,0,0,0,0,0};
     final int SIZE = 13;
 
-    ArrayList<FOOD> foodPref = new ArrayList<FOOD>();
+    ArrayList<FOOD> foodPref = new ArrayList<>();
     foodPref.add(FOOD.BERRIES);
     foodPref.add(FOOD.BUDS);
 

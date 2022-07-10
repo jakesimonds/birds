@@ -22,7 +22,7 @@ public class AviaryClass implements Aviary {
     this.aviaryLocation = aviaryLocation;
     // initialized with 0 birds:
     this.numBirds = 0;
-    this.birdList = new ArrayList<BirdClass>();
+    this.birdList = new ArrayList<>();
   }
   // TODO : Should there be other constructors?
   //  Or does every aviary need to be initialized with name/type/location?
