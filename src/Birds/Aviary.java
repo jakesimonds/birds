@@ -20,15 +20,12 @@ public interface Aviary {
   // (GENERAL, WATER_BIRDS, BIRDS_OF_PREY, FLIGHTLESS)
   public AVIARY_TYPE getType();
 
-
   // addBird(bird) -- adds the given bird object to the aviary (if possible)
   public Aviary addBird(BirdClass bird);
 
-  
   // printSign() -- prints bird info to user for that aviary
   public String printSign();
 
-  
   // isFull() -- return true if the aviary already has 5 birds,
   //                false if there is room to add another bird:
   public boolean isFull();

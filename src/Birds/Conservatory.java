@@ -40,7 +40,7 @@ public interface Conservatory {
   
   // Rescue New Bird
   // FAILS if conservatory is full
-  public Conservatory rescueBird(BirdClass bird);
+  public Conservatory rescueBird(Bird bird);
 
 
   
