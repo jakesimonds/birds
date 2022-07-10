@@ -92,19 +92,36 @@ public class ConservatoryClass implements Conservatory {
 
   // Print Map
   // print a "map" that lists all aviaries by location, and the birds they house
-  //
-  // iterate through each aviary, add to ArrayList "locationName - aviaryName - bird1, bird2, bird3, etc. "
-  // then sort list alphabetically and add all to String for output
-  public void printMap() {
-    // TODO : Implement me!
-    return;
+  public String printMap() {
+    ArrayList<String> mapIndex = new ArrayList<>();
+    // Iterate through all Aviaries in aviaryList:
+    for (int i = 0; i < this.numAviaries; i++) {
+      // each aviary can now be accessed using   this.aviaryList.get(i)
+      AviaryClass currentAviary = this.aviaryList.get(i);
+      // Create a string to store aviary location, name, and birds housed there
+      String thisAviaryListing = currentAviary.getAviaryLocation() + " -- " +
+              currentAviary.getAviaryName() + " Houses:\n";
+      // Iterate through all Birds in that birdList, adding them to the string:
+      for (int j = 0; j < currentAviary.getSize(); j++) {
+        // each bird can now be accessed using  currentAviary.getBirdList().get(j)
+        BirdClass currentBird = currentAviary.getBirdList().get(j);
+        thisAviaryListing += "\t" + currentBird.getBirdName() + "\n";
+      }
+      mapIndex.add(thisAviaryListing);
+    }
+    // Sort the list of birds alphabetically:
+    Collections.sort(mapIndex);
+    // Add each String in the sorted list to a single String for output:
+    String output = "";
+    for (int i = 0; i < mapIndex.size(); i++) {
+      output += mapIndex.get(i) + "\n";
+    }
+    return output;
   }
 
 
-  // calculateFood() print what food needs to be kept & in what quantities
+  // calculateFood() -- print what food needs to be kept & in what quantities
   public String calculateFood() {
-    // iterate through each aviary -> iterate through each bird list ->
-    //                                            keep a tally for each FOOD enum
     FOOD[] foodList = {
             FOOD.AQUATIC_INVERTEBRATES,
             FOOD.BERRIES,
@@ -122,14 +139,6 @@ public class ConservatoryClass implements Conservatory {
             };
     int[] foodCounter = {0,0,0,0,0,0,0,0,0,0,0,0,0};
     final int SIZE = 13;
-
-    ArrayList<FOOD> foodPref = new ArrayList<>();
-    foodPref.add(FOOD.BERRIES);
-    foodPref.add(FOOD.BUDS);
-
-
-
-
     // Iterate through all Aviaries in aviaryList:
     for (int i = 0; i < this.numAviaries; i++) {
       // each aviary can now be accessed using   this.aviaryList.get(i)
@@ -160,27 +169,36 @@ public class ConservatoryClass implements Conservatory {
   // Rescue New Bird
   // FAILS if conservatory is full
   public Conservatory rescueBird(Bird bird) {
-    // TODO : Implement me!
-
-
-
-
-
-
-    // FIRST iterate through existing aviaries to see if there's room/compatibility
-    // (for each aviary, check !aviary.isFUll() and aviaryName.isCompatible(bird))
-    // if no space in existing aviaries, and if fewer than 20 aviaries, create a new aviary
-    // and designate its type according to the bird we're rescuing (GENERAL, FLIGHTLESS, etc.)
-    // Update numAviaries, aviaryList, and within the specific aviary,
-    //                                numBirds and birdList as well.
-
-    return this;
+    // iterate through all existing aviaries:
+    for (int i = 0; i < this.numAviaries; i++) {
+      // each aviary can now be accessed with this.aviaryList.get(i)
+      AviaryClass currentAviary = this.aviaryList.get(i);
+      // check whether current aviary is full / compatible with bird:
+      if ((!currentAviary.isFull()) && (currentAviary.isCompatible(bird))) {
+          // add bird to aviary
+          currentAviary.addBird(bird);
+          return this;
+      }
+    }
+    // AT THIS POINT, NO EXISTING AVIARIES CAN HOUSE NEW BIRD
+    //            ATTEMPT TO CREATE A NEW AVIARY FOR OUR BIRD:
+    if (this.isFull()) {
+      // Conservatory is full. No room to add a new aviary.
+      throw new IllegalStateException("Conservatory full for this bird type. Cannot add a new " + bird.getBirdName());
+    } else {
+      // There is room to add a new aviary in the conservatory:
+      AviaryClass newAviary = (AviaryClass) this.makeAviary(bird);
+      // add the rescued bird to the new aviary:
+      newAviary.addBird(bird);
+      this.addAviary(newAviary);
+      // New aviary containing rescued bird has now been added to the conservatory.
+      return this;
+    }
   }
 
 
 
   // makeAviary() -- creates & returns a new aviary compatible with the given bird.
-
   private Aviary makeAviary(Bird bird) {
     // TODO : not sure how we're dealing with 'location' param yet. Filler for now.
     String location = "Maine"; // THIS IS FILLER
@@ -229,10 +247,12 @@ public class ConservatoryClass implements Conservatory {
     return this;
   }
 
+
   // returns a list of existing aviary objects within the conservatory
   private ArrayList<AviaryClass> getAviaryList() {
     return this.aviaryList;
   }
+
 
   // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
   public boolean isFull() {

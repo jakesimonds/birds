@@ -21,7 +21,7 @@ public interface Aviary {
   public AVIARY_TYPE getType();
 
   // addBird(bird) -- adds the given bird object to the aviary (if possible)
-  public Aviary addBird(BirdClass bird);
+  public Aviary addBird(Bird bird);
 
   // printSign() -- prints bird info to user for that aviary
   public String printSign();
@@ -29,6 +29,11 @@ public interface Aviary {
   // isFull() -- return true if the aviary already has 5 birds,
   //                false if there is room to add another bird:
   public boolean isFull();
+
+
+  // isCompatible(BirdClass bird) checks whether the
+  //       given bird is compatible with this aviary
+  public boolean isCompatible(Bird bird);
 
 
   
