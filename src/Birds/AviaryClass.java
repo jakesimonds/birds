@@ -61,7 +61,7 @@ public class AviaryClass implements Aviary {
   // Add Bird (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
   // UPDATES numOfBirds
   @Override
-  public Aviary addBird(BirdClass bird) {
+  public Aviary addBird(Bird bird) {
     if (this.numBirds == 5) {
       throw new IllegalStateException("Cannot add a bird to a full aviary.");
     } else {
@@ -73,9 +73,8 @@ public class AviaryClass implements Aviary {
       }
       else {
         //bird is compatible with aviary
-        this.birdList.add(bird);
+        this.birdList.add((BirdClass)bird);
         this.numBirds ++;
-
         return this;
       }
     }
@@ -106,7 +105,7 @@ public class AviaryClass implements Aviary {
 
   // isCompatible(BirdClass bird) checks whether the
   //       given bird is compatible with this aviary
-  private boolean isCompatible(BirdClass bird) {
+  public boolean isCompatible(Bird bird) {
     boolean compatible = false;
     switch (this.aviaryType) {
       case GENERAL:
