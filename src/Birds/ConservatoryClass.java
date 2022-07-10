@@ -120,10 +120,8 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-  // calculateFood() print what food needs to be kept & in what quantities
+  // calculateFood() -- print what food needs to be kept & in what quantities
   public String calculateFood() {
-    // iterate through each aviary -> iterate through each bird list ->
-    //                                            keep a tally for each FOOD enum
     FOOD[] foodList = {
             FOOD.AQUATIC_INVERTEBRATES,
             FOOD.BERRIES,
