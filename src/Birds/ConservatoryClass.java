@@ -322,17 +322,11 @@ public class ConservatoryClass implements Conservatory {
       return false;
     }
     Conservatory other = (Conservatory) obj;
-    /*if (this.aviaryName == other.getAviaryName() &&
-            this.aviaryType == other.getType() &&
-            this.aviaryLocation == other.getAviaryLocation() &&
-            this.numBirds == other.getSize() &&
-            this.birdList == other.getBirdList()) {
+    if (this.name == other.getName()) {
       return true;
     } else {
       return false;
     }
-    */
-    return false;
   }
 
 
