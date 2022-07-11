@@ -83,9 +83,10 @@ public class AviaryClass implements Aviary {
   // printSign() -- returns a String listing birds housed in that aviary
   public String printSign(){
     // iterate through birdList, printing each bird's info:
-    String output = "Birds housed in this aviary are:\n\n";
+    String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
     for (int i = 0; i < this.numBirds; i++) {
-      output += this.birdList.get(i).toString() + "\n";
+      BirdClass currentBird = this.birdList.get(i);
+      output += currentBird.toString() + "--" + "\n";
       // TODO : SHOULD THIS BE bird.toString() or bird.getName() ???
       //  "gives a description of the birds it houses and any interesting information that it may have about that animal"
       //  (should include the description in toString for BirdClass)
