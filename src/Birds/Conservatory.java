@@ -2,7 +2,7 @@ package Birds;
 import java.util.ArrayList;
 
 // Represents a conservatory which can house up to 20 Aviaries
-// which house rescued birds
+// which each house up to 5 rescued birds
 
 public interface Conservatory {
   // getName() -- returns the name of the conservatory

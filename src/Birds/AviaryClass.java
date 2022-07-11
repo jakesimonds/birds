@@ -13,6 +13,7 @@ public class AviaryClass implements Aviary {
 
 
   //================================== CONSTRUCTOR(S) ======================================
+
   public AviaryClass(String aviaryName, AVIARY_TYPE aviaryType, String aviaryLocation) {
     this.aviaryName = aviaryName;
     this.aviaryType = aviaryType;
@@ -51,7 +52,6 @@ public class AviaryClass implements Aviary {
 
   // addBird() -- adds the given bird to this aviary
   // (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
-  @Override
   public Aviary addBird(Bird bird) {
     if (bird.getExtinct()) {
       // bird is extinct
@@ -88,6 +88,7 @@ public class AviaryClass implements Aviary {
     return output;
   }
 
+
   // isFull return true if the aviary already has 5 birds, false if there is room to add another bird:
   public boolean isFull(){
     if (this.numBirds == 5) {
@@ -97,8 +98,8 @@ public class AviaryClass implements Aviary {
   }
 
 
-  // isCompatible(BirdClass bird) checks whether the
-  //       given bird is compatible with this aviary
+  // isCompatible(bird) -- checks whether the given bird is compatible with this aviary.
+  //                       return true if compatible, false otherwise
   public boolean isCompatible(Bird bird) {
     boolean compatible = false;
     switch (this.aviaryType) {
@@ -132,10 +133,6 @@ public class AviaryClass implements Aviary {
   }
 
 
-
-
-
-
   @Override
   public String toString() {
     String output = this.getAviaryName() + " is located on " + this.getAviaryLocation() + ".\nIt currently houses the following birds:\n";
@@ -162,16 +159,7 @@ public class AviaryClass implements Aviary {
       } else {
         return false;
       }
-
   }
-
-
-
-
-
-
-
-
 
 
 

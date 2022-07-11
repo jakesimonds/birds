@@ -129,7 +129,6 @@ public class ConservatoryClass implements Conservatory {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
         thisAviaryListing += "\t" + currentBird.getBirdName() + "\n";
-        // TODO should this include a description or any other info? like bird type
       }
       mapIndex.add(thisAviaryListing);
     }
@@ -241,7 +240,8 @@ public class ConservatoryClass implements Conservatory {
 
   // makeAviary() -- creates & returns a new aviary compatible with the given bird.
   private Aviary makeAviary(Bird bird) {
-    // TODO : not sure how we're dealing with 'location' param yet. Filler for now.
+    // TODO : should this be private or public? Currently private bc it's only ever called
+    //  from within rescueBird method in the Conservatory class
     String location = "Campus " + (char)(65 + this.numAviaries);
     String name = "Aviary #" + (this.numAviaries + 1);
     AVIARY_TYPE type;
@@ -273,6 +273,8 @@ public class ConservatoryClass implements Conservatory {
   // (Private) Add Aviary -- Adds a new Aviary to the Conservatory
   // FAILS if there are already 20 aviaries
   private Conservatory addAviary(AviaryClass aviary) {
+    // TODO : should this be private or public? Currently private bc it's only ever called
+    //  from within rescueBird method in the Conservatory class
     // check whether there are already 20 aviaries,
     // if no, make a new aviary and update numAviaries/aviaryList
     if (this.aviaryListFull()) {
@@ -308,8 +310,6 @@ public class ConservatoryClass implements Conservatory {
       return true;
     } else { return false; }
   }
-
-
 
 
 
