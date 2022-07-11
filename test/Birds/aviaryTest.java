@@ -6,7 +6,10 @@ import java.util.ArrayList;
 
 public class aviaryTest {
 
-    //FULL AVIARY
+
+
+
+    //=================================== Testing IsFull =======================================
     @Test
     public void TestFullAviary() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -32,10 +35,9 @@ public class aviaryTest {
     }
 
 
-    //BIRDS OF WRONG TYPE
 
 
-    //numBirds (tests for empty through 4 birds
+    //=================================== Testing NumBird =======================================
     @Test
     public void TestNumBirds() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -61,7 +63,8 @@ public class aviaryTest {
         assertEquals(4,aviary1.getSize());
     }
 
-    //
+    //================================== Testing adding too many birds =======================================
+
     @Test(expected = IllegalStateException.class)
     public void TestTooManyBirds() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -86,7 +89,7 @@ public class aviaryTest {
 
     }
 
-    //TEST put bird of prey in general aviary
+    //=================================== Testing bird of prey in general aviary =======================================
     @Test(expected = IllegalStateException.class)
     public void AviaryTypeTest() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -94,9 +97,7 @@ public class aviaryTest {
         foodPref.add(FOOD.BUDS);
 
         BirdClass larry = new BirdOfPrey("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry3 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry4 = new Pigeon("Larry", 2, false, foodPref, "great with children");
+
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
         assertEquals(0, aviary1.getSize());
@@ -104,7 +105,10 @@ public class aviaryTest {
 
     }
 
-    //put pigeon in with bird of prey
+
+    //=================================== Testing Add bird of wrong type2 (pigeon in bird of prey aviary) =======================================
+
+
     @Test(expected = IllegalStateException.class)
     public void AviaryTypeTest2() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -113,8 +117,6 @@ public class aviaryTest {
 
         BirdClass larry = new BirdOfPrey("Larry", 2, false, foodPref, "great with children");
         BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry3 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry4 = new Pigeon("Larry", 2, false, foodPref, "great with children");
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.BIRDS_OF_PREY, "Hannaford's parking lot");
         assertEquals(0, aviary1.getSize());
@@ -122,7 +124,8 @@ public class aviaryTest {
         aviary1.addBird(larry2);
     }
 
-    //Get aviary location & get aviary name & get aviary type
+
+    //=================================== Testing Aviary type/location/name =======================================
     @Test
     public void AviaryLocationNameTypeTest() {
 

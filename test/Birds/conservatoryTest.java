@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class conservatoryTest {
 
-    // --------- TESTING: guestLookup() ---------------
+    //=================================== Testing guest look up =======================================
 
         @Test
     public void TestGuestLookup() {
@@ -34,12 +34,14 @@ public class conservatoryTest {
                 conservatory.rescueBird(barry);
             }
             conservatory.rescueBird(gary);
-            String str = conservatory.guestLookup("Sherry");
-            assertEquals(true,str.contains("Sherry"));
+            String strSherry = conservatory.guestLookup("Sherry");
+            String strFailure = conservatory.guestLookup("Failure");
+            assertEquals(true,strSherry.contains("Sherry"));
             //assertEquals(true,str.contains("Aviary 1"));
+            assertEquals(true,strFailure.contains("404"));
         }
 
-    //---------- TESTING: PrintMap ---------------
+    //=================================== Testing PrintMap =======================================
 
     @Test
     public void TestPrintMap() {
@@ -76,8 +78,7 @@ public class conservatoryTest {
     }
 
 
-
-    // --------- TESTING: isFull() ---------------
+    //=================================== Testing isFull =======================================
     @Test
     public void ConservatoryTestIsFull() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -95,9 +96,42 @@ public class conservatoryTest {
         conservatory.rescueBird(larry);
         assertEquals(true,conservatory.isFull());
 
-
     }
 
+    @Test(expected = IllegalStateException.class)
+    public void ConservatoryTestIsFullNoRoomForPigeon() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPref, "super smart");
+        BirdClass Sarah = new FlightlessBird("Sarah", 2, false, foodPref, "Large eyes");
+        BirdClass Amelia = new Waterfowl("Amelia", 2, false, foodPref, WATER.RIVER, "likes attention");
+        BirdClass Emma = new Owl("Emma", 2, false, foodPref, "large talons");
+
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+        //filling 5 aviaries with general birds
+        for(int i = 0; i<25; i++){
+            conservatory.rescueBird(Emma);
+        }
+        //now making it so 15 other aviaries aren't all full, but can't take general bird
+        for(int i = 0; i<21; i++){
+            conservatory.rescueBird(barry);
+        }
+        for(int i = 0; i<21; i++){
+            conservatory.rescueBird(Amelia);
+        }
+        for(int i = 0; i<21; i++){
+            conservatory.rescueBird(Sarah);
+        }
+        assertEquals(false,conservatory.isFull());
+        assertEquals(88,conservatory.getNumBirds());
+        conservatory.rescueBird(larry);
+
+    }
+    //=================================== Testing isFull & beyond =======================================
     @Test(expected = IllegalStateException.class)
     public void ConservatoryTestTooMany() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -114,6 +148,156 @@ public class conservatoryTest {
 
     }
 
+    //----------------NOW TESTING MULTIPLE METHODS ON DIFFERENT CONSERVATORY SITUATIONS--------------------
+
+
+    //=================================== 1 of every kind of bird =======================================
+    @Test
+    public void OneOfEveryKind() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPref, "super smart");
+        BirdClass gary = new Parrot("Gary", 2, 44, "idk", false, foodPref, "strong self esteem");
+        BirdClass Sarah = new FlightlessBird("Sarah", 2, false, foodPref, "Large eyes");
+        BirdClass Emma = new Owl("Emma", 2, false, foodPref, "large talons");
+        BirdClass Lucy = new Shorebird("Lucy", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
+        BirdClass Amelia = new Waterfowl("Amelia", 2, false, foodPref, WATER.RIVER, "likes attention");
+
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+        conservatory.rescueBird(larry);
+        conservatory.rescueBird(barry);
+        conservatory.rescueBird(Sarah);
+        conservatory.rescueBird(Amelia);
+        //have added four birds that all need their own aviary
+        assertEquals(4, conservatory.getNumAviaries());
+        assertEquals(4, conservatory.getNumBirds());
+
+        conservatory.rescueBird(Emma);
+        conservatory.rescueBird(Lucy);
+        conservatory.rescueBird(gary);
+        //added three more birds, but they can fit into existing aviaries
+        assertEquals(7, conservatory.getNumBirds());
+        assertEquals(4, conservatory.getNumAviaries());
+
+
+
+    }
+
+
+    //=================================== Every kind of food =======================================
+
+    @Test
+    public void AllFoods() {
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
+        ArrayList<FOOD> foodPrefPrey = new ArrayList<>();
+        foodPrefPrey.add(FOOD.SMALL_MAMMALS);
+        foodPrefPrey.add(FOOD.LARVAE);
+        foodPrefPrey.add(FOOD.FRUIT);
+        ArrayList<FOOD> foodPrefParrot = new ArrayList<>();
+        foodPrefParrot.add(FOOD.INSECTS);
+        foodPrefParrot.add(FOOD.EGGS);
+        foodPrefParrot.add(FOOD.FISH);
+        ArrayList<FOOD> foodPrefDuck = new ArrayList<>();
+        foodPrefDuck.add(FOOD.NUTS);
+        foodPrefDuck.add(FOOD.OTHER_BIRDS);
+        foodPrefDuck.add(FOOD.SEEDS);
+        foodPrefDuck.add(FOOD.VEGETATION);
+
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPrefPrey, "super smart");
+        BirdClass gary = new Parrot("Gary", 2, 44, "idk", false, foodPrefParrot, "strong self esteem");
+        BirdClass Sarah = new FlightlessBird("Sarah", 2, false, foodPrefDuck, "Large eyes");
+
+        conservatory.rescueBird(larry);
+        conservatory.rescueBird(barry);
+        conservatory.rescueBird(gary);
+        conservatory.rescueBird(Sarah);
+
+        String strFood = conservatory.calculateFood();
+
+        assertEquals(true,strFood.contains("NUTS"));
+        assertEquals(true,strFood.contains("OTHER_BIRDS"));
+        assertEquals(true,strFood.contains("VEGETATION"));
+        assertEquals(true,strFood.contains("SEEDS"));
+        assertEquals(true,strFood.contains("LARVAE"));
+        //because every type of food should have just 1 bird that needs it
+        assertEquals(true,strFood.contains("1"));
+
+    }
+
+
+    //=================================== Empty Conservatory =======================================
+
+    @Test
+    public void EmptyConservatory() {
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        //just showing it doesn't crash
+        conservatory.calculateFood();
+        conservatory.printIndex();
+        conservatory.printMap();
+        conservatory.guestLookup("BirdThatIsntThere");
+
+
+        assertEquals(0,conservatory.getNumBirds());
+        assertEquals(0,conservatory.getNumAviaries());
+
+
+    }
+
+    //=================================== One Bird =======================================
+
+        @Test
+        public void OneBird() {
+            ConservatoryClass conservatory = new ConservatoryClass();
+
+            ArrayList<FOOD> foodPref = new ArrayList<>();
+            foodPref.add(FOOD.BERRIES);
+            foodPref.add(FOOD.BUDS);
+
+
+
+            BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "not extinct");
+            assertEquals(0,conservatory.getNumBirds());
+            assertEquals(0,conservatory.getNumAviaries());
+
+
+            conservatory.rescueBird(larry);
+
+            assertEquals(1,conservatory.getNumBirds());
+            assertEquals(1,conservatory.getNumAviaries());
+
+
+
+        }
+
+
+    //=================================== Rescue Extinct Bird =======================================
+
+    @Test(expected = IllegalStateException.class)
+    public void RescueExtinctBird() {
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+
+
+        BirdClass larry = new Pigeon("Larry", 2, true, foodPref, "extinct pigeon");
+
+        conservatory.rescueBird(larry);
+
+    }
 
 
 
