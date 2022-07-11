@@ -5,17 +5,35 @@ import java.util.Collections;
 
 public class ConservatoryClass implements Conservatory {
 
+  private String name;                        // name of the conservatory
   private int numAviaries;                    // The number of aviaries housed in the conservatory
   private ArrayList<AviaryClass> aviaryList;  // A list of aviary objects within the conservatory
 
   //=================================== CONSTRUCTOR =======================================
 
   public ConservatoryClass() {
+    this.name = "Jake & Nick's Bird Rescue Sanctuary";
     this.numAviaries = 0;
     this.aviaryList = new ArrayList<>();
   }
 
   //===================================== METHODS =========================================
+
+  // getName() -- returns the name of the conservatory
+  public String getName() {
+    return this.name;
+  }
+
+  //
+  public int getNumBirds() {
+    int numBirds = 0;
+    for (int i = 0; i < this.numAviaries; i++) {
+      // iterate through every aviary and check numBirds:
+      AviaryClass currentAviary = this.aviaryList.get(i);
+      numBirds += currentAviary.getSize();
+      }
+    return numBirds;
+  }
 
   // Guest Lookup (returns which aviary that bird is housed in)
   //       print/return an error message if bird does not exist
@@ -273,22 +291,9 @@ public class ConservatoryClass implements Conservatory {
 
   // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
   public boolean isFull() {
-    if (!this.aviaryListFull()) {
-      // still room for more aviaries
-      return false;
-    } else {
-      // there are already 20 aviaries
-      boolean full = true;
-      for (int i = 0; i < this.numAviaries; i++) {
-        // iterate through every aviary and check is full
-        AviaryClass currentAviary = this.aviaryList.get(i);
-        if (!currentAviary.isFull()) {
-          full = false;
-          break;
-        }
-      }
-      return full;
-    }
+    if (this.getNumBirds() == 100) {
+      return true;
+    } else { return false; }
   }
 
 
@@ -305,22 +310,19 @@ public class ConservatoryClass implements Conservatory {
 
   @Override
   public String toString() {
-    String output = this.getAviaryName() + " is located on " + this.getAviaryLocation() + ".\nIt currently houses the following birds:\n";
-    for (int i = 0; i < this.numBirds; i++) {
-      BirdClass currentBird = this.birdList.get(i);
-      output += "\t" + currentBird.getBirdName() + "\n";
-    }
-    return output;
+    return this.name + " is a Conservatory currently comprised of " +
+            this.numAviaries + " Aviaries.\nIt currently houses " +
+            this.getNumBirds() + "birds.\n";
   }
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Aviary == false) {
-      System.out.println("Not an Aviary!");
+    if (obj instanceof Conservatory == false) {
+      System.out.println("Not a Conservatory!");
       return false;
     }
-    Aviary other = (Aviary) obj;
-    if (this.aviaryName == other.getAviaryName() &&
+    Conservatory other = (Conservatory) obj;
+    /*if (this.aviaryName == other.getAviaryName() &&
             this.aviaryType == other.getType() &&
             this.aviaryLocation == other.getAviaryLocation() &&
             this.numBirds == other.getSize() &&
@@ -329,7 +331,8 @@ public class ConservatoryClass implements Conservatory {
     } else {
       return false;
     }
-
+    */
+    return false;
   }
 
 
