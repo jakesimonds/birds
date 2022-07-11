@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="more tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +49,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.nickTest">
+  <component name="RunManager" selected="JUnit.conservatoryTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
@@ -119,9 +123,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.nickTest" />
-        <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="JUnit.conservatoryTest" />
+        <item itemvalue="Application.conservatoryTest2" />
+        <item itemvalue="Application.nickTest" />
         <item itemvalue="JUnit.birdTest" />
         <item itemvalue="JUnit.aviaryTest" />
       </list>
@@ -283,56 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657557616279</updated>
     </task>
-    <task id="LOCAL-00022" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657558755620</created>
+    <task id="LOCAL-00022" summary="more tests">
+      <created>1657564578546</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1657558755620</updated>
+      <updated>1657564578546</updated>
     </task>
-    <task id="LOCAL-00023" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657559044971</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1657559044971</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657559107301</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1657559107301</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657559865613</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1657559865613</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657559878562</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1657559878562</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657560122217</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1657560122217</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Added &amp; edited files in package 'Birds'">
-      <created>1657560353214</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1657560353214</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +316,7 @@
     <MESSAGE value="committing just so it will let me pull again" />
     <MESSAGE value="have added some aviary tests &amp; added method to bird getBirdType" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &amp; edited files in package 'Birds'" />
+    <MESSAGE value="more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="more tests" />
   </component>
 </project>
