@@ -73,15 +73,15 @@ public class ConservatoryClass implements Conservatory {
       for (int j = 0; j < currentAviary.getSize(); j++) {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
-        birdIndex.add(currentBird.getBirdName() + " -- " + currentAviary.getAviaryName() + "\n");
+        birdIndex.add(currentBird.getBirdName() + "\t--\t" + currentAviary.getAviaryName() + "\n");
       }
     }
     // Sort the list of birds alphabetically:
     Collections.sort(birdIndex);
     // Add each element to a String for output:
-    String output = "";
+    String output = "INDEX OF BIRDS & THEIR AVIARIES:\n\n";
     for (int i = 0; i < birdIndex.size(); i++) {
-      output += birdIndex.get(i) + "\n";
+      output += birdIndex.get(i);
     }
     return output;
   }
@@ -106,6 +106,7 @@ public class ConservatoryClass implements Conservatory {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
         thisAviaryListing += "\t" + currentBird.getBirdName() + "\n";
+        // TODO should this include a description or any other info? like bird type
       }
       mapIndex.add(thisAviaryListing);
     }
@@ -156,10 +157,27 @@ public class ConservatoryClass implements Conservatory {
         }
       }
     }
-    String output = "FOOD TYPE \t\t NUMBER OF BIRDS\n";
+    String output = "FOOD TYPE \t\t\t\tNUMBER OF BIRDS\n";
     for (int i = 0; i < SIZE; i++) {
       if (foodCounter[i] > 0) {
-        output += foodList[i].toString() + "\t\t" + foodCounter[i] + "\n";
+        if (foodList[i].toString().length() < 10) {
+          output += foodList[i].toString() + "\t\t\t\t\t" + foodCounter[i] + "\n";
+        } else {
+          switch (foodList[i]) {
+            case VEGETATION, OTHER_BIRDS:
+              output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
+              break;
+            //case OTHER_BIRDS:
+              //output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
+              //break;
+            case SMALL_MAMMALS:
+              output += foodList[i].toString() + "\t\t\t" + foodCounter[i] + "\n";
+              break;
+            case AQUATIC_INVERTEBRATES:
+              output += foodList[i].toString() + "\t" + foodCounter[i] + "\n";
+              break;
+          }
+        }
       }
     }
     return output;
@@ -182,7 +200,7 @@ public class ConservatoryClass implements Conservatory {
     }
     // AT THIS POINT, NO EXISTING AVIARIES CAN HOUSE NEW BIRD
     //            ATTEMPT TO CREATE A NEW AVIARY FOR OUR BIRD:
-    if (this.isFull()) {
+    if (this.aviaryListFull()) {
       // Conservatory is full. No room to add a new aviary.
       throw new IllegalStateException("Conservatory full for this bird type. Cannot add a new " + bird.getBirdName());
     } else {
@@ -201,7 +219,7 @@ public class ConservatoryClass implements Conservatory {
   // makeAviary() -- creates & returns a new aviary compatible with the given bird.
   private Aviary makeAviary(Bird bird) {
     // TODO : not sure how we're dealing with 'location' param yet. Filler for now.
-    String location = "Maine"; // THIS IS FILLER
+    String location = "Campus " + (char)(65 + this.numAviaries);
     String name = "Aviary #" + (this.numAviaries + 1);
     AVIARY_TYPE type;
     // figure out what type of aviary is required for the given bird:
@@ -234,9 +252,9 @@ public class ConservatoryClass implements Conservatory {
   private Conservatory addAviary(AviaryClass aviary) {
     // check whether there are already 20 aviaries,
     // if no, make a new aviary and update numAviaries/aviaryList
-    if (this.isFull()) {
+    if (this.aviaryListFull()) {
       //Conservatory is full (of aviaries)!
-      throw new IllegalStateException("Conservatory is full. Cannot add another Aviary.");
+      throw new IllegalStateException("Aviary Capacity is full. Cannot add another Aviary.");
     }
     else {
       // Conservatory has 19 or fewer aviaries:
@@ -253,13 +271,73 @@ public class ConservatoryClass implements Conservatory {
     return this.aviaryList;
   }
 
+  // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
+  public boolean isFull() {
+    if (!this.aviaryListFull()) {
+      // still room for more aviaries
+      return false;
+    } else {
+      // there are already 20 aviaries
+      boolean full = true;
+      for (int i = 0; i < this.numAviaries; i++) {
+        // iterate through every aviary and check is full
+        AviaryClass currentAviary = this.aviaryList.get(i);
+        if (!currentAviary.isFull()) {
+          full = false;
+          break;
+        }
+      }
+      return full;
+    }
+  }
+
 
   // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
-  public boolean isFull() {
+  public boolean aviaryListFull() {
     if (this.numAviaries == 20) {
       return true;
     } else { return false; }
   }
+
+
+
+
+
+  @Override
+  public String toString() {
+    String output = this.getAviaryName() + " is located on " + this.getAviaryLocation() + ".\nIt currently houses the following birds:\n";
+    for (int i = 0; i < this.numBirds; i++) {
+      BirdClass currentBird = this.birdList.get(i);
+      output += "\t" + currentBird.getBirdName() + "\n";
+    }
+    return output;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Aviary == false) {
+      System.out.println("Not an Aviary!");
+      return false;
+    }
+    Aviary other = (Aviary) obj;
+    if (this.aviaryName == other.getAviaryName() &&
+            this.aviaryType == other.getType() &&
+            this.aviaryLocation == other.getAviaryLocation() &&
+            this.numBirds == other.getSize() &&
+            this.birdList == other.getBirdList()) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+
+
+
+
+
+
 
 
 

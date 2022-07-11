@@ -10,7 +10,6 @@ public class BirdClass implements Bird  {
     //private String description;     // not sure if/how to make them make sense here.
     private boolean extinct;
     private ArrayList<FOOD> foodPreference;
-
     private String birdType;
 
     private String characteristic;
