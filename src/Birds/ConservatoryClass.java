@@ -300,4 +300,45 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
+
+
+
+  @Override
+  public String toString() {
+    String output = this.getAviaryName() + " is located on " + this.getAviaryLocation() + ".\nIt currently houses the following birds:\n";
+    for (int i = 0; i < this.numBirds; i++) {
+      BirdClass currentBird = this.birdList.get(i);
+      output += "\t" + currentBird.getBirdName() + "\n";
+    }
+    return output;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Aviary == false) {
+      System.out.println("Not an Aviary!");
+      return false;
+    }
+    Aviary other = (Aviary) obj;
+    if (this.aviaryName == other.getAviaryName() &&
+            this.aviaryType == other.getType() &&
+            this.aviaryLocation == other.getAviaryLocation() &&
+            this.numBirds == other.getSize() &&
+            this.birdList == other.getBirdList()) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
 }
