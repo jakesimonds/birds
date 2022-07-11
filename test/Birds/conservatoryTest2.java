@@ -18,10 +18,13 @@ public class conservatoryTest2 {
         BirdClass larry = new Pigeon("Larry", 2, false, foodPref,"Great with children");
         BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey,"super smart");
         BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot,"strong self esteem");
+        BirdClass sherry = new Pigeon("Sherry", 2, false, foodPref, "strong self esteem");
 
         ConservatoryClass conservatory = new ConservatoryClass();
 
-        for(int i = 0; i<30; i++){
+        conservatory.rescueBird(sherry);
+
+        for(int i = 0; i<10; i++){
             conservatory.rescueBird(larry);
             conservatory.rescueBird(barry);
             conservatory.rescueBird(gary);
@@ -36,6 +39,10 @@ public class conservatoryTest2 {
         System.out.println("--------------------------------------");
 
         System.out.println(conservatory.printMap());
+
+        System.out.println(conservatory.guestLookup("Sherry"));
+
+
 
 
 

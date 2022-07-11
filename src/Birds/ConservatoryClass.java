@@ -54,6 +54,9 @@ public class ConservatoryClass implements Conservatory {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
         if (currentBird.getBirdName().toUpperCase() == birdName.toUpperCase()) {
+
+          //TODO: should more happen here?
+
           // it's a match! record current bird & aviary in birdsFound :
           // check that aviary isn't already in the list:
           if (!birdsFound.contains(currentAviary.getAviaryName())) {
