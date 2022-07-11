@@ -11,8 +11,8 @@ public class BirdOfPrey extends BirdClass {
 
 
     // Constructor with 2 food preferences
-    public BirdOfPrey(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference) {
-        super(name, wingNum, extinct, foodPreference);
+    public BirdOfPrey(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {
+        super(name, wingNum, extinct, foodPreference, characteristic);
 
         //this.name = name;
         //this.wingNum = wingNum;

@@ -14,7 +14,7 @@ public class conservatoryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
 
         ConservatoryClass conservatory = new ConservatoryClass();
 
@@ -35,7 +35,7 @@ public class conservatoryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref,"great with children");
 
         ConservatoryClass conservatory = new ConservatoryClass();
 
@@ -58,9 +58,9 @@ public class conservatoryTest {
         foodPref.add(FOOD.INSECTS);
         foodPref.add(FOOD.LARVAE);
 
-        BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
-        BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey);
-        BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot);
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey,"super smart");
+        BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot,"strong self esteem");
 
         ConservatoryClass conservatory = new ConservatoryClass();
 
