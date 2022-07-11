@@ -189,9 +189,6 @@ public class ConservatoryClass implements Conservatory {
             case VEGETATION, OTHER_BIRDS:
               output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
               break;
-            //case OTHER_BIRDS:
-              //output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
-              //break;
             case SMALL_MAMMALS:
               output += foodList[i].toString() + "\t\t\t" + foodCounter[i] + "\n";
               break;
