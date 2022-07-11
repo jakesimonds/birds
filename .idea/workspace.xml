@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'">
+      <change afterPath="$PROJECT_DIR$/test/Birds/nickTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
     </list>
@@ -48,9 +49,9 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.conservatoryTest2">
-    <configuration name="BirdTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Birds.BirdTest2" />
+  <component name="RunManager" selected="Application.nickTest">
+    <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -62,8 +63,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
+    <configuration name="nickTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Birds.nickTest" />
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -122,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.nickTest" />
         <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="JUnit.conservatoryTest" />
         <item itemvalue="JUnit.birdTest" />
         <item itemvalue="JUnit.aviaryTest" />
-        <item itemvalue="Application.BirdTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657553665811</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657553931552</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657553931552</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

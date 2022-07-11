@@ -157,13 +157,27 @@ public class ConservatoryClass implements Conservatory {
         }
       }
     }
-    String output = "FOOD TYPE \t\t NUMBER OF BIRDS\n";
+    String output = "FOOD TYPE \t\t\t\tNUMBER OF BIRDS\n";
     for (int i = 0; i < SIZE; i++) {
       if (foodCounter[i] > 0) {
-        // TODO : Adjust tabs here to be specific to the ENUM
-        //  (for instance, shorter enum has more tabs after it so that everythnig lines up in the end)
-        //  (do a test with every food used so we can see what needs extra tabs)
-        output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
+        if (foodList[i].toString().length() < 10) {
+          output += foodList[i].toString() + "\t\t\t\t\t" + foodCounter[i] + "\n";
+        } else {
+          switch (foodList[i]) {
+            case VEGETATION, OTHER_BIRDS:
+              output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
+              break;
+            //case OTHER_BIRDS:
+              //output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
+              //break;
+            case SMALL_MAMMALS:
+              output += foodList[i].toString() + "\t\t\t" + foodCounter[i] + "\n";
+              break;
+            case AQUATIC_INVERTEBRATES:
+              output += foodList[i].toString() + "\t" + foodCounter[i] + "\n";
+              break;
+          }
+        }
       }
     }
     return output;
