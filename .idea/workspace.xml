@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="have added some aviary tests &amp; added method to bird getBirdType">
+      <change afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
