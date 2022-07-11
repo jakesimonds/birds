@@ -9,16 +9,29 @@ import static org.junit.Assert.*;
 
 public class birdTest {
 
+    //unsure of proper strategy, how much do we want to guard against int as name kind of stuff
+    @Test()
+    public void TestBirdConstructor() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
+        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref);
+
+        assertEquals(larry, larry2);
+
+    }
+
 
     //WHAT DO WE WANT WHEN A BIRD HAS -3 or 33 wings??
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void TestGetNumberOfWings() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
         BirdClass larry = new Pigeon("Larry", 1, false, foodPref);
-        BirdClass larry1 = new Pigeon("Larry", 0, false, foodPref);
+        BirdClass larry1 = new Pigeon("Larry", -1, false, foodPref);
         BirdClass larry2 = new Pigeon("Larry", -3, false, foodPref);
         BirdClass larry3 = new Pigeon("Larry", 33, false, foodPref);
         assertEquals(1, larry.getNumberOfWings());
@@ -34,8 +47,8 @@ public class birdTest {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
-        BirdClass larry = new Pigeon("Larry", 0, false, foodPref);
-        BirdClass larry2 = new Pigeon("Larry", 0, false, foodPref);
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
+        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref);
 
         assertEquals(larry, larry2);
 
@@ -44,11 +57,17 @@ public class birdTest {
     //my understanding is: bird type = names of subclasses, maybe need to build a method
     @Test
     public void TestGetBirdType() {
-        assertEquals(1, 1);
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
+        BirdClass larry2 = new Owl("Larry", 2, false, foodPref);
+        assertEquals("Pigeon", larry.getBirdType());
+        assertEquals("Owl", larry2.getBirdType());
 
     }
 
-    //
+    //not sure exactly what characteristic is
     @Test
     public void TestGetCharacteristic() {
         assertEquals(1, 1);
@@ -88,6 +107,7 @@ public class birdTest {
 
     }
 
+    //testing equality of two different food preferences
     @Test()
     public void TestGetFoodPreference2() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -104,11 +124,91 @@ public class birdTest {
         BirdClass larry2 = new Pigeon("Larry2", 2, false, foodPref1);
 
         assertNotEquals(larry.getFoodPreference(), larry2.getFoodPreference());
+        //assertEquals(4,getLength(foodPref))
 
         //System.out.println(birdEx.toString());
         //this will be the bird test
 
 
     }
+
+
+    //PARROT
+
+    @Test(expected = IllegalArgumentException.class)
+    public void TestParrotKnownWords() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        foodPref.add(FOOD.INSECTS);
+        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
+
+        BirdClass larry = new Parrot("Larry", 2, -10, "Bummer, man!",false, foodPref);
+        BirdClass larry2 = new Parrot("Larry", 2, 101, "Bummer, man!",false, foodPref);
+
+
+    }
+
+    @Test()
+    public void TestGetKnownWords() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        foodPref.add(FOOD.INSECTS);
+        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
+
+        BirdClass larry = new Parrot("Larry", 2, 10, "Bummer, man!",false, foodPref);
+        BirdClass larry2 = new Parrot("Larry", 2, 99, "Bummer, man!",false, foodPref);
+        assertEquals(10, ((Parrot) larry).getKnownWords());
+        assertEquals(99, ((Parrot) larry2).getKnownWords());
+
+
+    }
+
+    @Test()
+    public void TestGetFavoritePhrase() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        foodPref.add(FOOD.INSECTS);
+        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
+
+        BirdClass larry = new Parrot("Larry", 2, 10, "Bummer, man!",false, foodPref);
+        BirdClass larry2 = new Parrot("Larry", 2, 11, "",false, foodPref);
+
+        assertEquals("Bummer, man!",((Parrot)larry).getFavoritePhrase());
+        assertEquals("",((Parrot)larry2).getFavoritePhrase());
+    }
+
+    //Waterbirds
+    //both Shorebirds and Waterfowl being tested here
+
+    @Test()
+    public void TestGetBodyOfWater() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        foodPref.add(FOOD.INSECTS);
+        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
+
+        BirdClass larry = new Shorebird("Larry", 2, false, foodPref, WATER.OCEAN);
+        BirdClass larry2 = new Waterfowl("Larry", 2, false, foodPref,WATER.LAKE);
+        BirdClass larry3 = new Shorebird("Larry", 2, false, foodPref, WATER.RIVER);
+        BirdClass larry4 = new Waterfowl("Larry", 2, false, foodPref,WATER.FRESHWATER_SHORELANDS);
+
+        assertEquals(WATER.OCEAN,((Shorebird)larry).getBodyOfWater());
+        assertEquals(WATER.LAKE,((Waterfowl)larry2).getBodyOfWater());
+        assertEquals(WATER.RIVER,((Shorebird)larry3).getBodyOfWater());
+        assertEquals(WATER.FRESHWATER_SHORELANDS,((Waterfowl)larry4).getBodyOfWater());
+
+    }
+
+
+
+
+
+
+
+
 
 }

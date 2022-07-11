@@ -7,5 +7,6 @@ public class Owl extends BirdClass {
   public Owl(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference) {
     super(name, wingNum, extinct, foodPreference);
     this.description = "Owls are distinguished by the facial disks that frame the eyes and bill.";
+    setBirdType("Owl");
   }
 }

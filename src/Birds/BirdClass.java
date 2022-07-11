@@ -10,6 +10,8 @@ public class BirdClass implements Bird  {
     private boolean extinct;
     private ArrayList<FOOD> foodPreference;
 
+    private String birdType;
+
 
     //===================================== CONSTRUCTORS =========================================
 
@@ -19,11 +21,15 @@ public class BirdClass implements Bird  {
         if (foodPreference.size()<2 || foodPreference.size() > 4) {
             throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
         }
+        if (wingNum < 0 || wingNum > 3) {
+            throw new IllegalArgumentException("Wing number has to be 0-3 (we are inclusive of birds without wing (due to injury) & mutants with three wings");
+        }
 
         this.name = name;
         this.wingNum = wingNum;
         this.extinct = extinct;
         this.foodPreference = foodPreference;
+        this.birdType = "Bird";
     }
 
     /*
@@ -86,18 +92,18 @@ public class BirdClass implements Bird  {
         return this.name;
     }
 
-    /*
+
     @Override
     public String getBirdType() {
         return this.birdType;
     }
 
 
-    @Override
-    public String getCharacteristic() {
-        return this.description;
-    }
-    */
+//    @Override
+//    public String getCharacteristic() {
+//        return this.description;
+//    }
+//    */
 
     @Override
     public boolean getExtinct() {
@@ -108,6 +114,12 @@ public class BirdClass implements Bird  {
     public ArrayList<FOOD> getFoodPreference() {
         return this.foodPreference;
     }
+
+    @Override
+    public void setBirdType(String birdType) {
+        this.birdType = birdType;
+    }
+
 
     @Override
     public String toString() {

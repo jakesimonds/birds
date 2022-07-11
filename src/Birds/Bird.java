@@ -12,7 +12,7 @@ public interface Bird {
     public int getNumberOfWings();
 
     //return the type of bird (ie. kiwi, moa, etc.)
-    // public String getBirdType();
+    public String getBirdType();
 
     // get a description/characteristic of that bird/family of birds
     // public String getCharacteristic();
@@ -23,7 +23,7 @@ public interface Bird {
     // return an array of FOOD types (enum class in its own file) (2-4)
     public ArrayList<FOOD> getFoodPreference();
 
-
+    public void setBirdType(String birdType);
 
 
 }

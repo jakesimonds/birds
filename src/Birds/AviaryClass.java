@@ -44,8 +44,8 @@ public class AviaryClass implements Aviary {
 
   // getAviaryLocation returns a string for that aviary's location
   public String getAviaryLocation(){
-    // TODO : implement me!
-    return null;
+
+    return this.aviaryLocation;
   }
 
   // getSize returns the number of birds in the aviary

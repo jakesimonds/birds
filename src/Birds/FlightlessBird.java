@@ -8,5 +8,6 @@ public class FlightlessBird extends BirdClass {
     super(name, wingNum, extinct, foodPreference);
     this.description = "Flightless birds live on the ground and have no (or undeveloped) wings. " +
             "They include the emus, kiwis, and moas. Some (but not all) of these birds are extinct.";
+    setBirdType("Flightless Bird");
   }
 }
