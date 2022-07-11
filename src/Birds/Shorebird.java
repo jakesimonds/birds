@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class Shorebird extends WaterBird {
   private String description;
   // Constructor:
-  public Shorebird(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater) {
-      super(name, wingNum, extinct, foodPreference, bodyOfWater);
+  public Shorebird(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {
+      super(name, wingNum, extinct, foodPreference, bodyOfWater, characteristic);
       this.description =
               "Shorebirds live near water sources including wetlands, " +
                       "freshwater and saltwater shorelands, even the ocean.";

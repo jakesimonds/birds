@@ -15,8 +15,8 @@ public class Parrot extends BirdClass {
     
    
     // Constructor:
-    public Parrot(String name, int wingNum, int knownWords, String favoritePhrase, boolean extinct, ArrayList<FOOD> foodPreference) {
-        super(name, wingNum, extinct, foodPreference);
+    public Parrot(String name, int wingNum, int knownWords, String favoritePhrase, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {
+        super(name, wingNum, extinct, foodPreference, characteristic);
 
         if (knownWords < 0 || knownWords > 100) {
             throw new IllegalArgumentException("Parrots can't know more than 100 or less than 0 words");
@@ -36,6 +36,17 @@ public class Parrot extends BirdClass {
     // Get Favorite Phrase
     public String getFavoritePhrase() {
         return this.favoritePhrase;
+    }
+
+    @Override
+    public String toString() {
+        return "This " + this.getBirdType() + " is named: " + this.getBirdName() + ".\n" +
+                "Wing number = " + this.getNumberOfWings() + ".\n" +
+                "Defining characteristic: " + this.getBirdCharacteristic() + ".\n" +
+                "Extinct = " + this.getExtinct() + ".\n" +
+                this.getFoodPrefString() + "\n" +
+                "Vocabulary size: " + this.knownWords + ".\n" +
+                "Favorite Phrase: " + this.favoritePhrase ;
     }
     
 
