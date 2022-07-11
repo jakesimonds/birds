@@ -6,16 +6,14 @@ public class AviaryClass implements Aviary {
 
   // Member Fields:
   private String aviaryName;              // name of aviary
-                                          // TODO : is this useful?
   private int numBirds;                   // number of birds stored in it
   private ArrayList<BirdClass> birdList;  // list of the bird objects stored there
   private AVIARY_TYPE aviaryType;         // type of bird(s) stored there
   private String aviaryLocation;          // location of this aviary
-                                          // TODO : is this useful?
 
 
+  //================================== CONSTRUCTOR(S) ======================================
 
-  //================================== CONSTRUCTORS ======================================
   public AviaryClass(String aviaryName, AVIARY_TYPE aviaryType, String aviaryLocation) {
     this.aviaryName = aviaryName;
     this.aviaryType = aviaryType;
@@ -54,7 +52,6 @@ public class AviaryClass implements Aviary {
 
   // addBird() -- adds the given bird to this aviary
   // (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
-  @Override
   public Aviary addBird(Bird bird) {
     if (bird.getExtinct()) {
       // bird is extinct
@@ -86,10 +83,7 @@ public class AviaryClass implements Aviary {
     String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
     for (int i = 0; i < this.numBirds; i++) {
       BirdClass currentBird = this.birdList.get(i);
-      output += currentBird.toString() + "--" + "\n";
-      // TODO : SHOULD THIS BE bird.toString() or bird.getName() ???
-      //  "gives a description of the birds it houses and any interesting information that it may have about that animal"
-      //  (should include the description in toString for BirdClass)
+      output += "\t" + currentBird.getBirdName() + "\n" + currentBird.toString() + "\n\n";
     }
     return output;
   }
@@ -104,8 +98,8 @@ public class AviaryClass implements Aviary {
   }
 
 
-  // isCompatible(BirdClass bird) checks whether the
-  //       given bird is compatible with this aviary
+  // isCompatible(bird) -- checks whether the given bird is compatible with this aviary.
+  //                       return true if compatible, false otherwise
   public boolean isCompatible(Bird bird) {
     boolean compatible = false;
     switch (this.aviaryType) {
@@ -139,10 +133,6 @@ public class AviaryClass implements Aviary {
   }
 
 
-
-
-
-
   @Override
   public String toString() {
     String output = this.getAviaryName() + " is located on " + this.getAviaryLocation() + ".\nIt currently houses the following birds:\n";
@@ -169,16 +159,7 @@ public class AviaryClass implements Aviary {
       } else {
         return false;
       }
-
   }
-
-
-
-
-
-
-
-
 
 
 

@@ -26,10 +26,10 @@ public class nickTest {
 
 
 
-    BirdClass larry = new Pigeon("Larry", 2, false, foodPref);
-    BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey);
-    BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot);
-    BirdClass harry = new Waterfowl("Harry", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS);
+    BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "White nose");
+    BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey, "Large, shiny talons");
+    BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
+    BirdClass harry = new Waterfowl("Harry", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
 
 
     ConservatoryClass conservatory = new ConservatoryClass();
@@ -45,5 +45,15 @@ public class nickTest {
     System.out.println(conservatory.calculateFood());
 
     System.out.println("--------------------------------------");
+
+    for (int j = 0; j < conservatory.getNumAviaries(); j++) {
+      AviaryClass currentAviary = conservatory.getAviaryList().get(j);
+      System.out.println(currentAviary.printSign());
+      System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    }
+
+
+
+
   }
 }

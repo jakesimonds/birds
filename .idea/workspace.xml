@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="have added some aviary tests &amp; added method to bird getBirdType">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,8 +46,8 @@
   }
 }</component>
   <component name="RunManager" selected="Application.conservatoryTest2">
-    <configuration name="BirdTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Birds.BirdTest2" />
+    <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -61,8 +59,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
+    <configuration name="nickTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Birds.nickTest" />
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -122,10 +120,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.conservatoryTest2" />
+        <item itemvalue="Application.nickTest" />
         <item itemvalue="JUnit.conservatoryTest" />
         <item itemvalue="JUnit.birdTest" />
         <item itemvalue="JUnit.aviaryTest" />
-        <item itemvalue="Application.BirdTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -222,14 +220,70 @@
       <option name="project" value="LOCAL" />
       <updated>1657480597758</updated>
     </task>
-    <task id="LOCAL-00013" summary="committing so I can pull...">
-      <created>1657558201088</created>
+    <task id="LOCAL-00013" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657548973224</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1657558201088</updated>
+      <updated>1657548973224</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657552205859</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657552205859</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657553555043</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657553555043</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657553665811</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657553665811</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657553931552</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657553931552</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657555326243</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657555326243</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657555695908</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657555695908</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657557491859</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557491859</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added &amp; edited files in package 'Birds'">
+      <created>1657557616279</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557616279</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,9 +303,8 @@
     <MESSAGE value="Added files to package 'Birds'" />
     <MESSAGE value="committing just so it will let me pull" />
     <MESSAGE value="committing just so it will let me pull again" />
-    <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="have added some aviary tests &amp; added method to bird getBirdType" />
-    <MESSAGE value="committing so I can pull..." />
-    <option name="LAST_COMMIT_MESSAGE" value="committing so I can pull..." />
+    <MESSAGE value="Added &amp; edited files in package 'Birds'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &amp; edited files in package 'Birds'" />
   </component>
 </project>

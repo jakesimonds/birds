@@ -24,7 +24,7 @@ public class ConservatoryClass implements Conservatory {
     return this.name;
   }
 
-  //
+  // getNumBirds() -- returns the number of birds currently housed in the conservatory
   public int getNumBirds() {
     int numBirds = 0;
     for (int i = 0; i < this.numAviaries; i++) {
@@ -33,6 +33,11 @@ public class ConservatoryClass implements Conservatory {
       numBirds += currentAviary.getSize();
       }
     return numBirds;
+  }
+
+  // getNumAviaries returns the number of aviaries currently housed in the conservatory
+  public int getNumAviaries() {
+    return this.numAviaries;
   }
 
   // Guest Lookup (returns which aviary that bird is housed in)
@@ -124,7 +129,6 @@ public class ConservatoryClass implements Conservatory {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
         thisAviaryListing += "\t" + currentBird.getBirdName() + "\n";
-        // TODO should this include a description or any other info? like bird type
       }
       mapIndex.add(thisAviaryListing);
     }
@@ -185,9 +189,6 @@ public class ConservatoryClass implements Conservatory {
             case VEGETATION, OTHER_BIRDS:
               output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
               break;
-            //case OTHER_BIRDS:
-              //output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
-              //break;
             case SMALL_MAMMALS:
               output += foodList[i].toString() + "\t\t\t" + foodCounter[i] + "\n";
               break;
@@ -236,7 +237,8 @@ public class ConservatoryClass implements Conservatory {
 
   // makeAviary() -- creates & returns a new aviary compatible with the given bird.
   private Aviary makeAviary(Bird bird) {
-    // TODO : not sure how we're dealing with 'location' param yet. Filler for now.
+    // TODO : should this be private or public? Currently private bc it's only ever called
+    //  from within rescueBird method in the Conservatory class
     String location = "Campus " + (char)(65 + this.numAviaries);
     String name = "Aviary #" + (this.numAviaries + 1);
     AVIARY_TYPE type;
@@ -268,6 +270,8 @@ public class ConservatoryClass implements Conservatory {
   // (Private) Add Aviary -- Adds a new Aviary to the Conservatory
   // FAILS if there are already 20 aviaries
   private Conservatory addAviary(AviaryClass aviary) {
+    // TODO : should this be private or public? Currently private bc it's only ever called
+    //  from within rescueBird method in the Conservatory class
     // check whether there are already 20 aviaries,
     // if no, make a new aviary and update numAviaries/aviaryList
     if (this.aviaryListFull()) {
@@ -285,7 +289,7 @@ public class ConservatoryClass implements Conservatory {
 
 
   // returns a list of existing aviary objects within the conservatory
-  private ArrayList<AviaryClass> getAviaryList() {
+  public ArrayList<AviaryClass> getAviaryList() {
     return this.aviaryList;
   }
 
@@ -303,8 +307,6 @@ public class ConservatoryClass implements Conservatory {
       return true;
     } else { return false; }
   }
-
-
 
 
 
