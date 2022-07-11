@@ -159,6 +159,9 @@ public class ConservatoryClass implements Conservatory {
     String output = "FOOD TYPE \t\t NUMBER OF BIRDS\n";
     for (int i = 0; i < SIZE; i++) {
       if (foodCounter[i] > 0) {
+        // TODO : Adjust tabs here to be specific to the ENUM
+        //  (for instance, shorter enum has more tabs after it so that everythnig lines up in the end)
+        //  (do a test with every food used so we can see what needs extra tabs)
         output += foodList[i].toString() + "\t\t" + foodCounter[i] + "\n";
       }
     }
@@ -182,7 +185,7 @@ public class ConservatoryClass implements Conservatory {
     }
     // AT THIS POINT, NO EXISTING AVIARIES CAN HOUSE NEW BIRD
     //            ATTEMPT TO CREATE A NEW AVIARY FOR OUR BIRD:
-    if (this.isFull()) {
+    if (this.aviaryListFull()) {
       // Conservatory is full. No room to add a new aviary.
       throw new IllegalStateException("Conservatory full for this bird type. Cannot add a new " + bird.getBirdName());
     } else {
@@ -201,7 +204,7 @@ public class ConservatoryClass implements Conservatory {
   // makeAviary() -- creates & returns a new aviary compatible with the given bird.
   private Aviary makeAviary(Bird bird) {
     // TODO : not sure how we're dealing with 'location' param yet. Filler for now.
-    String location = "Maine"; // THIS IS FILLER
+    String location = "Campus " + (char)(65 + this.numAviaries);
     String name = "Aviary #" + (this.numAviaries + 1);
     AVIARY_TYPE type;
     // figure out what type of aviary is required for the given bird:
@@ -234,9 +237,9 @@ public class ConservatoryClass implements Conservatory {
   private Conservatory addAviary(AviaryClass aviary) {
     // check whether there are already 20 aviaries,
     // if no, make a new aviary and update numAviaries/aviaryList
-    if (this.isFull()) {
+    if (this.aviaryListFull()) {
       //Conservatory is full (of aviaries)!
-      throw new IllegalStateException("Conservatory is full. Cannot add another Aviary.");
+      throw new IllegalStateException("Aviary Capacity is full. Cannot add another Aviary.");
     }
     else {
       // Conservatory has 19 or fewer aviaries:
@@ -253,14 +256,33 @@ public class ConservatoryClass implements Conservatory {
     return this.aviaryList;
   }
 
+  // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
+  public boolean isFull() {
+    if (!this.aviaryListFull()) {
+      // still room for more aviaries
+      return false;
+    } else {
+      // there are already 20 aviaries
+      boolean full = true;
+      for (int i = 0; i < this.numAviaries; i++) {
+        // iterate through every aviary and check is full
+        AviaryClass currentAviary = this.aviaryList.get(i);
+        if (!currentAviary.isFull()) {
+          full = false;
+          break;
+        }
+      }
+      return full;
+    }
+  }
+
 
   // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
-  public boolean isFull() {
+  public boolean aviaryListFull() {
     if (this.numAviaries == 20) {
       return true;
     } else { return false; }
   }
-
 
 
 }

@@ -23,7 +23,10 @@ public interface Conservatory {
   //                        there is room for it (in a compatible aviary)
   public Conservatory rescueBird(Bird bird);
 
-  // isFUll() -- Returns true if the conservatory already has 20 Aviaries, false otherwise
+  // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
   public boolean isFull();
+
+  // aviariesFull() -- Returns true if the conservatory already has 20 Aviaries, false otherwise
+  public boolean aviaryListFull();
 
 }
