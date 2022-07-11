@@ -24,7 +24,7 @@ public class ConservatoryClass implements Conservatory {
     return this.name;
   }
 
-  //
+  // getNumBirds() -- returns the number of birds currently housed in the conservatory
   public int getNumBirds() {
     int numBirds = 0;
     for (int i = 0; i < this.numAviaries; i++) {
@@ -33,6 +33,11 @@ public class ConservatoryClass implements Conservatory {
       numBirds += currentAviary.getSize();
       }
     return numBirds;
+  }
+
+  // getNumAviaries returns the number of aviaries currently housed in the conservatory
+  public int getNumAviaries() {
+    return this.numAviaries;
   }
 
   // Guest Lookup (returns which aviary that bird is housed in)
@@ -285,7 +290,7 @@ public class ConservatoryClass implements Conservatory {
 
 
   // returns a list of existing aviary objects within the conservatory
-  private ArrayList<AviaryClass> getAviaryList() {
+  public ArrayList<AviaryClass> getAviaryList() {
     return this.aviaryList;
   }
 

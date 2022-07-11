@@ -86,10 +86,7 @@ public class AviaryClass implements Aviary {
     String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
     for (int i = 0; i < this.numBirds; i++) {
       BirdClass currentBird = this.birdList.get(i);
-      output += currentBird.toString() + "--" + "\n";
-      // TODO : SHOULD THIS BE bird.toString() or bird.getName() ???
-      //  "gives a description of the birds it houses and any interesting information that it may have about that animal"
-      //  (should include the description in toString for BirdClass)
+      output += "\t" + currentBird.getBirdName() + "\n" + currentBird.toString() + "\n\n";
     }
     return output;
   }

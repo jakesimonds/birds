@@ -11,6 +11,9 @@ public interface Conservatory {
   // getNumBirds() -- returns the number of birds currently housed in the conservatory
   public int getNumBirds();
 
+  // getNumAviaries returns the number of aviaries currently housed in the conservatory
+  public int getNumAviaries();
+
   // guestLookup(bird) -- returns which aviary that bird is housed in
   public String guestLookup(String birdName);
 
@@ -27,6 +30,10 @@ public interface Conservatory {
   // rescueNewBird(bird) -- adds new bird to the conservatory if/where
   //                        there is room for it (in a compatible aviary)
   public Conservatory rescueBird(Bird bird);
+
+  // returns a list of existing aviary objects within the conservatory
+  public ArrayList<AviaryClass> getAviaryList();
+
 
   // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
   public boolean isFull();
