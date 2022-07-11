@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="have added some aviary tests &amp; added method to bird getBirdType">
-      <change afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657480597758</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="committing so I can pull...">
+      <created>1657558201088</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657558201088</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +251,7 @@
     <MESSAGE value="committing just so it will let me pull again" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="have added some aviary tests &amp; added method to bird getBirdType" />
-    <option name="LAST_COMMIT_MESSAGE" value="have added some aviary tests &amp; added method to bird getBirdType" />
+    <MESSAGE value="committing so I can pull..." />
+    <option name="LAST_COMMIT_MESSAGE" value="committing so I can pull..." />
   </component>
 </project>
