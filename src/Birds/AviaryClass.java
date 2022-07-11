@@ -15,7 +15,7 @@ public class AviaryClass implements Aviary {
 
 
 
-  //===================================== CONSTRUCTORS =========================================
+  //================================== CONSTRUCTORS ======================================
   public AviaryClass(String aviaryName, AVIARY_TYPE aviaryType, String aviaryLocation) {
     this.aviaryName = aviaryName;
     this.aviaryType = aviaryType;
@@ -24,69 +24,71 @@ public class AviaryClass implements Aviary {
     this.numBirds = 0;
     this.birdList = new ArrayList<>();
   }
-  // TODO : Should there be other constructors?
-  //  Or does every aviary need to be initialized with name/type/location?
-  //  (leaning towards the latter)
 
-  //===================================== METHODS =========================================
+  //===================================== METHODS ========================================
 
-  // getBirdList() -- private method which returns a
-  //          list of the bird objects in that aviary
+  // getBirdList() -- returns an Arraylist of the bird objects in that aviary
   public ArrayList<BirdClass> getBirdList(){
     return this.birdList;
   }
 
+  // getAviaryName() -- returns the name of the aviary
   public String getAviaryName() {
     return this.aviaryName;
   }
 
-  // ACCESSOR METHODS
-
-  // getAviaryLocation returns a string for that aviary's location
+  // getAviaryLocation() -- returns a string for that aviary's location
   public String getAviaryLocation(){
-
     return this.aviaryLocation;
   }
 
-  // getSize returns the number of birds in the aviary
+  // getSize() -- returns the number of birds in the aviary
   public int getSize() {
     return this.numBirds;
   }
 
-  // getType returns the type of birds stored in the aviary (from AVIARY_TYPE enum)
+  // getType() -- returns the type of birds stored in the aviary (from AVIARY_TYPE enum)
   public AVIARY_TYPE getType() {
     return this.aviaryType;
   }
 
-  // Add Bird (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
-  // UPDATES numOfBirds
+  // addBird() -- adds the given bird to this aviary
+  // (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
   @Override
   public Aviary addBird(Bird bird) {
-    if (this.numBirds == 5) {
-      throw new IllegalStateException("Cannot add a bird to a full aviary.");
+    if (bird.getExtinct()) {
+      // bird is extinct
+      throw new IllegalStateException("Cannot add an extinct bird to an aviary.");
     } else {
-      // There is room to add another bird.
-      // Check whether bird is compatible with this aviary:
-      if (!this.isCompatible(bird)) {
-        // throw error
-        throw new IllegalStateException("Attempted to add a bird to incompatible aviary.");
-      }
-      else {
-        //bird is compatible with aviary
-        this.birdList.add((BirdClass)bird);
-        this.numBirds ++;
-        return this;
+      if (this.isFull()) {
+        // aviary is full
+        throw new IllegalStateException("Cannot add a bird to a full aviary.");
+      } else {
+        // There is room to add another bird.
+        // Check whether bird is compatible with this aviary:
+        if (!this.isCompatible(bird)) {
+          // throw error
+          throw new IllegalStateException("Attempted to add a bird to incompatible aviary.");
+        }
+        else {
+          //bird is compatible with aviary
+          this.birdList.add((BirdClass) bird);
+          this.numBirds++;
+          return this;
+        }
       }
     }
   }
 
-  // printSign prints bird info to user for that aviary
-  // TODO : should this System.out.println, or should it return a string?
+  // printSign() -- returns a String listing birds housed in that aviary
   public String printSign(){
     // iterate through birdList, printing each bird's info:
     String output = "Birds housed in this aviary are:\n\n";
     for (int i = 0; i < this.numBirds; i++) {
       output += this.birdList.get(i).toString() + "\n";
+      // TODO : SHOULD THIS BE bird.toString() or bird.getName() ???
+      //  "gives a description of the birds it houses and any interesting information that it may have about that animal"
+      //  (should include the description in toString for BirdClass)
     }
     return output;
   }
@@ -99,8 +101,6 @@ public class AviaryClass implements Aviary {
     }
     else { return false; }
   }
-
-
 
 
   // isCompatible(BirdClass bird) checks whether the
