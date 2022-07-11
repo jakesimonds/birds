@@ -6,16 +6,13 @@ public class AviaryClass implements Aviary {
 
   // Member Fields:
   private String aviaryName;              // name of aviary
-                                          // TODO : is this useful?
   private int numBirds;                   // number of birds stored in it
   private ArrayList<BirdClass> birdList;  // list of the bird objects stored there
   private AVIARY_TYPE aviaryType;         // type of bird(s) stored there
   private String aviaryLocation;          // location of this aviary
-                                          // TODO : is this useful?
 
 
-
-  //================================== CONSTRUCTORS ======================================
+  //================================== CONSTRUCTOR(S) ======================================
   public AviaryClass(String aviaryName, AVIARY_TYPE aviaryType, String aviaryLocation) {
     this.aviaryName = aviaryName;
     this.aviaryType = aviaryType;
@@ -90,7 +87,6 @@ public class AviaryClass implements Aviary {
     }
     return output;
   }
-
 
   // isFull return true if the aviary already has 5 birds, false if there is room to add another bird:
   public boolean isFull(){
