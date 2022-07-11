@@ -5,7 +5,6 @@ import java.util.ArrayList;
 // which house rescued birds
 
 public interface Conservatory {
-
   
   // guestLookup(bird) -- returns which aviary that bird is housed in
   public String guestLookup(String birdName);
