@@ -73,13 +73,13 @@ public class ConservatoryClass implements Conservatory {
       for (int j = 0; j < currentAviary.getSize(); j++) {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
-        birdIndex.add(currentBird.getBirdName() + " -- " + currentAviary.getAviaryName() + "\n");
+        birdIndex.add(currentBird.getBirdName() + "\t--\t" + currentAviary.getAviaryName() + "\n");
       }
     }
     // Sort the list of birds alphabetically:
     Collections.sort(birdIndex);
     // Add each element to a String for output:
-    String output = "";
+    String output = "INDEX OF BIRDS & THEIR AVIARIES:\n\n";
     for (int i = 0; i < birdIndex.size(); i++) {
       output += birdIndex.get(i);
     }
@@ -106,6 +106,7 @@ public class ConservatoryClass implements Conservatory {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
         thisAviaryListing += "\t" + currentBird.getBirdName() + "\n";
+        // TODO should this include a description or any other info? like bird type
       }
       mapIndex.add(thisAviaryListing);
     }
@@ -162,7 +163,7 @@ public class ConservatoryClass implements Conservatory {
         // TODO : Adjust tabs here to be specific to the ENUM
         //  (for instance, shorter enum has more tabs after it so that everythnig lines up in the end)
         //  (do a test with every food used so we can see what needs extra tabs)
-        output += foodList[i].toString() + "\t\t" + foodCounter[i] + "\n";
+        output += foodList[i].toString() + "\t\t\t\t" + foodCounter[i] + "\n";
       }
     }
     return output;
