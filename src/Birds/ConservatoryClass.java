@@ -81,7 +81,7 @@ public class ConservatoryClass implements Conservatory {
     // Add each element to a String for output:
     String output = "";
     for (int i = 0; i < birdIndex.size(); i++) {
-      output += birdIndex.get(i) + "\n";
+      output += birdIndex.get(i);
     }
     return output;
   }
