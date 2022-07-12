@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="edited toString for BirdClass &amp; Children">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/WaterBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WaterBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdOfPrey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/FlightlessBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Waterfowl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Waterfowl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
