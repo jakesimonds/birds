@@ -11,7 +11,7 @@ public class BirdTest {
     //=================================== Testing bird constructor =======================================
     @Test()
     public void TestBirdConstructor() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
@@ -25,7 +25,7 @@ public class BirdTest {
     //TODO
     @Test
     public void TestGetBirdName() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
@@ -39,7 +39,7 @@ public class BirdTest {
     //=================================== Testing getNumberOfWings =======================================
     @Test
     public void TestGetNumberOfWings() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
@@ -59,7 +59,7 @@ public class BirdTest {
     //=================================== Testing GetBirdType =======================================
     @Test
     public void TestGetBirdType() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
@@ -72,7 +72,7 @@ public class BirdTest {
     //=================================== Testing GetExtinct =======================================
     @Test
     public void TestGetExtinct() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, true, foodPref, "great with children");
@@ -86,7 +86,7 @@ public class BirdTest {
     //=================================== Testing GetFoodPreference =======================================
     @Test
     public void TestGetFoodPreference() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -99,7 +99,7 @@ public class BirdTest {
     @Test
     public void TestGetFoodPreference2() {
 
-        ArrayList<FOOD> foodPref1 = new ArrayList();
+        ArrayList<FOOD> foodPref1 = new ArrayList<>();
         foodPref1.add(FOOD.BERRIES);
         foodPref1.add(FOOD.BUDS);
 
@@ -110,7 +110,7 @@ public class BirdTest {
 //=================================== Testing GetFoodPrefString =======================================
     @Test
     public void TestGetFoodPrefString() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -125,7 +125,7 @@ public class BirdTest {
     //=================================== Testing SetBirdType =======================================
     @Test
     public void TestSetBirdType() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -140,7 +140,7 @@ public class BirdTest {
     //=================================== Testing GetBirdCharacteristic =======================================
     @Test
     public void TestGetBirdCharacteristic() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -154,7 +154,7 @@ public class BirdTest {
 
     @Test
     public void TestSetBirdCharacteristic() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -169,14 +169,14 @@ public class BirdTest {
     //=================================== Testing equality of food items =======================================
     @Test
     public void TestGetFoodPreference3() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
         foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
 
 
-        ArrayList<FOOD> foodPref1 = new ArrayList();
+        ArrayList<FOOD> foodPref1 = new ArrayList<>();
         foodPref1.add(FOOD.BERRIES);
         foodPref1.add(FOOD.EGGS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, true, foodPref, "great with children");
@@ -191,7 +191,7 @@ public class BirdTest {
     //knownwords violation
     @Test(expected = IllegalArgumentException.class)
     public void TestParrotKnownWords() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
@@ -199,7 +199,7 @@ public class BirdTest {
     }
     @Test(expected = IllegalArgumentException.class)
     public void TestParrotKnownWords1() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
@@ -209,7 +209,7 @@ public class BirdTest {
     //GetKnownWords test
     @Test()
     public void TestGetKnownWords() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -226,7 +226,7 @@ public class BirdTest {
     //Favorite Phrase test
     @Test()
     public void TestGetFavoritePhrase() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -243,7 +243,7 @@ public class BirdTest {
 
     @Test()
     public void TestGetBodyOfWater() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
@@ -264,7 +264,7 @@ public class BirdTest {
     //=================================== Testing BirdEquality =======================================
     @Test
     public void TestBirdEquality() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
@@ -279,7 +279,7 @@ public class BirdTest {
 
     @Test
     public void TestBirdToString() {
-        ArrayList<FOOD> foodPref = new ArrayList();
+        ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         BirdClass bird1 = new BirdClass("Common Pigeon", 2, false, foodPref, "great with children");
