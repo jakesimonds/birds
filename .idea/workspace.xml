@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="names changed in aviaryTest birdTest &amp; conservatoryTest">
-      <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/constructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/ConstructorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.conservatoryTest">
+  <component name="RunManager" selected="JUnit.constructorTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
@@ -70,21 +71,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="aviaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="birds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Birds.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Birds" />
-      <option name="MAIN_CLASS_NAME" value="Birds.aviaryTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,13 +105,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="constructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="birds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Birds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Birds" />
+      <option name="MAIN_CLASS_NAME" value="Birds.constructorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.constructorTest" />
         <item itemvalue="JUnit.conservatoryTest" />
         <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="Application.nickTest" />
         <item itemvalue="JUnit.birdTest" />
-        <item itemvalue="JUnit.aviaryTest" />
       </list>
     </recent_temporary>
   </component>
