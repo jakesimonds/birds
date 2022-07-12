@@ -491,46 +491,11 @@ public class conservatoryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-
-
         BirdClass larry = new Pigeon("Common Pigeon", 2, true, foodPref, "extinct pigeon");
 
         conservatory.rescueBird(larry);
 
     }
-
-
-
-
-
-//    @Test(expected = IllegalStateException.class)
-//    public void ConservatoryTestDifferentBirds() {
-//        ArrayList<FOOD> foodPref = new ArrayList<>();
-//        foodPref.add(FOOD.BERRIES);
-//        foodPref.add(FOOD.BUDS);
-//        ArrayList<FOOD> foodPrefPrey = new ArrayList<>();
-//        foodPrefPrey.add(FOOD.SMALL_MAMMALS);
-//        foodPrefPrey.add(FOOD.LARVAE);
-//        ArrayList<FOOD> foodPrefParrot = new ArrayList<>();
-//        foodPrefParrot.add(FOOD.INSECTS);
-//        foodPrefParrot.add(FOOD.LARVAE);
-//
-//        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
-//        BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey,"super smart");
-//        BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot,"strong self esteem");
-//
-//        ConservatoryClass conservatory = new ConservatoryClass();
-//
-//        for(int i = 0; i<30; i++){
-//            conservatory.rescueBird(larry);
-//            conservatory.rescueBird(larry);
-//            conservatory.rescueBird(larry);
-//        }
-//
-//    }
-
-
-    //alphabetical: can name two bird AAA & ZZZ, call their names by index or something
 
 
 

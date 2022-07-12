@@ -38,8 +38,6 @@ public class birdTest {
     }
 
 
-
-
     //=================================== Testing getNumberOfWings =======================================
     @Test(expected = IllegalArgumentException.class)
     public void TestGetNumberOfWings() {
