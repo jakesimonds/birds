@@ -4,17 +4,15 @@ import java.util.Locale;
 
 public class BirdClass implements Bird  {
 
-    private String name;
-    private int wingNum;
-    //private String birdType;        // these attributes are both kind of specific to children classes --
-    //private String description;     // not sure if/how to make them make sense here.
-    private boolean extinct;
-    private ArrayList<FOOD> foodPreference;
-    private String birdType;
-    private String characteristic;
+    private String name;                        // bird name ie. Grey Parrot, or Black-Capped Chickadee
+    private int wingNum;                        // number of wings
+    private boolean extinct;                    // whether or not bird is extinct
+    private ArrayList<FOOD> foodPreference;     // ArrayList of 2-4 foods bird prefers
+    private String birdType;                    // Type of bird ie. Flightless, Pigeon, Bird of Prey, etc.
+    private String characteristic;              // a defining characteristic of that bird
 
 
-
+    //===================================== CONSTRUCTORS =========================================
 
     public BirdClass(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {
         // check that 2-4 food preferences selected:
