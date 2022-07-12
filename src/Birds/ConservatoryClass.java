@@ -278,6 +278,7 @@ public class ConservatoryClass implements Conservatory {
 
   // addAviary() -- Adds a new Aviary to the Conservatory
   //                fails if there are already 20 aviaries
+  @Override
   private Conservatory addAviary(AviaryClass aviary) {
     // check whether there are already 20 aviaries,
     // if no, make a new aviary and update numAviaries/aviaryList
@@ -295,12 +296,14 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-  // returns a list of existing aviary objects within the conservatory
+  // getAviaryList() -- returns an ArrayList of existing aviary objects within the conservatory
+  @Override
   public ArrayList<AviaryClass> getAviaryList() {
     return this.aviaryList;
   }
 
   // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
+  @Override
   public boolean isFull() {
     if (this.getNumBirds() == 100) {
       return true;
@@ -308,7 +311,8 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-  // Is Full -- Returns true if the conservatory already has 20 Aviaries, false otherwise
+  // aviaryListFull() -- Returns true if the conservatory already has 20 Aviaries, false otherwise
+  @Override
   public boolean aviaryListFull() {
     if (this.numAviaries == 20) {
       return true;
@@ -337,13 +341,6 @@ public class ConservatoryClass implements Conservatory {
       return false;
     }
   }
-
-
-
-
-
-
-
 
 
 
