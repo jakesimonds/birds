@@ -73,53 +73,101 @@ public class ConstructorTest {
   // Test Bird Constructor1:
   @Test
   public void TestBirdConstructor1(){
-    // make some ArrayLists of food preferences:
-    ArrayList<FOOD> foodPref1 = new ArrayList<>();
-    foodPref1.add(FOOD.AQUATIC_INVERTEBRATES);
-    foodPref1.add(FOOD.INSECTS);
-    foodPref1.add(FOOD.SEEDS);
-    foodPref1.add(FOOD.BUDS);
-
+    // make ArrayList of food preferences:
     ArrayList<FOOD> foodPref2 = new ArrayList<>();
     foodPref2.add(FOOD.EGGS);
     foodPref2.add(FOOD.FRUIT);
 
-    // make some birds:
-    BirdClass bird1 = new BirdClass("Duck", 2, false, foodPref1, "Loves to swim");
+    // make bird:
     BirdClass bird2 = new BirdClass("Moa", 2, true, foodPref2, "No longer with us :(");
 
     // check that expected values for all fields are as expected:
-    assertEquals("Duck", bird1.getBirdName());
-    assertEquals(2, bird1.getNumberOfWings());
-    assertEquals(false, bird1.getExtinct());
-    assertEquals(foodPref1, bird1.getFoodPreference());
-    assertEquals("Loves to swim", bird1.getBirdCharacteristic());
-
-
     assertEquals("Moa", bird2.getBirdName());
     assertEquals(2, bird2.getNumberOfWings());
     assertEquals(true, bird2.getExtinct());
     assertEquals(foodPref2, bird2.getFoodPreference());
     assertEquals("No longer with us :(", bird2.getBirdCharacteristic());
-
-
-
-
-
-
   }
 
-  // Test Bird Constructor1 Exception(s):
-  // TODO : I don't think there are any exceptions to test for this constructor
+
+
+  // Test Bird Constructor2 (assume not extinct):
+  @Test
+  public void TestBirdConstructor2(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.SEEDS);
+    foodPref.add(FOOD.BUDS);
+
+    // make bird:
+    BirdClass bird = new BirdClass("Duck", 2, foodPref, "Loves to swim");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Duck", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(false, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Loves to swim", bird.getBirdCharacteristic());
+  }
+
+
+
+  // Test Bird Constructor3 (assume 2 wings):
+  @Test
+  public void TestBirdConstructor3(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.BERRIES);
+    foodPref.add(FOOD.BUDS);
+    foodPref.add(FOOD.FRUIT);
+
+    // make bird:
+    BirdClass bird = new BirdClass("Fruit Bat", false, foodPref, "Thinks it's a bird");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Fruit Bat", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(false, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Thinks it's a bird", bird.getBirdCharacteristic());
+  }
+
+
+
+  // Test Bird Constructor4 (assume 2 wings & not extinct):
+  @Test
+  public void TestBirdConstructor4(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.BERRIES);
+    foodPref.add(FOOD.FRUIT);
+    foodPref.add(FOOD.BUDS);
+
+    // make bird:
+    BirdClass bird = new BirdClass("Big Bird", foodPref, "Works at Sesame Street");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Big Bird", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(false, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Works at Sesame Street", bird.getBirdCharacteristic());
+  }
+
+
+
+  //=========================== Test Bird Constructor Exception(s): =============================
   @Test(expected = IllegalArgumentException.class)
-  public void TestBirdConstructor1FoodException1(){
+  public void TestBirdConstructorFoodException1(){
     // test with too few food preferences:
     ArrayList<FOOD> foodPrefFew = new ArrayList<>();
     foodPrefFew.add(FOOD.BERRIES);
     BirdClass bird = new BirdClass("Bald Eagle", 2, false, foodPrefFew, "Bald");
   }
   @Test(expected = IllegalArgumentException.class)
-  public void TestBirdConstructor1FoodException2(){
+  public void TestBirdConstructorFoodException2(){
     // test with too many food preferences:
     ArrayList<FOOD> foodPrefMany = new ArrayList<>();
     foodPrefMany.add(FOOD.BERRIES);
@@ -129,6 +177,34 @@ public class ConstructorTest {
     foodPrefMany.add(FOOD.SEEDS);
     BirdClass bird = new BirdClass("Bald Eagle", 2, false, foodPrefMany, "Bald");
   }
+  @Test(expected = IllegalArgumentException.class)
+  public void TestBirdConstructorWingsException1(){
+    // test with too few (negative) wings:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.BERRIES);
+    foodPref.add(FOOD.BUDS);
+    BirdClass bird = new BirdClass("Bald Eagle", -1, false, foodPref, "Bald");
+  }
+  @Test(expected = IllegalArgumentException.class)
+  public void TestBirdConstructorWingsException2(){
+    // test with too many (more than 3) wings:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.BERRIES);
+    foodPref.add(FOOD.BUDS);
+    BirdClass bird = new BirdClass("Bald Eagle", 4, false, foodPref, "Bald");
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
