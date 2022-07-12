@@ -31,7 +31,7 @@ public class nickTest {
     BirdClass b3 = new Parrot("Grey Parrot",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
     BirdClass b4 = new Waterfowl("Duck", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
     BirdClass b5 = new FlightlessBird("Kiwi", 1, false, foodPref, "Likes to sleep during the day");
-    BirdClass b6 = new Owl("Barn Owl", 2, false, foodPrefPrey, "Perhaps too wise");
+    BirdClass b6 = new Owl("Barn Owl", foodPrefPrey, "Perhaps too wise");
     BirdClass b7 = new Shorebird("Great Puffin", 2, false, foodPrefDuck, WATER.OCEAN, "Thinks it's a penguin.");
 
 
@@ -56,6 +56,9 @@ public class nickTest {
       AviaryClass currentAviary = conservatory.getAviaryList().get(j);
       System.out.println(currentAviary.printSign());
       System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+      System.out.println(b6.getNumberOfWings());
+      System.out.println(b6.getExtinct());
     }
 
 

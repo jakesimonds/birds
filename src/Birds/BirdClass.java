@@ -14,7 +14,6 @@ public class BirdClass implements Bird  {
     private String characteristic;
 
 
-    //===================================== CONSTRUCTORS =========================================
 
 
     public BirdClass(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {
@@ -34,7 +33,6 @@ public class BirdClass implements Bird  {
         this.characteristic = characteristic;
     }
 
-    /*
 
 
     // Overloading the constructor (if we can assume a bird is not extinct):
@@ -55,6 +53,8 @@ public class BirdClass implements Bird  {
         this.characteristic = characteristic;
     }
 
+
+
     // Overloading the constructor (if we can assume a bird has 2 wings):
     public BirdClass(String name, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {
         // check that 2-4 food preferences selected:
@@ -69,6 +69,8 @@ public class BirdClass implements Bird  {
         this.birdType = "Bird";
         this.characteristic = characteristic;
     }
+
+
 
     // Overloading the constructor (if we can assume a bird has 2 wings and is not extinct):
     public BirdClass(String name, ArrayList<FOOD> foodPreference, String characteristic) {
@@ -85,7 +87,6 @@ public class BirdClass implements Bird  {
         this.characteristic = characteristic;
     }
 
-    */
 
     //===================================== METHODS =========================================
 
