@@ -74,19 +74,20 @@ public class ConstructorTest {
   @Test
   public void TestBirdConstructor1(){
     // make ArrayList of food preferences:
-    ArrayList<FOOD> foodPref2 = new ArrayList<>();
-    foodPref2.add(FOOD.EGGS);
-    foodPref2.add(FOOD.FRUIT);
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.EGGS);
+    foodPref.add(FOOD.FRUIT);
 
     // make bird:
-    BirdClass bird2 = new BirdClass("Moa", 2, true, foodPref2, "No longer with us :(");
+    BirdClass bird = new BirdClass("Moa", 2, true, foodPref, "No longer with us :(");
 
     // check that expected values for all fields are as expected:
-    assertEquals("Moa", bird2.getBirdName());
-    assertEquals(2, bird2.getNumberOfWings());
-    assertEquals(true, bird2.getExtinct());
-    assertEquals(foodPref2, bird2.getFoodPreference());
-    assertEquals("No longer with us :(", bird2.getBirdCharacteristic());
+    assertEquals("Moa", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(true, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Bird", bird.getBirdType());
+    assertEquals("No longer with us :(", bird.getBirdCharacteristic());
   }
 
 
@@ -109,6 +110,7 @@ public class ConstructorTest {
     assertEquals(2, bird.getNumberOfWings());
     assertEquals(false, bird.getExtinct());
     assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Bird", bird.getBirdType());
     assertEquals("Loves to swim", bird.getBirdCharacteristic());
   }
 
@@ -131,6 +133,7 @@ public class ConstructorTest {
     assertEquals(2, bird.getNumberOfWings());
     assertEquals(false, bird.getExtinct());
     assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Bird", bird.getBirdType());
     assertEquals("Thinks it's a bird", bird.getBirdCharacteristic());
   }
 
@@ -153,6 +156,7 @@ public class ConstructorTest {
     assertEquals(2, bird.getNumberOfWings());
     assertEquals(false, bird.getExtinct());
     assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Bird", bird.getBirdType());
     assertEquals("Works at Sesame Street", bird.getBirdCharacteristic());
   }
 
@@ -196,6 +200,89 @@ public class ConstructorTest {
 
 
 
+
+
+  //================================== BIRD OF PREY =======================================
+
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  //
+  // Mostly need to test that birdType is being initialized as expected:
+  @Test
+  public void TestBirdOfPreyConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.OTHER_BIRDS);
+    foodPref.add(FOOD.SMALL_MAMMALS);
+
+    // make bird:
+    BirdOfPrey bird = new BirdOfPrey("Dragon", 2, true, foodPref, "Very large bird. Likes to eat naughty children");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Dragon", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(true, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Bird of Prey", bird.getBirdType());
+    assertEquals("Very large bird. Likes to eat naughty children", bird.getBirdCharacteristic());
+    assertEquals("Birds of prey all have sharp, hooked beaks with visible nostrils.", bird.description);
+  }
+
+
+
+  //================================= FLIGHTLESS BIRD =====================================
+
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  //
+  // Mostly need to test that birdType is being initialized as expected:
+  @Test
+  public void TestFlightlessBirdConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.EGGS);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.SEEDS);
+
+    // make bird:
+    FlightlessBird bird = new FlightlessBird("Emu", foodPref, "Very large bird");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Emu", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(false, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Flightless Bird", bird.getBirdType());
+    assertEquals("Very large bird", bird.getBirdCharacteristic());
+    assertEquals("Flightless birds live on the ground and have no (or undeveloped) wings. " +
+            "They include the emus, kiwis, and moas. Some (but not all) of these birds are extinct.", bird.description);
+  }
+
+
+
+  //======================================= OWL ===========================================
+
+
+
+
+  //====================================== PARROT =========================================
+
+  // TODO : Special checks for vocabSize, favoritePhrase
+  // TODO : Special checks for exceptions (numWords <0, numWords > 100)
+
+  //====================================== PIGEON =========================================
+
+
+
+  //==================================== SHOREBIRD ========================================
+
+  // TODO : special checks for bodyOfWater
+
+  //==================================== WATER BIRD =======================================
+
+  // TODO : special checks for bodyOfWater
+
+  //===================================== WATERFOWL =======================================
+
+  // TODO : special checks for bodyOfWater
 
 
 
