@@ -26,13 +26,13 @@ public class nickTest {
 
 
 
-    BirdClass b1 = new Pigeon("Dove", 2, false, foodPref, "White nose");
+    BirdClass b1 = new Pigeon("Dove", 2, foodPref, "White nose");
     BirdClass b2 = new BirdOfPrey("Osprey", 2, false,foodPrefPrey, "Large, shiny talons");
-    BirdClass b3 = new Parrot("Grey Parrot",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
+    BirdClass b3 = new Parrot("Grey Parrot", 44, "idk",false,foodPrefParrot, "Shrill voice");
     BirdClass b4 = new Waterfowl("Duck", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
     BirdClass b5 = new FlightlessBird("Kiwi", 1, false, foodPref, "Likes to sleep during the day");
     BirdClass b6 = new Owl("Barn Owl", foodPrefPrey, "Perhaps too wise");
-    BirdClass b7 = new Shorebird("Great Puffin", 2, false, foodPrefDuck, WATER.OCEAN, "Thinks it's a penguin.");
+    BirdClass b7 = new Shorebird("Great Puffin", foodPrefDuck, WATER.OCEAN, "Thinks it's a penguin.");
 
 
     ConservatoryClass conservatory = new ConservatoryClass();
@@ -57,8 +57,34 @@ public class nickTest {
       System.out.println(currentAviary.printSign());
       System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
+
+      System.out.println("B1 wingNum, extinct:");
+      System.out.println(b1.getNumberOfWings());
+      System.out.println(b1.getExtinct());
+
+      System.out.println("B2 wingNum, extinct:");
+      System.out.println(b2.getNumberOfWings());
+      System.out.println(b2.getExtinct());
+
+      System.out.println("B3 wingNum, extinct:");
+      System.out.println(b3.getNumberOfWings());
+      System.out.println(b3.getExtinct());
+
+      System.out.println("B4 wingNum, extinct:");
+      System.out.println(b4.getNumberOfWings());
+      System.out.println(b4.getExtinct());
+
+      System.out.println("B5 wingNum, extinct:");
+      System.out.println(b5.getNumberOfWings());
+      System.out.println(b5.getExtinct());
+
+      System.out.println("B6 wingNum, extinct:");
       System.out.println(b6.getNumberOfWings());
       System.out.println(b6.getExtinct());
+
+      System.out.println("B7 wingNum, extinct:");
+      System.out.println(b7.getNumberOfWings());
+      System.out.println(b7.getExtinct());
     }
 
 
