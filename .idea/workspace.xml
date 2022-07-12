@@ -7,6 +7,7 @@
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="more tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Birds/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/birdTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,10 +125,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.conservatoryTest" />
+        <item itemvalue="JUnit.aviaryTest" />
+        <item itemvalue="JUnit.birdTest" />
         <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="Application.nickTest" />
-        <item itemvalue="JUnit.birdTest" />
-        <item itemvalue="JUnit.aviaryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -317,6 +318,7 @@
     <MESSAGE value="have added some aviary tests &amp; added method to bird getBirdType" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="more tests" />
+    <MESSAGE value="committing so I can pull..." />
+    <option name="LAST_COMMIT_MESSAGE" value="committing so I can pull..." />
   </component>
 </project>

@@ -16,11 +16,11 @@ public class aviaryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry3 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry4 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry5 = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry3 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry4 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry5 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
@@ -44,10 +44,10 @@ public class aviaryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry3 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry4 = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry3 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry4 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
 
 
@@ -71,12 +71,12 @@ public class aviaryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Pigeon("Larry", 2, false, foodPref,"great with children");
-        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref,"great with children");
-        BirdClass larry3 = new Pigeon("Larry", 2, false, foodPref,"great with children");
-        BirdClass larry4 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry5 = new Pigeon("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry6 = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref,"great with children");
+        BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref,"great with children");
+        BirdClass larry3 = new Pigeon("Common Pigeon", 2, false, foodPref,"great with children");
+        BirdClass larry4 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry5 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry6 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
@@ -96,7 +96,7 @@ public class aviaryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new BirdOfPrey("Larry", 2, false, foodPref, "great with children");
+        BirdClass larry = new BirdOfPrey("Common Pigeon", 2, false, foodPref, "great with children");
 
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
@@ -115,8 +115,8 @@ public class aviaryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new BirdOfPrey("Larry", 2, false, foodPref, "great with children");
-        BirdClass larry2 = new Pigeon("Larry", 2, false, foodPref, "great with children");
+        BirdClass larry = new BirdOfPrey("Eagle", 2, false, foodPref, "great with children");
+        BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.BIRDS_OF_PREY, "Hannaford's parking lot");
         assertEquals(0, aviary1.getSize());
@@ -142,6 +142,7 @@ public class aviaryTest {
 //    }
 
 
+    //=================================== Test PrintSign =======================================
 
 
 
