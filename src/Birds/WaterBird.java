@@ -7,32 +7,36 @@ public class WaterBird extends BirdClass {
   // Member fields:
   WATER bodyOfWater;
 
+  //===================================== CONSTRUCTORS =========================================
 
   public WaterBird(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {
     super(name, wingNum, extinct, foodPreference, characteristic);
     this.bodyOfWater = bodyOfWater;
   }
-/*
-  public WaterBird(String name, int wingNum, ArrayList<FOOD> foodPreference, WATER bodyOfWater) {
-    super(name, wingNum, foodPreference);
-    this.bodyOfWater = bodyOfWater;
 
-  }
 
-  public WaterBird(String name, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater) {
-    super(name, extinct, foodPreference);
+  // if we can assume 2 wings:
+  public WaterBird(String name, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {
+    super(name, extinct, foodPreference, characteristic);
     this.bodyOfWater = bodyOfWater;
   }
 
-  public WaterBird(String name, ArrayList<FOOD> foodPreference, WATER bodyOfWater) {
-    super(name, foodPreference);
+
+  // if we can assume not extinct:
+  public WaterBird(String name, int wingNum, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {
+    super(name, wingNum, foodPreference, characteristic);
     this.bodyOfWater = bodyOfWater;
   }
-*/
 
 
+  // if we can assume both 2 wings and not extinct:
+  public WaterBird(String name, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {
+    super(name, foodPreference, characteristic);
+    this.bodyOfWater = bodyOfWater;
+  }
 
-  // Methods:
+
+  //===================================== METHODS =========================================
   public WATER getBodyOfWater() {
     return this.bodyOfWater;
   }
