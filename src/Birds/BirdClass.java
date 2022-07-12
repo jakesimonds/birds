@@ -11,7 +11,6 @@ public class BirdClass implements Bird  {
     private boolean extinct;
     private ArrayList<FOOD> foodPreference;
     private String birdType;
-
     private String characteristic;
 
 
@@ -39,20 +38,25 @@ public class BirdClass implements Bird  {
 
 
     // Overloading the constructor (if we can assume a bird is not extinct):
-    public BirdClass(String name, int wingNum, ArrayList<FOOD> foodPreference) {
+    public BirdClass(String name, int wingNum, ArrayList<FOOD> foodPreference, String characteristic) {
         // check that 2-4 food preferences selected:
         if (foodPreference.size()<2 || foodPreference.size() > 4) {
             throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
+        }
+        if (wingNum < 0 || wingNum > 3) {
+            throw new IllegalArgumentException("Wing number has to be 0-3 (we are inclusive of birds without wing (due to injury) & mutants with three wings");
         }
 
         this.name = name;
         this.wingNum = wingNum;
         this.extinct = false;
         this.foodPreference = foodPreference;
+        this.birdType = "Bird";
+        this.characteristic = characteristic;
     }
 
     // Overloading the constructor (if we can assume a bird has 2 wings):
-    public BirdClass(String name, boolean extinct, ArrayList<FOOD> foodPreference) {
+    public BirdClass(String name, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {
         // check that 2-4 food preferences selected:
         if (foodPreference.size()<2 || foodPreference.size() > 4) {
             throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
@@ -62,10 +66,12 @@ public class BirdClass implements Bird  {
         this.wingNum = 2;
         this.extinct = extinct;
         this.foodPreference = foodPreference;
+        this.birdType = "Bird";
+        this.characteristic = characteristic;
     }
 
     // Overloading the constructor (if we can assume a bird has 2 wings and is not extinct):
-    public BirdClass(String name, ArrayList<FOOD> foodPreference) {
+    public BirdClass(String name, ArrayList<FOOD> foodPreference, String characteristic) {
         // check that 2-4 food preferences selected:
         if (foodPreference.size()<2 || foodPreference.size() > 4) {
             throw new IllegalArgumentException("Number of preferred foods must be between 2 - 4.");
@@ -75,6 +81,8 @@ public class BirdClass implements Bird  {
         this.wingNum = 2;
         this.extinct = false;
         this.foodPreference = foodPreference;
+        this.birdType = "Bird";
+        this.characteristic = characteristic;
     }
 
     */
