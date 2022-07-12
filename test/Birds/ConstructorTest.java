@@ -9,11 +9,10 @@ import java.util.ArrayList;
 public class ConstructorTest {
 
   //=================================== CONSERVATORY =======================================
-  // Test Conservatory Constructor:
   @Test
   public void TestConservatoryConstructor(){
     ConservatoryClass conservatory = new ConservatoryClass();
-
+    // check that values for name, numAviaries, & aviaryList are as expected:
     assertEquals("Jake & Nick's Bird Rescue Sanctuary", conservatory.getName());
     assertEquals(0, conservatory.getNumAviaries());
     assertEquals(new ArrayList<AviaryClass>(), conservatory.getAviaryList());
