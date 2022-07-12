@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class BirdOfPrey extends BirdClass {
 
-    private String description;
+    public final String description;
 
     //===================================== CONSTRUCTORS =========================================
 

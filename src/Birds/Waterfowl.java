@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Waterfowl extends WaterBird {
 
 
-  private String description;
+  public final String description;
 
   //===================================== CONSTRUCTORS =========================================
   public Waterfowl(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {

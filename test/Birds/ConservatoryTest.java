@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 
 
-public class conservatoryTest {
+public class ConservatoryTest {
 
     //=================================== Testing getName =======================================
 
@@ -347,6 +347,59 @@ public class conservatoryTest {
 
     }
 
+
+
+    @Test
+    public void TestConservatoryToString() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+
+        ConservatoryClass c1 = new ConservatoryClass();
+        String toString = "Jake & Nick's Bird Rescue Sanctuary is a Conservatory" +
+                " currently comprised of 0 Aviaries.\nIt currently houses 0 birds.\n";
+        assertEquals(toString, c1.toString());
+
+        c1.rescueBird(larry);
+        c1.rescueBird(larry);
+        c1.rescueBird(larry);
+
+        String toStringLarry1 = "Jake & Nick's Bird Rescue Sanctuary is a Conservatory" +
+                " currently comprised of 1 Aviaries.\nIt currently houses 3 birds.\n";
+        assertEquals(toStringLarry1, c1.toString());
+
+        c1.rescueBird(larry);
+        c1.rescueBird(larry);
+        c1.rescueBird(larry);
+
+        String toStringLarry2 = "Jake & Nick's Bird Rescue Sanctuary is a Conservatory" +
+                " currently comprised of 2 Aviaries.\nIt currently houses 6 birds.\n";
+        assertEquals(toStringLarry2, c1.toString());
+
+    }
+
+
+    @Test
+    public void testConservatoryEquals() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Jake & Nick's Bird Rescue Sanctuary", 2, false, foodPref, "great with children");
+
+        ConservatoryClass c1 = new ConservatoryClass();
+        ConservatoryClass c2 = new ConservatoryClass();
+
+        assertEquals(c1, c2);
+        assertNotEquals(c1, larry);
+        assertNotEquals(c2, larry);
+
+    }
+
+    //              NOTE THAT PRIVATE METHODS addAviary() and makeAviary()
+    //              are tested in all cases where rescueBird() is called
 
 
 

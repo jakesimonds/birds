@@ -2,7 +2,7 @@ package Birds;
 import java.util.ArrayList;
 
 public class Shorebird extends WaterBird {
-  private String description;
+  public final String description;
 
   //===================================== CONSTRUCTORS =========================================
 

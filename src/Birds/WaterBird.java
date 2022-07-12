@@ -5,7 +5,7 @@ import java.util.Locale;
 public class WaterBird extends BirdClass {
   
   // Member fields:
-  WATER bodyOfWater;
+  private WATER bodyOfWater;
 
   //===================================== CONSTRUCTORS =========================================
 

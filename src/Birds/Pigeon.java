@@ -2,7 +2,7 @@ package Birds;
 import java.util.ArrayList;
 
 public class Pigeon extends BirdClass {
-  private String description;
+  public final String description;
 
 
   //===================================== CONSTRUCTORS =========================================

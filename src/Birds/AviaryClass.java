@@ -163,7 +163,7 @@ public class AviaryClass implements Aviary {
               this.aviaryType.equals(other.getType()) &&
               this.aviaryLocation.equals(other.getAviaryLocation()) &&
               this.numBirds == other.getSize() &&
-              this.birdList == other.getBirdList()) {
+              this.getBirdList().equals(other.getBirdList())) {
         return true;
       } else {
         return false;
