@@ -25,7 +25,7 @@ public class Parrot extends BirdClass {
         this.description = "Parrots have a short, curved beak and are known for their intelligence and ability to mimic sounds.";
         this.knownWords = knownWords;
         this.favoritePhrase = favoritePhrase;
-        setBirdType("Parrot");
+        this.setBirdType("Parrot");
     }
     
     // Get Known Words
@@ -45,10 +45,10 @@ public class Parrot extends BirdClass {
             extinctIsIsnt = "is";
         }
         return "The " + this.getBirdName() + " is a type of " + this.getBirdType() + ".\n" +
-                "It has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
+                "This " + this.getBirdName() + " has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
                 "This " + this.getBirdName() + "'s defining characteristic is: " + this.getBirdCharacteristic() + ".\n" +
                 this.getFoodPrefString() + "\n" +
-                "Vocabulary size: " + this.knownWords + ".\n" +
+                "Vocabulary size: " + this.knownWords + " known words.\n" +
                 "Favorite Phrase: " + this.favoritePhrase ;
     }
     

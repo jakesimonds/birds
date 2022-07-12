@@ -9,6 +9,6 @@ public class Shorebird extends WaterBird {
       this.description =
               "Shorebirds live near water sources including wetlands, " +
                       "freshwater and saltwater shorelands, even the ocean.";
-      setBirdType("Shorebird");
+      this.setBirdType("Shorebird");
     }
 }

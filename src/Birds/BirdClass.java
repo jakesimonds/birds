@@ -123,7 +123,7 @@ public class BirdClass implements Bird  {
     public String getFoodPrefString() {
         ArrayList list = this.getFoodPreference();
         // T left off on purpose, will add it back once rest of string is converted to lowercase
-        String res = "his bird eats: ";
+        String res = " eats: ";
         //iterate through this.foodPreference, adding to string the foods the bird eats
         int i;
         //adding comma in between all but last item
@@ -134,7 +134,7 @@ public class BirdClass implements Bird  {
         res = res + "and " + list.get(i) + ".";
         //setting string to lowercase and then adding capital T
         res = res.toLowerCase(Locale.ROOT);
-        res = "T" + res;
+        res = "This " + this.getBirdName() + res;
 
         return res;}
 
@@ -159,7 +159,7 @@ public class BirdClass implements Bird  {
             extinctIsIsnt = "is";
         }
         return "The " + this.name + " is a type of " + this.birdType + ".\n" +
-                "It has " + this.wingNum + " wings, and " + extinctIsIsnt + " extinct.\n" +
+                "This " + this.getBirdName() + " has " + this.wingNum + " wings, and " + extinctIsIsnt + " extinct.\n" +
                 "This " + this.name + "'s defining characteristic is: " + this.characteristic + ".\n" +
                 this.getFoodPrefString() ;
     }
@@ -176,7 +176,6 @@ public class BirdClass implements Bird  {
         if (this.name == other.getBirdName() && this.extinct == other.getExtinct()
                 && this.birdType == other.getBirdType() && this.wingNum == other.getNumberOfWings() ) {return true; }
         else {return false; }
-
     }
 
 
