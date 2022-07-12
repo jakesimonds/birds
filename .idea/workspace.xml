@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="names changed in aviaryTest birdTest &amp; conservatoryTest">
+      <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.conservatoryTest2">
+  <component name="RunManager" selected="JUnit.conservatoryTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
@@ -121,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="JUnit.conservatoryTest" />
+        <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="Application.nickTest" />
         <item itemvalue="JUnit.birdTest" />
         <item itemvalue="JUnit.aviaryTest" />
@@ -299,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657581543263</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="names changed in aviaryTest birdTest &amp; conservatoryTest">
+      <created>1657636106251</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1657636106251</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,6 +329,7 @@
     <MESSAGE value="have added some aviary tests &amp; added method to bird getBirdType" />
     <MESSAGE value="more tests" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &amp; edited files in package 'Birds'" />
+    <MESSAGE value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
   </component>
 </project>
