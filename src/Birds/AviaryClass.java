@@ -154,14 +154,14 @@ public class AviaryClass implements Aviary {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Aviary == false) {
+    if (!(obj instanceof Aviary)) {
       System.out.println("Not an Aviary!");
       return false;
     }
       Aviary other = (Aviary) obj;
-      if (this.aviaryName == other.getAviaryName() &&
-              this.aviaryType == other.getType() &&
-              this.aviaryLocation == other.getAviaryLocation() &&
+      if (this.aviaryName.equals(other.getAviaryName()) &&
+              this.aviaryType.equals(other.getType()) &&
+              this.aviaryLocation.equals(other.getAviaryLocation()) &&
               this.numBirds == other.getSize() &&
               this.birdList == other.getBirdList()) {
         return true;
@@ -169,7 +169,5 @@ public class AviaryClass implements Aviary {
         return false;
       }
   }
-
-
 
 }

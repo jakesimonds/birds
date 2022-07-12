@@ -283,12 +283,12 @@ public class ConservatoryClass implements Conservatory {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Conservatory == false) {
+    if (!(obj instanceof Conservatory)) {
       System.out.println("Not a Conservatory!");
       return false;
     }
     Conservatory other = (Conservatory) obj;
-    if (this.name == other.getName()) {
+    if (this.name.equals(other.getName())) {
       return true;
     } else {
       return false;
@@ -327,8 +327,7 @@ public class ConservatoryClass implements Conservatory {
         }
       }
     }
-    AviaryClass newAviary = new AviaryClass(name, type, location);
-    return newAviary;
+    return new AviaryClass(name, type, location);
   }
 
 

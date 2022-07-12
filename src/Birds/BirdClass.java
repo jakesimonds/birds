@@ -4,11 +4,11 @@ import java.util.Locale;
 
 public class BirdClass implements Bird  {
 
-    private String name;                        // bird name ie. Grey Parrot, or Black-Capped Chickadee
+    private String name;                        // bird name i.e. Grey Parrot, or Black-Capped Chickadee
     private int wingNum;                        // number of wings
-    private boolean extinct;                    // whether or not bird is extinct
+    private boolean extinct;                    // whether bird is extinct or not
     private ArrayList<FOOD> foodPreference;     // ArrayList of 2-4 foods bird prefers
-    private String birdType;                    // Type of bird ie. Flightless, Pigeon, Bird of Prey, etc.
+    private String birdType;                    // Type of bird i.e. Flightless, Pigeon, Bird of Prey, etc.
     private String characteristic;              // a defining characteristic of that bird
 
 
@@ -113,7 +113,7 @@ public class BirdClass implements Bird  {
         return this.extinct;
     }
 
-    // getFooodPreference() -- returns an ArrayList of 2-4 food preferences (ENUM)
+    // getFoodPreference() -- returns an ArrayList of 2-4 food preferences (ENUM)
     @Override
     public ArrayList<FOOD> getFoodPreference() {
         return this.foodPreference;
@@ -122,7 +122,7 @@ public class BirdClass implements Bird  {
     // getFoodPrefString() -- returns a string describing the bird's food preferences
     @Override
     public String getFoodPrefString() {
-        ArrayList list = this.getFoodPreference();
+        ArrayList<FOOD> list = this.getFoodPreference();
         // T left off on purpose, will add it back once rest of string is converted to lowercase
         String res = " eats: ";
         //iterate through this.foodPreference, adding to string the foods the bird eats
@@ -170,15 +170,14 @@ public class BirdClass implements Bird  {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Bird == false) {
+        if (!(obj instanceof Bird)) {
             System.out.println("Not a bird!");
             return false;
         }
-
         Bird other = (Bird) obj;
         //can add food preference once that is built out
-        if (this.name == other.getBirdName() && this.extinct == other.getExtinct()
-                && this.birdType == other.getBirdType() && this.wingNum == other.getNumberOfWings() ) {return true; }
+        if (this.name.equals(other.getBirdName()) && this.extinct == other.getExtinct()
+                && this.birdType.equals(other.getBirdType()) && this.wingNum == other.getNumberOfWings() ) {return true; }
         else {return false; }
     }
 
