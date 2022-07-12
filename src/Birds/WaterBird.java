@@ -47,8 +47,7 @@ public class WaterBird extends BirdClass {
             "It has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
             "This " + this.getBirdName() + "'s defining characteristic is: " + this.getBirdCharacteristic() + ".\n" +
             this.getFoodPrefString() + "\n" +
-            "This bird thrives in: " + this.bodyOfWater.toString().toLowerCase(Locale.ROOT);
-
+            "This bird thrives in: " + this.bodyOfWater.toString().toLowerCase(Locale.ROOT) + ".";
   }
   
   

@@ -176,7 +176,6 @@ public class BirdClass implements Bird  {
         if (this.name == other.getBirdName() && this.extinct == other.getExtinct()
                 && this.birdType == other.getBirdType() && this.wingNum == other.getNumberOfWings() ) {return true; }
         else {return false; }
-
     }
 
 

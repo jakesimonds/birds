@@ -26,19 +26,25 @@ public class nickTest {
 
 
 
-    BirdClass larry = new Pigeon("Dove", 2, false, foodPref, "White nose");
-    BirdClass barry = new BirdOfPrey("Osprey", 2, false,foodPrefPrey, "Large, shiny talons");
-    BirdClass gary = new Parrot("Grey Parrot",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
-    BirdClass harry = new Waterfowl("Duck", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
+    BirdClass b1 = new Pigeon("Dove", 2, false, foodPref, "White nose");
+    BirdClass b2 = new BirdOfPrey("Osprey", 2, false,foodPrefPrey, "Large, shiny talons");
+    BirdClass b3 = new Parrot("Grey Parrot",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
+    BirdClass b4 = new Waterfowl("Duck", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
+    BirdClass b5 = new FlightlessBird("Kiwi", 1, false, foodPref, "Likes to sleep during the day");
+    BirdClass b6 = new Owl("Barn Owl", 2, false, foodPrefPrey, "Perhaps too wise");
+    BirdClass b7 = new Shorebird("Great Puffin", 2, false, foodPrefDuck, WATER.OCEAN, "Thinks it's a penguin.");
 
 
     ConservatoryClass conservatory = new ConservatoryClass();
 
-    for(int i = 0; i<25; i++){
-      conservatory.rescueBird(larry);
-      conservatory.rescueBird(barry);
-      conservatory.rescueBird(gary);
-      conservatory.rescueBird(harry);
+    for(int i = 0; i<2; i++){
+      conservatory.rescueBird(b1);
+      conservatory.rescueBird(b2);
+      conservatory.rescueBird(b3);
+      conservatory.rescueBird(b4);
+      conservatory.rescueBird(b5);
+      conservatory.rescueBird(b6);
+      conservatory.rescueBird(b7);
 
     }
 

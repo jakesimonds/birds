@@ -10,6 +10,6 @@ public class Waterfowl extends WaterBird {
   public Waterfowl(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, WATER bodyOfWater, String characteristic) {
       super(name, wingNum, extinct, foodPreference, bodyOfWater, characteristic);
       this.description = "Waterfowl are another classification that live near water sources (fresh or salt).";
-      setBirdType("Waterfowl");
+      this.setBirdType("Waterfowl");
     }
 }
