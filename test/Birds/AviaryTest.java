@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-public class aviaryTest {
+public class AviaryTest {
 
 
     //=================================== Testing GetBirdList =======================================
