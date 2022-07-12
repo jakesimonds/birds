@@ -128,7 +128,7 @@ public class AviaryTest {
 
         /*
 
-        printSign output :
+        printSign outputs :
 
         String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
         for (int i = 0; i < this.numBirds; i++) {
