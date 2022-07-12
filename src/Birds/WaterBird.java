@@ -44,7 +44,7 @@ public class WaterBird extends BirdClass {
       extinctIsIsnt = "is";
     }
     return "The " + this.getBirdName() + " is a type of " + this.getBirdType() + ".\n" +
-            "It has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
+            "This " + this.getBirdName() + " has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
             "This " + this.getBirdName() + "'s defining characteristic is: " + this.getBirdCharacteristic() + ".\n" +
             this.getFoodPrefString() + "\n" +
             "This bird thrives in: " + this.bodyOfWater.toString().toLowerCase(Locale.ROOT) + ".";

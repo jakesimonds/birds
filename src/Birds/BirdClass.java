@@ -159,7 +159,7 @@ public class BirdClass implements Bird  {
             extinctIsIsnt = "is";
         }
         return "The " + this.name + " is a type of " + this.birdType + ".\n" +
-                "It has " + this.wingNum + " wings, and " + extinctIsIsnt + " extinct.\n" +
+                "This " + this.getBirdName() + " has " + this.wingNum + " wings, and " + extinctIsIsnt + " extinct.\n" +
                 "This " + this.name + "'s defining characteristic is: " + this.characteristic + ".\n" +
                 this.getFoodPrefString() ;
     }

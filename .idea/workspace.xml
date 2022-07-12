@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'">
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="edited toString for BirdClass &amp; Children">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Birds/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Parrot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Birds/WaterBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WaterBird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/nickTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/nickTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,6 +325,7 @@
     <MESSAGE value="have added some aviary tests &amp; added method to bird getBirdType" />
     <MESSAGE value="more tests" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &amp; edited files in package 'Birds'" />
+    <MESSAGE value="edited toString for BirdClass &amp; Children" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited toString for BirdClass &amp; Children" />
   </component>
 </project>
