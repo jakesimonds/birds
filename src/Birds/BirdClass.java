@@ -102,12 +102,6 @@ public class BirdClass implements Bird  {
     }
 
 
-//    @Override
-//    public String getCharacteristic() {
-//        return this.description;
-//    }
-//    */
-
     @Override
     public boolean getExtinct() {
         return this.extinct;
