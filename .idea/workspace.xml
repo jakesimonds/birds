@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added tests to ConstructorTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/AviaryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/BirdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/ConservatoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/BirdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/BirdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ConstructorTest">
+  <component name="RunManager" selected="JUnit.BirdTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
@@ -77,6 +75,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BirdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="birds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Birds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Birds" />
+      <option name="MAIN_CLASS_NAME" value="Birds.BirdTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConstructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="birds" />
       <extension name="coverage">
@@ -88,21 +101,6 @@
       <option name="PACKAGE_NAME" value="Birds" />
       <option name="MAIN_CLASS_NAME" value="Birds.ConstructorTest" />
       <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="birdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="birds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Birds.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Birds" />
-      <option name="MAIN_CLASS_NAME" value="Birds.birdTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,17 +124,17 @@
     <list>
       <item itemvalue="Application.conservatoryTest2" />
       <item itemvalue="Application.nickTest" />
-      <item itemvalue="JUnit.birdTest" />
+      <item itemvalue="JUnit.BirdTest" />
       <item itemvalue="JUnit.conservatoryTest" />
       <item itemvalue="JUnit.ConstructorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BirdTest" />
         <item itemvalue="JUnit.ConstructorTest" />
         <item itemvalue="JUnit.conservatoryTest" />
         <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="Application.nickTest" />
-        <item itemvalue="JUnit.birdTest" />
       </list>
     </recent_temporary>
   </component>
@@ -387,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657658845019</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added tests to ConstructorTest">
+      <created>1657659104646</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1657659104646</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

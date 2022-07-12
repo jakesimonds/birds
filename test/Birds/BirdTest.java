@@ -1,5 +1,4 @@
 
-
 package Birds;
 import java.util.ArrayList;
 
@@ -8,7 +7,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BirdTest {
-
 
     //=================================== Testing bird constructor =======================================
     @Test()
@@ -98,7 +96,7 @@ public class BirdTest {
         assertEquals(foodPref, larry2.getFoodPreference());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void TestGetFoodPreference2() {
 
         ArrayList<FOOD> foodPref1 = new ArrayList();
@@ -110,7 +108,7 @@ public class BirdTest {
     }
 
 //=================================== Testing GetFoodPrefString =======================================
-    @Test()
+    @Test
     public void TestGetFoodPrefString() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
@@ -125,7 +123,7 @@ public class BirdTest {
     }
 
     //=================================== Testing SetBirdType =======================================
-    @Test()
+    @Test
     public void TestSetBirdType() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
@@ -154,7 +152,7 @@ public class BirdTest {
 
     //=================================== Testing SetBirdCharacteristic =======================================
 
-    @Test()
+    @Test
     public void TestSetBirdCharacteristic() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
@@ -169,7 +167,7 @@ public class BirdTest {
 
 
     //=================================== Testing equality of food items =======================================
-    @Test()
+    @Test
     public void TestGetFoodPreference3() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
@@ -205,7 +203,7 @@ public class BirdTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Parrot("Red Parrot", 2, -10, "Bummer, man!",false, foodPref, "great with children");
+        BirdClass larry = new Parrot("Red Parrot", 2, 111, "Bummer, man!",false, foodPref, "great with children");
     }
 
     //GetKnownWords test
@@ -277,7 +275,21 @@ public class BirdTest {
     }
 
     //=================================== Testing Bird toString =======================================
-    //TODO
+
+
+    @Test
+    public void TestBirdToString() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+        BirdClass bird1 = new BirdClass("Common Pigeon", 2, false, foodPref, "great with children");
+        String toString = "The Common Pigeon is a type of Bird.\n" +
+                "This Common Pigeon has 2 wings, and is not extinct.\n" +
+                "This Common Pigeon's defining characteristic is: great with children.\n" +
+                bird1.getFoodPrefString() ;
+        assertEquals(toString, bird1.toString());
+
+    }
 
 
 
