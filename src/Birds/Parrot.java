@@ -3,10 +3,7 @@ import java.util.ArrayList;
 
 public class Parrot extends BirdClass {
     
-    // Member fields: SHOULD THESE BE INCLUDED HERE IF THEY ARE INHERITED FROM BIRD CLASS?
-    String name;
-    int wingNum;
-    boolean extinct;
+    // Member fields:
     String description;
     
     // Parrot-specific attributes:
@@ -84,7 +81,7 @@ public class Parrot extends BirdClass {
     @Override
     public String toString() {
         String extinctIsIsnt = "is not";
-        if (this.extinct) {
+        if (this.getExtinct()) {
             extinctIsIsnt = "is";
         }
         return "The " + this.getBirdName() + " is a type of " + this.getBirdType() + ".\n" +
