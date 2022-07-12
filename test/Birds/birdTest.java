@@ -39,20 +39,20 @@ public class birdTest {
 
 
     //=================================== Testing getNumberOfWings =======================================
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void TestGetNumberOfWings() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass larry = new Pigeon("Common Pigeon", 1, false, foodPref, "great with children");
-        BirdClass larry1 = new Pigeon("Common Pigeon", -1, false, foodPref, "great with children");
-        BirdClass larry2 = new Pigeon("Common Pigeon", -3, false, foodPref, "great with children");
-        BirdClass larry3 = new Pigeon("Common Pigeon", 33, false, foodPref, "great with children");
-        assertEquals(1, larry.getNumberOfWings());
-        assertEquals(0, larry1.getNumberOfWings());
-        assertEquals(-3, larry2.getNumberOfWings());
-        assertEquals(33, larry3.getNumberOfWings());
+        BirdClass larry = new Pigeon("Common Pigeon", 0, false, foodPref, "great with children");
+        BirdClass larry1 = new Pigeon("Common Pigeon", 1, false, foodPref, "great with children");
+        BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry3 = new Pigeon("Common Pigeon", 3, false, foodPref, "great with children");
+        assertEquals(0, larry.getNumberOfWings());
+        assertEquals(1, larry1.getNumberOfWings());
+        assertEquals(2, larry2.getNumberOfWings());
+        assertEquals(3, larry3.getNumberOfWings());
 
     }
 
@@ -86,17 +86,16 @@ public class birdTest {
     }
 
     //=================================== Testing GetFoodPreference =======================================
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void TestGetFoodPreference() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
-        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
         foodPref.add(FOOD.EGGS);
 
         BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
-
+        assertEquals(foodPref, larry2.getFoodPreference());
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -104,8 +103,10 @@ public class birdTest {
 
         ArrayList<FOOD> foodPref1 = new ArrayList();
         foodPref1.add(FOOD.BERRIES);
-        BirdClass larry = new Pigeon("Common Pigeon", 2, true, foodPref1, "great with children");
+        foodPref1.add(FOOD.BUDS);
 
+        BirdClass larry = new Pigeon("Common Pigeon", 2, true, foodPref1, "great with children");
+        assertEquals(foodPref1, larry.getFoodPreference());
     }
 
 //=================================== Testing GetFoodPrefString =======================================
@@ -116,13 +117,11 @@ public class birdTest {
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
 
-
         BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
         String food = larry2.getFoodPrefString();
-        assertEquals(true,food.contains("buds"));
-        assertEquals(true,food.contains("insects"));
-        assertEquals(true,food.contains("berries"));
-
+        assertTrue(food.contains("buds"));
+        assertTrue(food.contains("insects"));
+        assertTrue(food.contains("berries"));
     }
 
     //=================================== Testing SetBirdType =======================================
@@ -140,7 +139,6 @@ public class birdTest {
 
     }
 
-
     //=================================== Testing GetBirdCharacteristic =======================================
     @Test
     public void TestGetBirdCharacteristic() {
@@ -149,11 +147,9 @@ public class birdTest {
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
 
-
         BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
         assertEquals("great with children", larry2.getBirdCharacteristic());
-
     }
 
     //=================================== Testing SetBirdCharacteristic =======================================
@@ -165,13 +161,10 @@ public class birdTest {
         foodPref.add(FOOD.BUDS);
         foodPref.add(FOOD.INSECTS);
 
-
         BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
         larry2.setBirdCharacteristic("Testing setBirdCharacteristic");
         assertEquals("Testing setBirdCharacteristic",larry2.getBirdCharacteristic());
-
     }
-
 
 
 
@@ -203,13 +196,16 @@ public class birdTest {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
-        foodPref.add(FOOD.INSECTS);
-        foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
 
         BirdClass larry = new Parrot("Red Parrot", 2, -10, "Bummer, man!",false, foodPref, "great with children");
-        BirdClass larry2 = new Parrot("Red Parrot", 2, 101, "Bummer, man!",false, foodPref, "great with children");
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void TestParrotKnownWords1() {
+        ArrayList<FOOD> foodPref = new ArrayList();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
 
-
+        BirdClass larry = new Parrot("Red Parrot", 2, -10, "Bummer, man!",false, foodPref, "great with children");
     }
 
     //GetKnownWords test

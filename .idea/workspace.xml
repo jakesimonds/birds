@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added tests to ConstructorTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/ConstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/ConstructorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/birdTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657657080467</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added tests to ConstructorTest">
+      <created>1657657982680</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1657657982680</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -54,7 +54,7 @@ public class aviaryTest {
 
     //=================================== Testing getSize =======================================
     @Test
-    public void TestgetSize() {
+    public void TestGetSize() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
