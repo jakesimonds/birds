@@ -87,7 +87,6 @@ public class BirdClass implements Bird  {
 
     */
 
-
     //===================================== METHODS =========================================
 
 
@@ -155,10 +154,13 @@ public class BirdClass implements Bird  {
 
     @Override
     public String toString() {
-        return "This " + this.birdType + " is named: " + this.name + ".\n" +
-                "Wing number = " + this.wingNum + ".\n" +
-                "Defining characteristic: " + this.characteristic + ".\n" +
-                "Extinct = " + this.getExtinct() + ".\n" +
+        String extinctIsIsnt = "is not";
+        if (this.extinct) {
+            extinctIsIsnt = "is";
+        }
+        return "The " + this.name + " is a type of " + this.birdType + ".\n" +
+                "It has " + this.wingNum + " wings, and " + extinctIsIsnt + " extinct.\n" +
+                "This " + this.name + "'s defining characteristic is: " + this.characteristic + ".\n" +
                 this.getFoodPrefString() ;
     }
 
