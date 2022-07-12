@@ -12,7 +12,7 @@ public class AviaryClass implements Aviary {
   private String aviaryLocation;          // location of this aviary
 
 
-  //================================== CONSTRUCTOR(S) ======================================
+  //================================== CONSTRUCTOR ======================================
 
   public AviaryClass(String aviaryName, AVIARY_TYPE aviaryType, String aviaryLocation) {
     this.aviaryName = aviaryName;
@@ -26,32 +26,38 @@ public class AviaryClass implements Aviary {
   //===================================== METHODS ========================================
 
   // getBirdList() -- returns an Arraylist of the bird objects in that aviary
+  @Override
   public ArrayList<BirdClass> getBirdList(){
     return this.birdList;
   }
 
   // getAviaryName() -- returns the name of the aviary
+  @Override
   public String getAviaryName() {
     return this.aviaryName;
   }
 
   // getAviaryLocation() -- returns a string for that aviary's location
+  @Override
   public String getAviaryLocation(){
     return this.aviaryLocation;
   }
 
   // getSize() -- returns the number of birds in the aviary
+  @Override
   public int getSize() {
     return this.numBirds;
   }
 
   // getType() -- returns the type of birds stored in the aviary (from AVIARY_TYPE enum)
+  @Override
   public AVIARY_TYPE getType() {
     return this.aviaryType;
   }
 
   // addBird() -- adds the given bird to this aviary
   // (fails if bird is extinct, if there is no room for the bird, bird is wrong type)
+  @Override
   public Aviary addBird(Bird bird) {
     if (bird.getExtinct()) {
       // bird is extinct
@@ -78,6 +84,7 @@ public class AviaryClass implements Aviary {
   }
 
   // printSign() -- returns a String listing birds housed in that aviary
+  @Override
   public String printSign(){
     // iterate through birdList, printing each bird's info:
     String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
@@ -90,6 +97,7 @@ public class AviaryClass implements Aviary {
 
 
   // isFull return true if the aviary already has 5 birds, false if there is room to add another bird:
+  @Override
   public boolean isFull(){
     if (this.numBirds == 5) {
       return true;
@@ -100,6 +108,7 @@ public class AviaryClass implements Aviary {
 
   // isCompatible(bird) -- checks whether the given bird is compatible with this aviary.
   //                       return true if compatible, false otherwise
+  @Override
   public boolean isCompatible(Bird bird) {
     boolean compatible = false;
     switch (this.aviaryType) {
@@ -145,14 +154,14 @@ public class AviaryClass implements Aviary {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Aviary == false) {
+    if (!(obj instanceof Aviary)) {
       System.out.println("Not an Aviary!");
       return false;
     }
       Aviary other = (Aviary) obj;
-      if (this.aviaryName == other.getAviaryName() &&
-              this.aviaryType == other.getType() &&
-              this.aviaryLocation == other.getAviaryLocation() &&
+      if (this.aviaryName.equals(other.getAviaryName()) &&
+              this.aviaryType.equals(other.getType()) &&
+              this.aviaryLocation.equals(other.getAviaryLocation()) &&
               this.numBirds == other.getSize() &&
               this.birdList == other.getBirdList()) {
         return true;
@@ -160,7 +169,5 @@ public class AviaryClass implements Aviary {
         return false;
       }
   }
-
-
 
 }

@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="names changed in aviaryTest birdTest &amp; conservatoryTest">
-      <change beforePath="$PROJECT_DIR$/test/Birds/aviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/aviaryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/birdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/birdTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -332,7 +330,6 @@
     <MESSAGE value="more tests" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
-    <MESSAGE value="committing so I can pull..." />
-    <option name="LAST_COMMIT_MESSAGE" value="committing so I can pull..." />
+    <option name="LAST_COMMIT_MESSAGE" value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
   </component>
 </project>

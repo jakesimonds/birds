@@ -57,7 +57,7 @@ public class nickTest {
       System.out.println(currentAviary.printSign());
       System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-
+      /*
       System.out.println("B1 wingNum, extinct:");
       System.out.println(b1.getNumberOfWings());
       System.out.println(b1.getExtinct());
@@ -85,6 +85,8 @@ public class nickTest {
       System.out.println("B7 wingNum, extinct:");
       System.out.println(b7.getNumberOfWings());
       System.out.println(b7.getExtinct());
+
+       */
     }
 
 
