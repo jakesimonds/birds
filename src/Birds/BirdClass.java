@@ -89,35 +89,37 @@ public class BirdClass implements Bird  {
     //===================================== METHODS =========================================
 
 
-
+    // getNumberOfWings() -- returns the number of wings
     @Override
     public int getNumberOfWings() {
         return this.wingNum;
     }
 
-
+    // getBirdName() -- returns that bird's 'name'
     @Override
     public String getBirdName() {
         return this.name;
     }
 
-
+    // getBirdType() -- returns that bird's type/classification
     @Override
     public String getBirdType() {
         return this.birdType;
     }
 
-
+    // getExtinct() -- returns true if the bird is extinct, otherwise false
     @Override
     public boolean getExtinct() {
         return this.extinct;
     }
 
+    // getFooodPreference() -- returns an ArrayList of 2-4 food preferences (ENUM)
     @Override
     public ArrayList<FOOD> getFoodPreference() {
         return this.foodPreference;
     }
 
+    // getFoodPrefString() -- returns a string describing the bird's food preferences
     @Override
     public String getFoodPrefString() {
         ArrayList list = this.getFoodPreference();
@@ -137,14 +139,17 @@ public class BirdClass implements Bird  {
 
         return res;}
 
+    // setBirdType() -- allows one to set the type of bird
     @Override
     public void setBirdType(String birdType) {
         this.birdType = birdType;
     }
 
+    // getBirdCharacteristic() -- returns the defining characteristic of that bird
     @Override
     public String getBirdCharacteristic() {return this.characteristic;}
 
+    // setBirdCharacteristic() -- allows one to set the defining characteristic of that bird
     @Override
     public void setBirdCharacteristic(String birdCharacteristic) {
         this.characteristic = birdCharacteristic;
