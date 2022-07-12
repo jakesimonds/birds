@@ -19,8 +19,6 @@ public class ConstructorTest {
   }
 
 
-
-
   //====================================== AVIARY ==========================================
   // Test Aviary Constructor:
   @Test
@@ -36,7 +34,6 @@ public class ConstructorTest {
     aviaryList.add(aviary2);
     aviaryList.add(aviary3);
     aviaryList.add(aviary4);
-
 
     // For each aviary, check that each field is as expected:
     //  (including numBirds = 0, birdList exists but is empty)
@@ -67,8 +64,6 @@ public class ConstructorTest {
 
 
 
-
-
   //======================================== BIRD ============================================
   // Test Bird Constructor1:
   @Test
@@ -89,7 +84,6 @@ public class ConstructorTest {
     assertEquals("Bird", bird.getBirdType());
     assertEquals("No longer with us :(", bird.getBirdCharacteristic());
   }
-
 
 
   // Test Bird Constructor2 (assume not extinct):
@@ -115,7 +109,6 @@ public class ConstructorTest {
   }
 
 
-
   // Test Bird Constructor3 (assume 2 wings):
   @Test
   public void TestBirdConstructor3(){
@@ -138,7 +131,6 @@ public class ConstructorTest {
   }
 
 
-
   // Test Bird Constructor4 (assume 2 wings & not extinct):
   @Test
   public void TestBirdConstructor4(){
@@ -159,7 +151,6 @@ public class ConstructorTest {
     assertEquals("Bird", bird.getBirdType());
     assertEquals("Works at Sesame Street", bird.getBirdCharacteristic());
   }
-
 
 
   //=========================== Test Bird Constructor Exception(s): =============================
@@ -197,8 +188,6 @@ public class ConstructorTest {
     foodPref.add(FOOD.BUDS);
     BirdClass bird = new BirdClass("Bald Eagle", 4, false, foodPref, "Bald");
   }
-
-
 
 
 
@@ -320,7 +309,6 @@ public class ConstructorTest {
             "very similar to the milk of mammals. Found all over the world, " +
             "there are several varieties that are extinct.", bird.description);
   }
-
 
 
 
