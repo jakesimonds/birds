@@ -120,7 +120,6 @@ public class conservatoryTest {
         }
 
     //=================================== Testing PrintIndex =======================================
-    //TODO
     @Test
     public void TestPrintIndex() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
