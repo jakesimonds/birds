@@ -195,7 +195,7 @@ public class ConstructorTest {
 
   // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
   //
-  // Mostly need to test that birdType is being initialized as expected:
+  // Mostly need to test that birdType, description are being initialized as expected:
   @Test
   public void TestBirdOfPreyConstructor(){
     // make ArrayList of food preferences:
@@ -222,7 +222,7 @@ public class ConstructorTest {
 
   // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
   //
-  // Mostly need to test that birdType is being initialized as expected:
+  // Mostly need to test that birdType, description are being initialized as expected:
   @Test
   public void TestFlightlessBirdConstructor(){
     // make ArrayList of food preferences:
@@ -251,7 +251,7 @@ public class ConstructorTest {
 
   // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
   //
-  // Mostly need to test that birdType is being initialized as expected:
+  // Mostly need to test that birdType, description are being initialized as expected:
   @Test
   public void TestOwlConstructor(){
     // make ArrayList of food preferences:
@@ -279,7 +279,7 @@ public class ConstructorTest {
 
   // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
   //
-  // Mostly need to test that birdType,  is being initialized as expected
+  // Mostly need to test that birdType, description are being initialized as expected
   // ALSO need to check parrot-specific fields: knownWords, favoritePhrase
   @Test
   public void TestParrotConstructor(){
@@ -325,11 +325,12 @@ public class ConstructorTest {
     Parrot bird = new Parrot("Grey Parrot", 101, "Mama Mia", foodPref, "Talks like Mario");
   }
 
+
   //====================================== PIGEON =========================================
 
   // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
   //
-  // Mostly need to test that birdType is being initialized as expected:
+  // Mostly need to test that birdType, description are being initialized as expected:
   @Test
   public void TestPigeonConstructor(){
     // make ArrayList of food preferences:
@@ -355,30 +356,91 @@ public class ConstructorTest {
   }
 
 
-
   //==================================== SHOREBIRD ========================================
 
-  // TODO : special checks for bodyOfWater
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  //
+  // Mostly need to test that birdType, description are being initialized as expected
+  // ALSO need to check shorebird-specific fields: bodyOfWater
+  @Test
+  public void TestShorebirdConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.FISH);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.BUDS);
+
+    // make Shorebird:
+    Shorebird bird = new Shorebird("Arctic Puffin", foodPref, WATER.OCEAN, "Black and white and read all over");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Arctic Puffin", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertFalse(bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Shorebird", bird.getBirdType());
+    assertEquals("Black and white and read all over", bird.getBirdCharacteristic());
+    assertEquals("Shorebirds live near water sources including wetlands, " +
+            "freshwater and saltwater shorelands, even the ocean.", bird.description);
+    // Waterfowl-specific checks:
+    assertEquals(WATER.OCEAN, bird.getBodyOfWater());
+  }
+
 
   //==================================== WATER BIRD =======================================
 
-  // TODO : special checks for bodyOfWater
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  // need to check WaterBird-specific fields: bodyOfWater
+  @Test
+  public void TestWaterBirdConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.FISH);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.BUDS);
+
+    // make Water Bird:
+    WaterBird bird = new WaterBird("Goose", foodPref, WATER.LAKE, "Likes to honk");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Goose", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertFalse(bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Likes to honk", bird.getBirdCharacteristic());
+    // Waterfowl-specific checks:
+    assertEquals(WATER.LAKE, bird.getBodyOfWater());
+  }
+
 
   //===================================== WATERFOWL =======================================
 
-  // TODO : special checks for bodyOfWater
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  //
+  // Mostly need to test that birdType, description are being initialized as expected
+  // ALSO need to check waterfowl-specific fields: bodyOfWater
+  @Test
+  public void TestWaterfowlConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.FISH);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.BUDS);
 
+    // make Waterfowl:
+    Waterfowl bird = new Waterfowl("Canada Goose", foodPref, WATER.RIVER, "Likes to honk its horn");
 
-
-
-
-
-
-
-
-
-
-
+    // check that expected values for all fields are as expected:
+    assertEquals("Canada Goose", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertFalse(bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Waterfowl", bird.getBirdType());
+    assertEquals("Likes to honk its horn", bird.getBirdCharacteristic());
+    assertEquals("Waterfowl are another classification that live near water sources (fresh or salt).", bird.description);
+    // Waterfowl-specific checks:
+    assertEquals(WATER.RIVER, bird.getBodyOfWater());
+  }
 
 
 
