@@ -226,7 +226,36 @@ public class ConservatoryTest {
 
     }
 
-    //=================================== Testing getAviaryList =======================================
+    //=================================== Testing rescueBird =======================================
+
+    @Test
+    public void RescueBirdTest() {
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "not extinct");
+        assertEquals(0, conservatory.getNumBirds());
+        assertEquals(0, conservatory.getNumAviaries());
+
+
+        conservatory.rescueBird(larry);
+        assertEquals(1, conservatory.getNumBirds());
+        assertEquals(1, conservatory.getNumAviaries());
+
+        String LookUpLarry = conservatory.guestLookup("Common Pigeon");
+        assertEquals(true, LookUpLarry.contains("Common Pigeon"));
+        assertEquals(true, LookUpLarry.contains("Aviary #1"));
+
+    }
+
+
+
+
+
+        //=================================== Testing getAviaryList =======================================
 
 
     @Test
@@ -518,18 +547,14 @@ public class ConservatoryTest {
             foodPref.add(FOOD.BUDS);
 
 
-
             BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "not extinct");
             assertEquals(0,conservatory.getNumBirds());
             assertEquals(0,conservatory.getNumAviaries());
-
 
             conservatory.rescueBird(larry);
 
             assertEquals(1,conservatory.getNumBirds());
             assertEquals(1,conservatory.getNumAviaries());
-
-
 
         }
 

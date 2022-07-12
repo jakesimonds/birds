@@ -117,8 +117,29 @@ public class AviaryTest {
 
     @Test
     public void testPrintSign() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
 
-        // TODO : Implement me!
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry2 = new Owl("Barn Owl", 2, false, foodPref, "Soulful");
+
+        AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
+        aviary1.addBird(larry);
+
+        String aviaryOneBird = aviary1.printSign();
+        assertEquals(true,aviaryOneBird.contains("great with children"));
+        assertEquals(true,aviaryOneBird.contains("HannafordAviary"));
+        assertEquals(true,aviaryOneBird.contains("buds"));
+        assertEquals(true,aviaryOneBird.contains("Common Pigeon"));
+        assertEquals(false,aviaryOneBird.contains("Barn Owl"));
+
+        aviary1.addBird(larry2);
+        String aviaryTwoBirds = aviary1.printSign();
+        assertNotEquals(aviaryTwoBirds,aviaryOneBird);
+        assertEquals(aviaryOneBird,aviaryOneBird);
+        assertEquals(true,aviaryTwoBirds.contains("Barn Owl"));
+        assertEquals(true,aviaryTwoBirds.contains("Soulful"));
 
         // make an aviary
         // add some birds

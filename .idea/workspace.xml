@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="names changed in aviaryTest birdTest &amp; conservatoryTest">
-      <change beforePath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/conservatoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/AviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/AviaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/ConservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/ConservatoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.conservatoryTest">
+  <component name="RunManager" selected="JUnit.AviaryTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
@@ -74,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="aviaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AviaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -83,13 +85,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Birds" />
-      <option name="MAIN_CLASS_NAME" value="Birds.aviaryTest" />
+      <option name="MAIN_CLASS_NAME" value="Birds.AviaryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="birdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConservatoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -98,7 +100,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Birds" />
-      <option name="MAIN_CLASS_NAME" value="Birds.birdTest" />
+      <option name="MAIN_CLASS_NAME" value="Birds.ConservatoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AviaryTest" />
+        <item itemvalue="JUnit.ConservatoryTest" />
         <item itemvalue="JUnit.conservatoryTest" />
         <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="Application.nickTest" />
-        <item itemvalue="JUnit.birdTest" />
-        <item itemvalue="JUnit.aviaryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -330,6 +332,7 @@
     <MESSAGE value="more tests" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
+    <MESSAGE value="committing so I can pull..." />
+    <option name="LAST_COMMIT_MESSAGE" value="committing so I can pull..." />
   </component>
 </project>
