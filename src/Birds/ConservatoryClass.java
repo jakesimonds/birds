@@ -43,6 +43,14 @@ public class ConservatoryClass implements Conservatory {
     return this.numAviaries;
   }
 
+
+  // getAviaryList() -- returns an ArrayList of existing aviary objects within the conservatory
+  @Override
+  public ArrayList<AviaryClass> getAviaryList() {
+    return this.aviaryList;
+  }
+
+
   // Guest Lookup(bird) --  (returns which aviary/aviaries that bird is housed in)
   //                        return an error message if bird does not exist
   @Override
@@ -247,61 +255,6 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-  // PRIVATE HELPER METHODS:
-
-  // makeAviary() -- creates & returns a new aviary compatible with the given bird.
-  private Aviary makeAviary(Bird bird) {
-    String location = "Campus " + (char)(65 + this.numAviaries);
-    String name = "Aviary #" + (this.numAviaries + 1);
-    AVIARY_TYPE type;
-    // figure out what type of aviary is required for the given bird:
-    if (bird instanceof FlightlessBird) {
-      // Flightless Bird:
-      type = AVIARY_TYPE.FLIGHTLESS;
-    } else {
-      if (bird instanceof BirdOfPrey) {
-        // Bird of Prey
-        type = AVIARY_TYPE.BIRDS_OF_PREY;
-      } else {
-        if (bird instanceof WaterBird) {
-          // Water Bird
-          type = AVIARY_TYPE.WATER_BIRDS;
-        } else {
-          type = AVIARY_TYPE.GENERAL;
-        }
-      }
-    }
-    AviaryClass newAviary = new AviaryClass(name, type, location);
-    return newAviary;
-  }
-
-
-  // addAviary() -- Adds a new Aviary to the Conservatory
-  //                fails if there are already 20 aviaries
-  @Override
-  private Conservatory addAviary(AviaryClass aviary) {
-    // check whether there are already 20 aviaries,
-    // if no, make a new aviary and update numAviaries/aviaryList
-    if (this.aviaryListFull()) {
-      //Conservatory is full (of aviaries)!
-      throw new IllegalStateException("Aviary Capacity is full. Cannot add another Aviary.");
-    }
-    else {
-      // Conservatory has 19 or fewer aviaries:
-      // Add the aviary, update numAviaries
-      this.aviaryList.add(aviary);
-      this.numAviaries ++;
-    }
-    return this;
-  }
-
-
-  // getAviaryList() -- returns an ArrayList of existing aviary objects within the conservatory
-  @Override
-  public ArrayList<AviaryClass> getAviaryList() {
-    return this.aviaryList;
-  }
-
   // isFUll() -- Returns true if the conservatory already has 100 birds, false otherwise
   @Override
   public boolean isFull() {
@@ -340,6 +293,61 @@ public class ConservatoryClass implements Conservatory {
     } else {
       return false;
     }
+  }
+
+
+
+
+
+
+
+
+
+  // PRIVATE HELPER METHODS:
+
+  // makeAviary() -- creates & returns a new aviary compatible with the given bird.
+  private Aviary makeAviary(Bird bird) {
+    String location = "Campus " + (char)(65 + this.numAviaries);
+    String name = "Aviary #" + (this.numAviaries + 1);
+    AVIARY_TYPE type;
+    // figure out what type of aviary is required for the given bird:
+    if (bird instanceof FlightlessBird) {
+      // Flightless Bird:
+      type = AVIARY_TYPE.FLIGHTLESS;
+    } else {
+      if (bird instanceof BirdOfPrey) {
+        // Bird of Prey
+        type = AVIARY_TYPE.BIRDS_OF_PREY;
+      } else {
+        if (bird instanceof WaterBird) {
+          // Water Bird
+          type = AVIARY_TYPE.WATER_BIRDS;
+        } else {
+          type = AVIARY_TYPE.GENERAL;
+        }
+      }
+    }
+    AviaryClass newAviary = new AviaryClass(name, type, location);
+    return newAviary;
+  }
+
+
+  // addAviary() -- Adds a new Aviary to the Conservatory
+  //                fails if there are already 20 aviaries
+  private Conservatory addAviary(AviaryClass aviary) {
+    // check whether there are already 20 aviaries,
+    // if no, make a new aviary and update numAviaries/aviaryList
+    if (this.aviaryListFull()) {
+      //Conservatory is full (of aviaries)!
+      throw new IllegalStateException("Aviary Capacity is full. Cannot add another Aviary.");
+    }
+    else {
+      // Conservatory has 19 or fewer aviaries:
+      // Add the aviary, update numAviaries
+      this.aviaryList.add(aviary);
+      this.numAviaries ++;
+    }
+    return this;
   }
 
 
