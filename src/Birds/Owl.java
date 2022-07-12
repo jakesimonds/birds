@@ -2,7 +2,7 @@ package Birds;
 import java.util.ArrayList;
 
 public class Owl extends BirdClass {
-  private String description;
+  public final String description;
 
   //===================================== CONSTRUCTORS =========================================
   public Owl(String name, int wingNum, boolean extinct, ArrayList<FOOD> foodPreference, String characteristic) {

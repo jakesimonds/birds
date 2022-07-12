@@ -4,11 +4,11 @@ import java.util.ArrayList;
 public class Parrot extends BirdClass {
     
     // Member fields:
-    String description;
+    public final String description;
     
     // Parrot-specific attributes:
-    int knownWords;
-    String favoritePhrase;
+    private int knownWords;
+    private String favoritePhrase;
 
 
     //===================================== CONSTRUCTORS =========================================

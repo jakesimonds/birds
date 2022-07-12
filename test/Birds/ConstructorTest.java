@@ -214,7 +214,7 @@ public class ConstructorTest {
     foodPref.add(FOOD.OTHER_BIRDS);
     foodPref.add(FOOD.SMALL_MAMMALS);
 
-    // make bird:
+    // make bird of prey:
     BirdOfPrey bird = new BirdOfPrey("Dragon", 2, true, foodPref, "Very large bird. Likes to eat naughty children");
 
     // check that expected values for all fields are as expected:
@@ -242,7 +242,7 @@ public class ConstructorTest {
     foodPref.add(FOOD.INSECTS);
     foodPref.add(FOOD.SEEDS);
 
-    // make bird:
+    // make flightless bird:
     FlightlessBird bird = new FlightlessBird("Emu", foodPref, "Very large bird");
 
     // check that expected values for all fields are as expected:
@@ -260,6 +260,29 @@ public class ConstructorTest {
 
   //======================================= OWL ===========================================
 
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  //
+  // Mostly need to test that birdType is being initialized as expected:
+  @Test
+  public void TestOwlConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.SMALL_MAMMALS);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.EGGS);
+
+    // make owl:
+    Owl bird = new Owl("Barn Owl", 2, foodPref, "Hangs out in a barn at night");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Barn Owl", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(false, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Owl", bird.getBirdType());
+    assertEquals("Hangs out in a barn at night", bird.getBirdCharacteristic());
+    assertEquals("Owls are distinguished by the facial disks that frame the eyes and bill.", bird.description);
+  }
 
 
 
@@ -269,6 +292,35 @@ public class ConstructorTest {
   // TODO : Special checks for exceptions (numWords <0, numWords > 100)
 
   //====================================== PIGEON =========================================
+
+
+  // Note that overloaded constructors for this class have already been tested in BirdConstructor tests.
+  //
+  // Mostly need to test that birdType is being initialized as expected:
+  @Test
+  public void TestPigeonConstructor(){
+    // make ArrayList of food preferences:
+    ArrayList<FOOD> foodPref = new ArrayList<>();
+    foodPref.add(FOOD.SEEDS);
+    foodPref.add(FOOD.NUTS);
+    foodPref.add(FOOD.INSECTS);
+    foodPref.add(FOOD.BERRIES);
+
+    // make pigeon:
+    Pigeon bird = new Pigeon("Passenger Pigeon", 2, true, foodPref, "Carries Mail to Heaven, now");
+
+    // check that expected values for all fields are as expected:
+    assertEquals("Passenger Pigeon", bird.getBirdName());
+    assertEquals(2, bird.getNumberOfWings());
+    assertEquals(true, bird.getExtinct());
+    assertEquals(foodPref, bird.getFoodPreference());
+    assertEquals("Pigeon", bird.getBirdType());
+    assertEquals("Carries Mail to Heaven, now", bird.getBirdCharacteristic());
+    assertEquals("Pigeons (or doves) are known for feeding their young \"bird milk\" " +
+            "very similar to the milk of mammals. Found all over the world, " +
+            "there are several varieties that are extinct.", bird.description);
+  }
+
 
 
 
