@@ -8,6 +8,86 @@ import java.util.ArrayList;
 
 public class conservatoryTest {
 
+    //=================================== Testing getName =======================================
+
+    @Test
+    public void TestGetName(){
+        ConservatoryClass conservatory = new ConservatoryClass();
+        assertEquals("Jake & Nick's Bird Rescue Sanctuary", conservatory.getName());
+
+    }
+
+    //=================================== Testing getNumBirds =======================================
+    @Test
+    public void TestingGetNumBirds() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass barry = new BirdOfPrey("Hawk", 2, false, foodPref, "super smart");
+        BirdClass Sarah = new FlightlessBird("Emu", 2, false, foodPref, "Large eyes");
+        BirdClass Amelia = new Waterfowl("Geese", 2, false, foodPref, WATER.RIVER, "likes attention");
+        BirdClass Emma = new Owl("Night Owl", 2, false, foodPref, "large talons");
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+        //filling 5 aviaries with general birds
+        for(int i = 0; i<25; i++){
+            conservatory.rescueBird(Emma);
+            assertEquals(i+1,conservatory.getNumBirds());
+        }
+        //now making it so 15 other aviaries aren't all full, but can't take general bird
+        for(int i = 0; i<21; i++){
+            conservatory.rescueBird(barry);
+            assertEquals(i+26,conservatory.getNumBirds());
+        }
+        for(int i = 0; i<21; i++){
+            conservatory.rescueBird(Amelia);
+            assertEquals(i+47,conservatory.getNumBirds());
+        }
+        for(int i = 0; i<21; i++){
+            conservatory.rescueBird(Sarah);
+            assertEquals(i+68,conservatory.getNumBirds());
+        }
+        assertEquals(false,conservatory.isFull());
+        assertEquals(88,conservatory.getNumBirds());
+
+
+    }
+
+    //=================================== Testing getNumAviaries =======================================
+
+    @Test
+    public void TestGetNumAviaries() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass barry = new BirdOfPrey("Eagle", 2, false, foodPref, "super smart");
+        BirdClass gary = new Parrot("Grey Parrot", 2, 44, "idk", false, foodPref, "strong self esteem");
+        BirdClass Sarah = new FlightlessBird("Kiwi", 2, false, foodPref, "Large eyes");
+        BirdClass Emma = new Owl("Red Owl", 2, false, foodPref, "large talons");
+        BirdClass Lucy = new Shorebird("African Jacana", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
+        BirdClass Amelia = new Waterfowl("Swan", 2, false, foodPref, WATER.RIVER, "likes attention");
+
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+        assertEquals(0, conservatory.getNumAviaries());
+        conservatory.rescueBird(larry);
+        assertEquals(1, conservatory.getNumAviaries());
+        conservatory.rescueBird(barry);
+        assertEquals(2, conservatory.getNumAviaries());
+        conservatory.rescueBird(Sarah);
+        assertEquals(3, conservatory.getNumAviaries());
+        conservatory.rescueBird(Amelia);
+        //have added four birds that all need their own aviary
+        assertEquals(4, conservatory.getNumAviaries());
+        assertEquals(4, conservatory.getNumBirds());
+
+    }
+
     //=================================== Testing guest look up =======================================
 
         @Test
@@ -39,6 +119,40 @@ public class conservatoryTest {
             assertEquals(true,strFailure.contains("404"));
         }
 
+    //=================================== Testing PrintIndex =======================================
+    //TODO
+    @Test
+    public void TestPrintIndex() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass barry = new BirdOfPrey("Hawk", 2, false, foodPref, "super smart");
+        BirdClass gary = new Parrot("Sulfer-Crested Cockatoo", 2, 44, "idk", false, foodPref, "strong self esteem");
+        BirdClass sherry = new Pigeon("Maine Pigeon", 2, false, foodPref, "strong self esteem");
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        conservatory.rescueBird(sherry);
+
+        for (int i = 0; i < 14; i++) {
+            conservatory.rescueBird(larry);
+            conservatory.rescueBird(barry);
+        }
+        conservatory.rescueBird(gary);
+
+        String strMap = conservatory.printMap();
+        String strIndex = conservatory.printIndex();
+        String strFood = conservatory.calculateFood();
+        assertEquals(true,strIndex.contains("Aviary #7"));
+        assertEquals(false,strIndex.contains("Aviary #8"));
+
+
+
+    }
+
+
     //=================================== Testing PrintMap =======================================
 
     @Test
@@ -55,6 +169,7 @@ public class conservatoryTest {
         ConservatoryClass conservatory = new ConservatoryClass();
 
         conservatory.rescueBird(sherry);
+
         for (int i = 0; i < 14; i++) {
             conservatory.rescueBird(larry);
             conservatory.rescueBird(barry);
@@ -75,8 +190,75 @@ public class conservatoryTest {
 
     }
 
+    //=================================== Calculating food =======================================
 
-    //=================================== Testing isFull =======================================
+    @Test
+    public void TestCalculateFood() {
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+
+        ArrayList<FOOD> foodPrefDuck = new ArrayList<>();
+        foodPrefDuck.add(FOOD.NUTS);
+        foodPrefDuck.add(FOOD.OTHER_BIRDS);
+        foodPrefDuck.add(FOOD.SEEDS);
+        foodPrefDuck.add(FOOD.VEGETATION);
+
+        BirdClass Sarah = new FlightlessBird("Duck", 2, false, foodPrefDuck, "Large eyes");
+        BirdClass Sarah2 = new FlightlessBird("Duck", 2, false, foodPrefDuck, "Large eyes");
+        BirdClass Sarah3 = new FlightlessBird("Duck", 2, false, foodPrefDuck, "Large eyes");
+        BirdClass Sarah4 = new FlightlessBird("Duck", 2, false, foodPrefDuck, "Large eyes");
+        BirdClass Sarah5 = new FlightlessBird("Duck", 2, false, foodPrefDuck, "Large eyes");
+        BirdClass Sarah6 = new FlightlessBird("Duck", 2, false, foodPrefDuck, "Large eyes");
+
+        conservatory.rescueBird(Sarah);
+        conservatory.rescueBird(Sarah2);
+        conservatory.rescueBird(Sarah3);
+        conservatory.rescueBird(Sarah4);
+        conservatory.rescueBird(Sarah5);
+        conservatory.rescueBird(Sarah6);
+
+        String strFood = conservatory.calculateFood();
+
+        assertEquals(true,strFood.contains("NUTS"));
+        assertEquals(true,strFood.contains("OTHER_BIRDS"));
+        assertEquals(true,strFood.contains("SEEDS"));
+        //because 6 birds have same diet
+        assertEquals(true,strFood.contains("6"));
+
+    }
+
+    //=================================== Testing getAviaryList =======================================
+
+
+    @Test
+    public void TestGetAviariesList() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass barry = new BirdOfPrey("Eagle", 2, false, foodPref, "super smart");
+        BirdClass gary = new Parrot("Grey Parrot", 2, 44, "idk", false, foodPref, "strong self esteem");
+        BirdClass Sarah = new FlightlessBird("Kiwi", 2, false, foodPref, "Large eyes");
+        BirdClass Emma = new Owl("Red Owl", 2, false, foodPref, "large talons");
+        BirdClass Lucy = new Shorebird("African Jacana", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
+        BirdClass Amelia = new Waterfowl("Swan", 2, false, foodPref, WATER.RIVER, "likes attention");
+
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+        conservatory.rescueBird(larry);
+        conservatory.rescueBird(barry);
+        conservatory.rescueBird(Sarah);
+        conservatory.rescueBird(Amelia);
+
+        //have added four birds that all need their own aviary
+        assertEquals(4, conservatory.getAviaryList().size());
+
+    }
+
+
+
+        //=================================== Testing isFull =======================================
     @Test
     public void ConservatoryTestIsFull() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -129,7 +311,7 @@ public class conservatoryTest {
         conservatory.rescueBird(larry);
 
     }
-    //=================================== Testing isFull & beyond =======================================
+    //=================================== Testing overfilling generates error =======================================
     @Test(expected = IllegalStateException.class)
     public void ConservatoryTestTooMany() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -146,10 +328,33 @@ public class conservatoryTest {
 
     }
 
+    //=================================== Testing AviaryListIsFull =======================================
+    @Test
+    public void AviaryListIsFullTest() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        for(int i = 0; i<95; i++){
+            conservatory.rescueBird(larry);
+        }
+        assertEquals(false,conservatory.aviaryListFull());
+        conservatory.rescueBird(larry);
+        assertEquals(true,conservatory.aviaryListFull());
+
+    }
+
+
+
+
     //----------------NOW TESTING MULTIPLE METHODS ON DIFFERENT CONSERVATORY SITUATIONS--------------------
 
 
-    //=================================== 1 of every kind of bird =======================================
+    //=================================== Oneofeverykind =======================================
     @Test
     public void OneOfEveryKind() {
         ArrayList<FOOD> foodPref = new ArrayList<>();
@@ -180,8 +385,6 @@ public class conservatoryTest {
         //added three more birds, but they can fit into existing aviaries
         assertEquals(7, conservatory.getNumBirds());
         assertEquals(4, conservatory.getNumAviaries());
-
-
 
     }
 
