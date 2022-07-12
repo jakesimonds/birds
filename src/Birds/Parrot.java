@@ -40,10 +40,13 @@ public class Parrot extends BirdClass {
 
     @Override
     public String toString() {
-        return "This " + this.getBirdType() + " is named: " + this.getBirdName() + ".\n" +
-                "Wing number = " + this.getNumberOfWings() + ".\n" +
-                "Defining characteristic: " + this.getBirdCharacteristic() + ".\n" +
-                "Extinct = " + this.getExtinct() + ".\n" +
+        String extinctIsIsnt = "is not";
+        if (this.extinct) {
+            extinctIsIsnt = "is";
+        }
+        return "The " + this.getBirdName() + " is a type of " + this.getBirdType() + ".\n" +
+                "It has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
+                "This " + this.getBirdName() + "'s defining characteristic is: " + this.getBirdCharacteristic() + ".\n" +
                 this.getFoodPrefString() + "\n" +
                 "Vocabulary size: " + this.knownWords + ".\n" +
                 "Favorite Phrase: " + this.favoritePhrase ;

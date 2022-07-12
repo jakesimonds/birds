@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added &amp; edited files in package 'Birds'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/BirdClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/BirdClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/Parrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/Parrot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/WaterBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/WaterBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/nickTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/nickTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.conservatoryTest2">
+  <component name="RunManager" selected="Application.nickTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
       <module name="birds" />
@@ -121,9 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.nickTest" />
         <item itemvalue="Application.conservatoryTest2" />
         <item itemvalue="JUnit.conservatoryTest" />
-        <item itemvalue="Application.nickTest" />
         <item itemvalue="JUnit.birdTest" />
         <item itemvalue="JUnit.aviaryTest" />
       </list>

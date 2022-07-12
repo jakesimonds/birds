@@ -1,5 +1,6 @@
 package Birds;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class WaterBird extends BirdClass {
   
@@ -38,12 +39,15 @@ public class WaterBird extends BirdClass {
 
   @Override
   public String toString() {
-    return "This " + this.getBirdType() + " is named: " + this.getBirdName() + ".\n" +
-            "Wing number = " + this.getNumberOfWings() + ".\n" +
-            "Defining characteristic: " + this.getBirdCharacteristic() + ".\n" +
-            "Extinct = " + this.getExtinct() + ".\n" +
+    String extinctIsIsnt = "is not";
+    if (this.getExtinct()) {
+      extinctIsIsnt = "is";
+    }
+    return "The " + this.getBirdName() + " is a type of " + this.getBirdType() + ".\n" +
+            "It has " + this.getNumberOfWings() + " wings, and " + extinctIsIsnt + " extinct.\n" +
+            "This " + this.getBirdName() + "'s defining characteristic is: " + this.getBirdCharacteristic() + ".\n" +
             this.getFoodPrefString() + "\n" +
-            "This bird thrives in : " + this.bodyOfWater;
+            "This bird thrives in: " + this.bodyOfWater.toString().toLowerCase(Locale.ROOT);
 
   }
   

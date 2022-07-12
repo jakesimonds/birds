@@ -26,10 +26,10 @@ public class nickTest {
 
 
 
-    BirdClass larry = new Pigeon("Larry", 2, false, foodPref, "White nose");
-    BirdClass barry = new BirdOfPrey("Barry", 2, false,foodPrefPrey, "Large, shiny talons");
-    BirdClass gary = new Parrot("Gary",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
-    BirdClass harry = new Waterfowl("Harry", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
+    BirdClass larry = new Pigeon("Dove", 2, false, foodPref, "White nose");
+    BirdClass barry = new BirdOfPrey("Osprey", 2, false,foodPrefPrey, "Large, shiny talons");
+    BirdClass gary = new Parrot("Grey Parrot",2, 44, "idk",false,foodPrefParrot, "Shrill voice");
+    BirdClass harry = new Waterfowl("Duck", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
 
 
     ConservatoryClass conservatory = new ConservatoryClass();
