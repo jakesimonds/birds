@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Added tests to ConstructorTest">
-      <change beforePath="$PROJECT_DIR$/test/Birds/BirdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/BirdTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/ConservatoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/ConservatoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,22 +49,9 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.BirdTest">
+  <component name="RunManager" selected="JUnit.ConservatoryTest">
     <configuration name="conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
-      <module name="birds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Birds.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="nickTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Birds.nickTest" />
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -84,6 +73,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="Birds" />
       <option name="MAIN_CLASS_NAME" value="Birds.BirdTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConservatoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="birds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Birds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Birds" />
+      <option name="MAIN_CLASS_NAME" value="Birds.ConservatoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,18 +126,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.conservatoryTest2" />
-      <item itemvalue="Application.nickTest" />
       <item itemvalue="JUnit.BirdTest" />
+      <item itemvalue="JUnit.ConservatoryTest" />
       <item itemvalue="JUnit.conservatoryTest" />
       <item itemvalue="JUnit.ConstructorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConservatoryTest" />
         <item itemvalue="JUnit.BirdTest" />
         <item itemvalue="JUnit.ConstructorTest" />
         <item itemvalue="JUnit.conservatoryTest" />
         <item itemvalue="Application.conservatoryTest2" />
-        <item itemvalue="Application.nickTest" />
       </list>
     </recent_temporary>
   </component>
@@ -398,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657659404932</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added tests to ConstructorTest">
+      <created>1657659509581</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1657659509581</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

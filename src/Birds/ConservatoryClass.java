@@ -278,7 +278,7 @@ public class ConservatoryClass implements Conservatory {
   public String toString() {
     return this.name + " is a Conservatory currently comprised of " +
             this.numAviaries + " Aviaries.\nIt currently houses " +
-            this.getNumBirds() + "birds.\n";
+            this.getNumBirds() + " birds.\n";
   }
 
   @Override
