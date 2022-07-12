@@ -9,7 +9,8 @@ import static org.junit.Assert.*;
 
 public class birdTest {
 
-    //unsure of proper strategy, how much do we want to guard against int as name kind of stuff
+
+    //=================================== Testing bird constructor =======================================
     @Test()
     public void TestBirdConstructor() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -23,7 +24,8 @@ public class birdTest {
     }
 
 
-    //WHAT DO WE WANT WHEN A BIRD HAS -3 or 33 wings??
+
+    //=================================== Testing getNumberOfWings =======================================
     @Test(expected = IllegalArgumentException.class)
     public void TestGetNumberOfWings() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -42,6 +44,7 @@ public class birdTest {
     }
 
 
+    //=================================== Testing Add BirdEquality =======================================
     @Test
     public void TestBirdEquality() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -54,7 +57,8 @@ public class birdTest {
 
     }
 
-    //my understanding is: bird type = names of subclasses, maybe need to build a method
+
+    //=================================== Testing GetBirdType =======================================
     @Test
     public void TestGetBirdType() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -67,13 +71,16 @@ public class birdTest {
 
     }
 
-    //not sure exactly what characteristic is
+
+    //=================================== Testing GetCharacteristic =======================================
     @Test
     public void TestGetCharacteristic() {
         assertEquals(1, 1);
 
     }
 
+
+    //=================================== Testing GetExtinct =======================================
     @Test
     public void TestGetExtinct() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -87,7 +94,8 @@ public class birdTest {
 
     }
 
-    //testing too many or not enough food preference items
+
+    //=================================== Testing Too many/not enough food items =======================================
     @Test(expected = IllegalArgumentException.class)
     public void TestGetFoodPreference() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -97,19 +105,21 @@ public class birdTest {
         foodPref.add(FOOD.AQUATIC_INVERTEBRATES);
         foodPref.add(FOOD.EGGS);
 
+        BirdClass larry2 = new Pigeon("Larry2", 2, false, foodPref, "great with children");
+
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void TestGetFoodPreference2() {
+
         ArrayList<FOOD> foodPref1 = new ArrayList();
-        foodPref.add(FOOD.BERRIES);
-        BirdClass larry = new Pigeon("Larry", 2, true, foodPref, "great with children");
-        BirdClass larry2 = new Pigeon("Larry2", 2, false, foodPref1, "great with children");
-
-
-        //
+        foodPref1.add(FOOD.BERRIES);
+        BirdClass larry = new Pigeon("Larry", 2, true, foodPref1, "great with children");
 
     }
 
-    //testing equality of two different food preferences
+    //=================================== Testing equality of food items =======================================
     @Test()
-    public void TestGetFoodPreference2() {
+    public void TestGetFoodPreference3() {
         ArrayList<FOOD> foodPref = new ArrayList();
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
@@ -126,15 +136,10 @@ public class birdTest {
         assertNotEquals(larry.getFoodPreference(), larry2.getFoodPreference());
         //assertEquals(4,getLength(foodPref))
 
-        //System.out.println(birdEx.toString());
-        //this will be the bird test
-
-
     }
+    //=================================== PARROT SPECIFIC TESTS =======================================
 
-
-    //PARROT
-
+    //knownwords violation
     @Test(expected = IllegalArgumentException.class)
     public void TestParrotKnownWords() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -149,6 +154,7 @@ public class birdTest {
 
     }
 
+    //GetKnownWords test
     @Test()
     public void TestGetKnownWords() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -165,6 +171,7 @@ public class birdTest {
 
     }
 
+    //Favorite Phrase test
     @Test()
     public void TestGetFavoritePhrase() {
         ArrayList<FOOD> foodPref = new ArrayList();
@@ -180,8 +187,7 @@ public class birdTest {
         assertEquals("",((Parrot)larry2).getFavoritePhrase());
     }
 
-    //Waterbirds
-    //both Shorebirds and Waterfowl being tested here
+    //=================================== WATERBIRDS TESTS =======================================
 
     @Test()
     public void TestGetBodyOfWater() {
@@ -202,11 +208,6 @@ public class birdTest {
         assertEquals(WATER.FRESHWATER_SHORELANDS,((Waterfowl)larry4).getBodyOfWater());
 
     }
-
-
-
-
-
 
 
 
