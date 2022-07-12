@@ -114,7 +114,30 @@ public class AviaryTest {
     }
 
     //=================================== Testing printSign =======================================
-    //TODO
+
+    @Test
+    public void testPrintSign() {
+
+        // TODO : Implement me!
+
+        // make an aviary
+        // add some birds
+        // write out a string for expected output and compare.
+
+        // could do this for one or two aviaries.
+
+        /*
+
+        printSign output :
+
+        String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
+        for (int i = 0; i < this.numBirds; i++) {
+            BirdClass currentBird = this.birdList.get(i);
+            output += "\t" + currentBird.getBirdName() + "\n" + currentBird.toString() + "\n\n";
+        }
+
+         */
+    }
 
 
     //=================================== Testing IsFull =======================================
