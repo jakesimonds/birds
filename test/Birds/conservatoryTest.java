@@ -20,8 +20,8 @@ public class conservatoryTest {
 
             BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
             BirdClass barry = new BirdOfPrey("Common Pigeon", 2, false, foodPref, "super smart");
-            BirdClass gary = new Parrot("Gary", 2, 44, "idk", false, foodPref, "strong self esteem");
-            BirdClass sherry = new Pigeon("Sherry", 2, false, foodPref, "strong self esteem");
+            BirdClass gary = new Parrot("sulfer-crested cockatoo", 2, 44, "idk", false, foodPref, "strong self esteem");
+            BirdClass sherry = new Pigeon("Maine Pigeon", 2, false, foodPref, "strong self esteem");
 
             ConservatoryClass conservatory = new ConservatoryClass();
 
@@ -32,9 +32,9 @@ public class conservatoryTest {
                 conservatory.rescueBird(barry);
             }
             conservatory.rescueBird(gary);
-            String strSherry = conservatory.guestLookup("Sherry");
+            String strSherry = conservatory.guestLookup("Maine Pigeon");
             String strFailure = conservatory.guestLookup("Failure");
-            assertEquals(true,strSherry.contains("Sherry"));
+            assertEquals(true,strSherry.contains("Maine"));
             assertEquals(true,strSherry.contains("Aviary #1"));
             assertEquals(true,strFailure.contains("404"));
         }
@@ -48,9 +48,9 @@ public class conservatoryTest {
         foodPref.add(FOOD.BUDS);
 
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
-        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPref, "super smart");
-        BirdClass gary = new Parrot("Gary", 2, 44, "idk", false, foodPref, "strong self esteem");
-        BirdClass sherry = new Pigeon("Sherry", 2, false, foodPref, "strong self esteem");
+        BirdClass barry = new BirdOfPrey("Hawk", 2, false, foodPref, "super smart");
+        BirdClass gary = new Parrot("Sulfer-Crested Cockatoo", 2, 44, "idk", false, foodPref, "strong self esteem");
+        BirdClass sherry = new Pigeon("Maine Pigeon", 2, false, foodPref, "strong self esteem");
 
         ConservatoryClass conservatory = new ConservatoryClass();
 
@@ -102,10 +102,10 @@ public class conservatoryTest {
         foodPref.add(FOOD.BERRIES);
         foodPref.add(FOOD.BUDS);
 
-        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPref, "super smart");
-        BirdClass Sarah = new FlightlessBird("Sarah", 2, false, foodPref, "Large eyes");
-        BirdClass Amelia = new Waterfowl("Amelia", 2, false, foodPref, WATER.RIVER, "likes attention");
-        BirdClass Emma = new Owl("Emma", 2, false, foodPref, "large talons");
+        BirdClass barry = new BirdOfPrey("Hawk", 2, false, foodPref, "super smart");
+        BirdClass Sarah = new FlightlessBird("Emu", 2, false, foodPref, "Large eyes");
+        BirdClass Amelia = new Waterfowl("Geese", 2, false, foodPref, WATER.RIVER, "likes attention");
+        BirdClass Emma = new Owl("Night Owl", 2, false, foodPref, "large talons");
 
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
@@ -157,12 +157,12 @@ public class conservatoryTest {
         foodPref.add(FOOD.BUDS);
 
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
-        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPref, "super smart");
-        BirdClass gary = new Parrot("Gary", 2, 44, "idk", false, foodPref, "strong self esteem");
-        BirdClass Sarah = new FlightlessBird("Sarah", 2, false, foodPref, "Large eyes");
-        BirdClass Emma = new Owl("Emma", 2, false, foodPref, "large talons");
-        BirdClass Lucy = new Shorebird("Lucy", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
-        BirdClass Amelia = new Waterfowl("Amelia", 2, false, foodPref, WATER.RIVER, "likes attention");
+        BirdClass barry = new BirdOfPrey("Eagle", 2, false, foodPref, "super smart");
+        BirdClass gary = new Parrot("Grey Parrot", 2, 44, "idk", false, foodPref, "strong self esteem");
+        BirdClass Sarah = new FlightlessBird("Kiwi", 2, false, foodPref, "Large eyes");
+        BirdClass Emma = new Owl("Red Owl", 2, false, foodPref, "large talons");
+        BirdClass Lucy = new Shorebird("African Jacana", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
+        BirdClass Amelia = new Waterfowl("Swan", 2, false, foodPref, WATER.RIVER, "likes attention");
 
 
         ConservatoryClass conservatory = new ConservatoryClass();
@@ -211,9 +211,9 @@ public class conservatoryTest {
         foodPrefDuck.add(FOOD.VEGETATION);
 
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
-        BirdClass barry = new BirdOfPrey("Barry", 2, false, foodPrefPrey, "super smart");
-        BirdClass gary = new Parrot("Gary", 2, 44, "idk", false, foodPrefParrot, "strong self esteem");
-        BirdClass Sarah = new FlightlessBird("Sarah", 2, false, foodPrefDuck, "Large eyes");
+        BirdClass barry = new BirdOfPrey("Hawk", 2, false, foodPrefPrey, "super smart");
+        BirdClass gary = new Parrot("Grey Parrot", 2, 44, "idk", false, foodPrefParrot, "strong self esteem");
+        BirdClass Sarah = new FlightlessBird("Kiwi", 2, false, foodPrefDuck, "Large eyes");
 
         conservatory.rescueBird(larry);
         conservatory.rescueBird(barry);
