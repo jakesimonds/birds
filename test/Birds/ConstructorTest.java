@@ -26,7 +26,7 @@ public class ConstructorTest {
     AviaryClass aviary1 = new AviaryClass("Aviary #1", AVIARY_TYPE.GENERAL, "Campus A");
     AviaryClass aviary2 = new AviaryClass("Aviary #2", AVIARY_TYPE.FLIGHTLESS, "Campus B");
     AviaryClass aviary3 = new AviaryClass("Aviary #3", AVIARY_TYPE.BIRDS_OF_PREY, "Campus C");
-    AviaryClass aviary4 = new AviaryClass("Aviary #4", AVIARY_TYPE.WATER_BIRDS, "Campus D");
+    AviaryClass aviary4 = new AviaryClass("Aviary #4", AVIARY_TYPE.WATERFOWL, "Campus D");
 
     // add each new aviary to an ArrayList:
     ArrayList<AviaryClass> aviaryList = new ArrayList<>();
@@ -56,7 +56,7 @@ public class ConstructorTest {
           assertEquals(AVIARY_TYPE.BIRDS_OF_PREY, currentAviary.getType());
           break;
         case "Aviary #4":
-          assertEquals(AVIARY_TYPE.WATER_BIRDS, currentAviary.getType());
+          assertEquals(AVIARY_TYPE.WATERFOWL, currentAviary.getType());
           break;
       }
     }

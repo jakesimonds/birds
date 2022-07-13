@@ -2,7 +2,7 @@ package Birds;
 
 public enum AVIARY_TYPE {
   GENERAL,
-  WATER_BIRDS,
+  WATERFOWL,
   BIRDS_OF_PREY,
   FLIGHTLESS
 }

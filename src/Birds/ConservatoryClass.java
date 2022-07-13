@@ -320,9 +320,9 @@ public class ConservatoryClass implements Conservatory {
         // Bird of Prey
         type = AVIARY_TYPE.BIRDS_OF_PREY;
       } else {
-        if (bird instanceof WaterBird) {
+        if (bird instanceof Waterfowl) {
           // Water Bird
-          type = AVIARY_TYPE.WATER_BIRDS;
+          type = AVIARY_TYPE.WATERFOWL;
         } else {
           // General/other birds:
           type = AVIARY_TYPE.GENERAL;

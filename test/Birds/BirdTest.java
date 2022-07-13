@@ -22,7 +22,6 @@ public class BirdTest {
     }
 
     //=================================== Testing getBirdName =======================================
-    //TODO
     @Test
     public void TestGetBirdName() {
         ArrayList<FOOD> foodPref = new ArrayList<>();

@@ -118,7 +118,7 @@ public class AviaryClass implements Aviary {
     switch (this.aviaryType) {
       case GENERAL:
         if(bird instanceof BirdOfPrey ||
-                bird instanceof WaterBird ||
+                bird instanceof Waterfowl ||
                 bird instanceof FlightlessBird) {
           compatible = false;
         } else { compatible = true; }
@@ -130,8 +130,8 @@ public class AviaryClass implements Aviary {
         } else { compatible = false; }
         break;
 
-      case WATER_BIRDS:
-        if (bird instanceof WaterBird) {
+      case WATERFOWL:
+        if (bird instanceof Waterfowl) {
           compatible = true;
         } else { compatible = false; }
         break;
