@@ -2,6 +2,10 @@ package Birds;
 import java.util.ArrayList;
 import java.util.Locale;
 
+// This class represents a bird with a name (species-- grey parrot, or blue jay, etc.),
+// number of wings (int), extinct(t/f), Type (enum-- flightless bird, bird of prey, etc.),
+// defining characteristic (string) and an ArrayList of 2-4 foods it prefers to eat (enum)
+
 public class BirdClass implements Bird  {
 
     private String name;                        // bird name i.e. Grey Parrot, or Black-Capped Chickadee

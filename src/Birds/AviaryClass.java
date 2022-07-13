@@ -1,6 +1,9 @@
 package Birds;
 import java.util.ArrayList;
 
+// This class represents an aviary which can house up to 5 birds objects, stored in birdList.
+// The aviary has a name & location (Strings), Type (ENUM), and numBirds (int representing
+// the number of birds living there)
 
 public class AviaryClass implements Aviary {
 

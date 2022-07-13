@@ -2,6 +2,9 @@ package Birds;
 import java.util.ArrayList;
 import java.util.Collections;
 
+// This class represents a Conservatory which is capable of housing up to 20 aviaries,
+// each of which can house up to 5 birds. The conservatory stores these aviaries in
+// the ArrayList aviaryList, and stored the number of aviaries in numAviaries.
 
 public class ConservatoryClass implements Conservatory {
 
