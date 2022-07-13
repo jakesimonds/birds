@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Cleaned up some code &amp; Spacing">
-      <change beforePath="$PROJECT_DIR$/test/Birds/AviaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/AviaryTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Cleaned up some code &amp; Spacing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656712256796</updated>
-    </task>
-    <task id="LOCAL-00001" summary="trying to commit">
-      <created>1656712508393</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1656712508393</updated>
     </task>
     <task id="LOCAL-00002" summary="just added a couple more files to make sure github is working">
       <created>1657060788054</created>
@@ -491,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657719134461</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Cleaned up some code &amp; Spacing">
+      <created>1657719162086</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1657719162088</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
