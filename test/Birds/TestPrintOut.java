@@ -2,7 +2,7 @@ package Birds;
 
 import java.util.ArrayList;
 
-public class nickTest {
+public class TestPrintOut {
 
   public static void main(String args[]) {
     //

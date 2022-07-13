@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Cleaned up some code &amp; Spacing" />
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="names changed in aviaryTest birdTest &amp; conservatoryTest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,9 +47,22 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.AviaryTest">
-    <configuration name="nickTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Birds.nickTest" />
+  <component name="RunManager" selected="Application.TestPrintOut">
+    <configuration name="Birds.conservatoryTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest2" />
+      <module name="birds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Birds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPrintOut" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Birds.TestPrintOut" />
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -74,21 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BirdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="birds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Birds.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Birds" />
-      <option name="MAIN_CLASS_NAME" value="Birds.BirdTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ConservatoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="birds" />
       <extension name="coverage">
@@ -104,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="conservatoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="birds" />
       <extension name="coverage">
         <pattern>
@@ -113,27 +113,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Birds" />
-      <option name="MAIN_CLASS_NAME" value="Birds.ConstructorTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Birds.conservatoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.nickTest" />
-      <item itemvalue="JUnit.AviaryTest" />
-      <item itemvalue="JUnit.BirdTest" />
-      <item itemvalue="JUnit.ConservatoryTest" />
-      <item itemvalue="JUnit.ConstructorTest" />
-    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestPrintOut" />
         <item itemvalue="JUnit.AviaryTest" />
-        <item itemvalue="Application.nickTest" />
         <item itemvalue="JUnit.ConservatoryTest" />
-        <item itemvalue="JUnit.ConstructorTest" />
-        <item itemvalue="JUnit.BirdTest" />
+        <item itemvalue="JUnit.conservatoryTest" />
+        <item itemvalue="Application.Birds.conservatoryTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +137,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656712256796</updated>
+    </task>
+    <task id="LOCAL-00001" summary="trying to commit">
+      <created>1656712508393</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656712508393</updated>
     </task>
     <task id="LOCAL-00002" summary="just added a couple more files to make sure github is working">
       <created>1657060788054</created>
@@ -307,189 +306,7 @@
       <option name="project" value="LOCAL" />
       <updated>1657636106251</updated>
     </task>
-    <task id="LOCAL-00025" summary="Overloaded constructors for BirdClass &amp; Children">
-      <created>1657646429312</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1657646429312</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added tests to ConstructorTest">
-      <created>1657646504539</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1657646504539</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Added tests to ConstructorTest">
-      <created>1657648226036</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1657648226036</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Added tests to ConstructorTest">
-      <created>1657649242499</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1657649242499</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Added tests to ConstructorTest">
-      <created>1657650332408</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1657650332408</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added tests to ConstructorTest">
-      <created>1657652150621</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1657652150621</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Added tests to ConstructorTest">
-      <created>1657652222393</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1657652222393</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Added tests to ConstructorTest">
-      <created>1657657080467</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1657657080467</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Added tests to ConstructorTest">
-      <created>1657657982680</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1657657982680</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Added tests to ConstructorTest">
-      <created>1657658845019</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1657658845019</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Added tests to ConstructorTest">
-      <created>1657659104646</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1657659104646</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Added tests to ConstructorTest">
-      <created>1657659404932</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1657659404932</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Added tests to ConstructorTest">
-      <created>1657659509581</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1657659509581</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Added tests to ConstructorTest">
-      <created>1657660538530</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1657660538530</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Added tests to ConstructorTest">
-      <created>1657662240205</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1657662240205</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Added tests to Aviary and Conservatory test files">
-      <created>1657662267508</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1657662267508</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Added tests to Aviary and Conservatory test files">
-      <created>1657662776254</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1657662776254</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Added tests to Aviary and Conservatory test files">
-      <created>1657662809551</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1657662809551</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Cleaned up some code &amp; Spacing">
-      <created>1657677587657</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1657677587657</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Cleaned up some code &amp; Spacing">
-      <created>1657677846926</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1657677846926</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Cleaned up some code &amp; Spacing">
-      <created>1657678642080</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1657678642080</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Cleaned up some code &amp; Spacing">
-      <created>1657678857038</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1657678857038</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Cleaned up some code &amp; Spacing">
-      <created>1657718226025</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1657718226027</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Cleaned up some code &amp; Spacing">
-      <created>1657718699778</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1657718699778</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Cleaned up some code &amp; Spacing">
-      <created>1657719134461</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1657719134461</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Cleaned up some code &amp; Spacing">
-      <created>1657719162086</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1657719162088</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -513,10 +330,7 @@
     <MESSAGE value="more tests" />
     <MESSAGE value="Added &amp; edited files in package 'Birds'" />
     <MESSAGE value="names changed in aviaryTest birdTest &amp; conservatoryTest" />
-    <MESSAGE value="Overloaded constructors for BirdClass &amp; Children" />
-    <MESSAGE value="Added tests to ConstructorTest" />
-    <MESSAGE value="Added tests to Aviary and Conservatory test files" />
-    <MESSAGE value="Cleaned up some code &amp; Spacing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up some code &amp; Spacing" />
+    <MESSAGE value="committing so I can pull..." />
+    <option name="LAST_COMMIT_MESSAGE" value="committing so I can pull..." />
   </component>
 </project>
