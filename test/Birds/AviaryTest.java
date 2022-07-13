@@ -25,7 +25,7 @@ public class AviaryTest {
         aviary1.addBird(larry3);
         aviary1.addBird(larry4);
 
-        ArrayList AviaryList = aviary1.getBirdList();
+        ArrayList<BirdClass> AviaryList = aviary1.getBirdList();
         assertEquals(4, AviaryList.size());
         assertEquals(larry3, AviaryList.get(2));
 
@@ -117,8 +117,29 @@ public class AviaryTest {
 
     @Test
     public void testPrintSign() {
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
 
-        // TODO : Implement me!
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        BirdClass larry2 = new Owl("Barn Owl", 2, false, foodPref, "Soulful");
+
+        AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
+        aviary1.addBird(larry);
+
+        String aviaryOneBird = aviary1.printSign();
+        assertTrue(aviaryOneBird.contains("great with children"));
+        assertTrue(aviaryOneBird.contains("HannafordAviary"));
+        assertTrue(aviaryOneBird.contains("buds"));
+        assertTrue(aviaryOneBird.contains("Common Pigeon"));
+        assertFalse(aviaryOneBird.contains("Barn Owl"));
+
+        aviary1.addBird(larry2);
+        String aviaryTwoBirds = aviary1.printSign();
+        assertNotEquals(aviaryTwoBirds,aviaryOneBird);
+        assertEquals(aviaryOneBird,aviaryOneBird);
+        assertTrue(aviaryTwoBirds.contains("Barn Owl"));
+        assertTrue(aviaryTwoBirds.contains("Soulful"));
 
         // make an aviary
         // add some birds
@@ -159,10 +180,10 @@ public class AviaryTest {
         aviary1.addBird(larry2);
         aviary1.addBird(larry3);
         aviary1.addBird(larry4);
-        assertEquals(false, aviary1.isFull());
+        assertFalse(aviary1.isFull());
         aviary1.addBird(larry5);
         assertEquals(5, aviary1.getSize());
-        assertEquals(true, aviary1.isFull());
+        assertTrue(aviary1.isFull());
     }
 
 
@@ -192,7 +213,7 @@ public class AviaryTest {
 
 
         AviaryClass aviary1 = new AviaryClass("HannafordAviary", AVIARY_TYPE.GENERAL, "Hannaford's parking lot");
-        assertEquals(false, aviary1.isCompatible(larry));
+        assertFalse(aviary1.isCompatible(larry));
 
     }
 
