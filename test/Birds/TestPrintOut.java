@@ -55,6 +55,10 @@ public class TestPrintOut {
     // Print out Guest Lookup:
     System.out.println("Guest Lookup Test:\n");
     System.out.println(conservatory1.guestLookup("Duck"));
+    System.out.println(conservatory1.guestLookup("Great Puffin"));
+    System.out.println(conservatory1.guestLookup("osprey"));
+    System.out.println("Guest Lookup Test (Expected not found):\n");
+    System.out.println(conservatory1.guestLookup("Chickadee"));
 
     System.out.println("--------------------------------------");
 
