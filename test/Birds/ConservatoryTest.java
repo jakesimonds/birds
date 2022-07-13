@@ -141,9 +141,9 @@ public class ConservatoryTest {
         }
         conservatory.rescueBird(gary);
 
-        String strMap = conservatory.printMap();
+        //String strMap = conservatory.printMap();
         String strIndex = conservatory.printIndex();
-        String strFood = conservatory.calculateFood();
+        //String strFood = conservatory.calculateFood();
         assertTrue(strIndex.contains("Aviary #7"));
         assertFalse(strIndex.contains("Aviary #8"));
 
@@ -176,7 +176,7 @@ public class ConservatoryTest {
         conservatory.rescueBird(gary);
 
         String strMap = conservatory.printMap();
-        String strIndex = conservatory.printIndex();
+        //String strIndex = conservatory.printIndex();
         String strFood = conservatory.calculateFood();
         assertTrue(strMap.contains("Aviary #7"));
         assertFalse(strMap.contains("Aviary #8"));
@@ -261,10 +261,10 @@ public class ConservatoryTest {
 
         BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
         BirdClass barry = new BirdOfPrey("Eagle", 2, false, foodPref, "super smart");
-        BirdClass gary = new Parrot("Grey Parrot", 2, 44, "idk", false, foodPref, "strong self esteem");
+        //BirdClass gary = new Parrot("Grey Parrot", 2, 44, "idk", false, foodPref, "strong self esteem");
         BirdClass Sarah = new FlightlessBird("Kiwi", 2, false, foodPref, "Large eyes");
-        BirdClass Emma = new Owl("Red Owl", 2, false, foodPref, "large talons");
-        BirdClass Lucy = new Shorebird("African Jacana", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
+        //BirdClass Emma = new Owl("Red Owl", 2, false, foodPref, "large talons");
+        //BirdClass Lucy = new Shorebird("African Jacana", 2, false, foodPref, WATER.FRESHWATER_SHORELANDS, "needs warm climate");
         BirdClass Amelia = new Waterfowl("Swan", 2, false, foodPref, WATER.RIVER, "likes attention");
 
 
