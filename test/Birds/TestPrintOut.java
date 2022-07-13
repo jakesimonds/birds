@@ -26,70 +26,59 @@ public class TestPrintOut {
 
     BirdClass b1 = new Pigeon("Dove", 2, foodPref, "White nose");
     BirdClass b2 = new BirdOfPrey("Osprey", 2, false,foodPrefPrey, "Large, shiny talons");
-    BirdClass b3 = new Parrot("Grey Parrot", 44, "idk",false,foodPrefParrot, "Shrill voice");
+    BirdClass b3 = new Parrot("Grey Parrot", 44, "I am a parrot",false,foodPrefParrot, "Shrill voice");
     BirdClass b4 = new Waterfowl("Duck", 2, false, foodPrefDuck, WATER.FRESHWATER_SHORELANDS, "Likes to swim");
     BirdClass b5 = new FlightlessBird("Kiwi", 1, false, foodPref, "Likes to sleep during the day");
     BirdClass b6 = new Owl("Barn Owl", foodPrefPrey, "Perhaps too wise");
     BirdClass b7 = new Shorebird("Great Puffin", foodPrefDuck, WATER.OCEAN, "Thinks it's a penguin.");
 
-    ConservatoryClass conservatory = new ConservatoryClass();
+    ConservatoryClass conservatory1 = new ConservatoryClass();
 
-    for(int i = 0; i<2; i++){
-      conservatory.rescueBird(b1);
-      conservatory.rescueBird(b2);
-      conservatory.rescueBird(b3);
-      conservatory.rescueBird(b4);
-      conservatory.rescueBird(b5);
-      conservatory.rescueBird(b6);
-      conservatory.rescueBird(b7);
 
-    }
+    conservatory1.rescueBird(b1);
+    conservatory1.rescueBird(b2);
+    conservatory1.rescueBird(b3);
+    conservatory1.rescueBird(b4);
+    conservatory1.rescueBird(b5);
+    conservatory1.rescueBird(b6);
+    conservatory1.rescueBird(b7);
 
-    System.out.println(conservatory.calculateFood());
-
-    System.out.println("--------------------------------------");
-    System.out.println("Testing Guest Lookup:\n");
-    System.out.println(conservatory.guestLookup("Duck"));
 
     System.out.println("--------------------------------------");
 
-    for (int j = 0; j < conservatory.getNumAviaries(); j++) {
-      AviaryClass currentAviary = conservatory.getAviaryList().get(j);
+    // Print out calculateFood:
+    System.out.println("Calculate Food Test:\n");
+    System.out.println(conservatory1.calculateFood());
+
+    System.out.println("--------------------------------------");
+
+    // Print out Guest Lookup:
+    System.out.println("Guest Lookup Test:\n");
+    System.out.println(conservatory1.guestLookup("Duck"));
+
+    System.out.println("--------------------------------------");
+
+    // Print out printSign:
+    System.out.println("Print Sign Test:\n");
+    for (int j = 0; j < conservatory1.getNumAviaries(); j++) {
+      AviaryClass currentAviary = conservatory1.getAviaryList().get(j);
       System.out.println(currentAviary.printSign());
       System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
-      /*
-      System.out.println("B1 wingNum, extinct:");
-      System.out.println(b1.getNumberOfWings());
-      System.out.println(b1.getExtinct());
-
-      System.out.println("B2 wingNum, extinct:");
-      System.out.println(b2.getNumberOfWings());
-      System.out.println(b2.getExtinct());
-
-      System.out.println("B3 wingNum, extinct:");
-      System.out.println(b3.getNumberOfWings());
-      System.out.println(b3.getExtinct());
-
-      System.out.println("B4 wingNum, extinct:");
-      System.out.println(b4.getNumberOfWings());
-      System.out.println(b4.getExtinct());
-
-      System.out.println("B5 wingNum, extinct:");
-      System.out.println(b5.getNumberOfWings());
-      System.out.println(b5.getExtinct());
-
-      System.out.println("B6 wingNum, extinct:");
-      System.out.println(b6.getNumberOfWings());
-      System.out.println(b6.getExtinct());
-
-      System.out.println("B7 wingNum, extinct:");
-      System.out.println(b7.getNumberOfWings());
-      System.out.println(b7.getExtinct());
-
-       */
     }
 
+    System.out.println("--------------------------------------");
+
+    // Print out printIndex
+    System.out.println("Print Index Test:\n");
+    System.out.println(conservatory1.printIndex());
+
+    System.out.println("--------------------------------------");
+
+    // Print out printMap
+    System.out.println("Print Map Test:\n");
+    System.out.println(conservatory1.printMap());
+
+    System.out.println("--------------------------------------");
 
 
 

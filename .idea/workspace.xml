@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="names changed in aviaryTest birdTest &amp; conservatoryTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Birds/TestPrintOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/TestPrintOut.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +120,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Birds.conservatoryTest2" />
+      <item itemvalue="Application.TestPrintOut" />
+      <item itemvalue="JUnit.AviaryTest" />
+      <item itemvalue="JUnit.ConservatoryTest" />
+      <item itemvalue="JUnit.conservatoryTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestPrintOut" />

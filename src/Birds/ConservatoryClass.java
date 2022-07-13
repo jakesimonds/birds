@@ -321,6 +321,7 @@ public class ConservatoryClass implements Conservatory {
           // Water Bird
           type = AVIARY_TYPE.WATER_BIRDS;
         } else {
+          // General/other birds:
           type = AVIARY_TYPE.GENERAL;
         }
       }
