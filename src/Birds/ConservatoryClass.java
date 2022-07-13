@@ -112,7 +112,18 @@ public class ConservatoryClass implements Conservatory {
       for (int j = 0; j < currentAviary.getSize(); j++) {
         // each bird can now be accessed using  currentAviary.getBirdList().get(j)
         BirdClass currentBird = currentAviary.getBirdList().get(j);
-        birdIndex.add(currentBird.getBirdName() + "\t--\t" + currentAviary.getAviaryName() + "\n");
+        // FORMAT SPACING BY GETTING NAME LENGTH
+        int nameLength = currentBird.getBirdName().length();
+        String birdInfo = currentBird.getBirdName();
+        int MAX = 14;
+        if (nameLength < MAX) {
+          for (int k = 0; k < (MAX - nameLength); k++) {
+            birdInfo += " ";
+          }
+        }
+        birdInfo += " --\t" + currentAviary.getAviaryName() + "\n";
+
+        birdIndex.add(birdInfo);
       }
     }
     // Sort the list of birds alphabetically:

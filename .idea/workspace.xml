@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Cleaned up some code &amp; added comments">
+    <list default="true" id="1d57a065-c28a-4e7c-9bcc-2599fd4b6d7d" name="Changes" comment="Adjusted Aviaries to isolate waterfowl rather than waterbirds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/AVIARY_TYPE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AVIARY_TYPE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Birds/AviaryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/AviaryClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Birds/ConservatoryClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/BirdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/BirdTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Birds/ConstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Birds/ConstructorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657722120613</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adjusted Aviaries to isolate waterfowl rather than waterbirds">
+      <created>1657723614476</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1657723614476</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,6 +364,7 @@
     <MESSAGE value="committing so I can pull..." />
     <MESSAGE value="Cleaned up some code &amp; Spacing" />
     <MESSAGE value="Cleaned up some code &amp; added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up some code &amp; added comments" />
+    <MESSAGE value="Adjusted Aviaries to isolate waterfowl rather than waterbirds" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Aviaries to isolate waterfowl rather than waterbirds" />
   </component>
 </project>
