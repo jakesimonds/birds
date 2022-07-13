@@ -119,6 +119,7 @@ public class ConservatoryClass implements Conservatory {
     for (int i = 0; i < birdIndex.size(); i++) {
       output += birdIndex.get(i);
     }
+    //System.out.println(output);
     return output;
   }
 
@@ -153,11 +154,12 @@ public class ConservatoryClass implements Conservatory {
     for (int i = 0; i < mapIndex.size(); i++) {
       output += mapIndex.get(i) + "\n";
     }
+    //System.out.println(output);
     return output;
   }
 
 
-  // calculateFood() -- print what food needs to be kept & in what quantities
+  // calculateFood() -- returns a String displaying what foods need to be kept & for how many birds
   @Override
   public String calculateFood() {
     FOOD[] foodList = {
@@ -193,7 +195,7 @@ public class ConservatoryClass implements Conservatory {
           }
         }
       }
-    }
+    } // Formatting the output properly with tabs:
     String output = "FOOD TYPE \t\t\t\tNUMBER OF BIRDS\n";
     for (int i = 0; i < SIZE; i++) {
       if (foodCounter[i] > 0) {
@@ -273,13 +275,13 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-
   @Override
   public String toString() {
     return this.name + " is a Conservatory currently comprised of " +
             this.numAviaries + " Aviaries.\nIt currently houses " +
             this.getNumBirds() + " birds.\n";
   }
+
 
   @Override
   public boolean equals(Object obj) {
@@ -294,10 +296,6 @@ public class ConservatoryClass implements Conservatory {
       return false;
     }
   }
-
-
-
-
 
 
 

@@ -92,6 +92,7 @@ public class AviaryClass implements Aviary {
       BirdClass currentBird = this.birdList.get(i);
       output += "\t" + currentBird.getBirdName() + "\n" + currentBird.toString() + "\n\n";
     }
+    //System.out.println(output);
     return output;
   }
 

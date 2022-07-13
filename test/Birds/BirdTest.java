@@ -77,8 +77,8 @@ public class BirdTest {
         foodPref.add(FOOD.BUDS);
         BirdClass larry = new Pigeon("Common Pigeon", 2, true, foodPref, "great with children");
         BirdClass larry2 = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
-        assertEquals(larry.getExtinct(), true);
-        assertEquals(larry2.getExtinct(), false);
+        assertTrue(larry.getExtinct());
+        assertFalse(larry2.getExtinct());
 
 
     }

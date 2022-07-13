@@ -24,8 +24,6 @@ public class nickTest {
     foodPrefDuck.add(FOOD.SEEDS);
     foodPrefDuck.add(FOOD.VEGETATION);
 
-
-
     BirdClass b1 = new Pigeon("Dove", 2, foodPref, "White nose");
     BirdClass b2 = new BirdOfPrey("Osprey", 2, false,foodPrefPrey, "Large, shiny talons");
     BirdClass b3 = new Parrot("Grey Parrot", 44, "idk",false,foodPrefParrot, "Shrill voice");
@@ -33,7 +31,6 @@ public class nickTest {
     BirdClass b5 = new FlightlessBird("Kiwi", 1, false, foodPref, "Likes to sleep during the day");
     BirdClass b6 = new Owl("Barn Owl", foodPrefPrey, "Perhaps too wise");
     BirdClass b7 = new Shorebird("Great Puffin", foodPrefDuck, WATER.OCEAN, "Thinks it's a penguin.");
-
 
     ConservatoryClass conservatory = new ConservatoryClass();
 
@@ -49,6 +46,10 @@ public class nickTest {
     }
 
     System.out.println(conservatory.calculateFood());
+
+    System.out.println("--------------------------------------");
+    System.out.println("Testing Guest Lookup:\n");
+    System.out.println(conservatory.guestLookup("Duck"));
 
     System.out.println("--------------------------------------");
 
