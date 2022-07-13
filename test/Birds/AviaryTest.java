@@ -136,7 +136,6 @@ public class AviaryTest {
 
         String expectedOutput = "Birds housed in HannafordAviary are:\n\n";
         expectedOutput += "\t" + larry.getBirdName() + "\n" + larry.toString() + "\n\n";
-
         assertEquals(expectedOutput, aviary1.printSign());
 
         aviary1.addBird(larry2);
@@ -147,7 +146,6 @@ public class AviaryTest {
         assertTrue(aviaryTwoBirds.contains("Soulful"));
 
         expectedOutput += "\t" + larry2.getBirdName() + "\n" + larry2.toString() + "\n\n";
-
         assertEquals(expectedOutput, aviaryTwoBirds);
 
 
