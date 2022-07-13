@@ -134,6 +134,11 @@ public class AviaryTest {
         assertTrue(aviaryOneBird.contains("Common Pigeon"));
         assertFalse(aviaryOneBird.contains("Barn Owl"));
 
+        String expectedOutput = "Birds housed in HannafordAviary are:\n\n";
+        expectedOutput += "\t" + larry.getBirdName() + "\n" + larry.toString() + "\n\n";
+
+        assertEquals(expectedOutput, aviary1.printSign());
+
         aviary1.addBird(larry2);
         String aviaryTwoBirds = aviary1.printSign();
         assertNotEquals(aviaryTwoBirds,aviaryOneBird);
@@ -141,24 +146,14 @@ public class AviaryTest {
         assertTrue(aviaryTwoBirds.contains("Barn Owl"));
         assertTrue(aviaryTwoBirds.contains("Soulful"));
 
-        // make an aviary
-        // add some birds
-        // write out a string for expected output and compare.
+        expectedOutput += "\t" + larry2.getBirdName() + "\n" + larry2.toString() + "\n\n";
 
-        // could do this for one or two aviaries.
+        assertEquals(expectedOutput, aviaryTwoBirds);
 
-        /*
 
-        printSign outputs :
 
-        String output = "Birds housed in " + this.getAviaryName() + " are:\n\n";
-        for (int i = 0; i < this.numBirds; i++) {
-            BirdClass currentBird = this.birdList.get(i);
-            output += "\t" + currentBird.getBirdName() + "\n" + currentBird.toString() + "\n\n";
-        }
-
-         */
     }
+
 
 
     //=================================== Testing IsFull =======================================
