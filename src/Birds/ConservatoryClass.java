@@ -195,7 +195,7 @@ public class ConservatoryClass implements Conservatory {
           }
         }
       }
-    }
+    } // Formatting the output properly with tabs:
     String output = "FOOD TYPE \t\t\t\tNUMBER OF BIRDS\n";
     for (int i = 0; i < SIZE; i++) {
       if (foodCounter[i] > 0) {
@@ -275,13 +275,13 @@ public class ConservatoryClass implements Conservatory {
   }
 
 
-
   @Override
   public String toString() {
     return this.name + " is a Conservatory currently comprised of " +
             this.numAviaries + " Aviaries.\nIt currently houses " +
             this.getNumBirds() + " birds.\n";
   }
+
 
   @Override
   public boolean equals(Object obj) {
@@ -296,10 +296,6 @@ public class ConservatoryClass implements Conservatory {
       return false;
     }
   }
-
-
-
-
 
 
 
