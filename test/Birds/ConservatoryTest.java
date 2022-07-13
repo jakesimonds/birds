@@ -29,7 +29,7 @@ public class ConservatoryTest {
         BirdClass Amelia = new Waterfowl("Geese", 2, false, foodPref, WATER.RIVER, "likes attention");
         BirdClass Emma = new Owl("Night Owl", 2, false, foodPref, "large talons");
 
-        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
+        //BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "great with children");
 
         ConservatoryClass conservatory = new ConservatoryClass();
         //filling 5 aviaries with general birds
@@ -178,12 +178,12 @@ public class ConservatoryTest {
         String strMap = conservatory.printMap();
         String strIndex = conservatory.printIndex();
         String strFood = conservatory.calculateFood();
-        assertEquals(true,strMap.contains("Aviary #7"));
-        assertEquals(false,strMap.contains("Aviary #8"));
+        assertTrue(strMap.contains("Aviary #7"));
+        assertFalse(strMap.contains("Aviary #8"));
 
-        assertEquals(true,strFood.contains("BUDS"));
+        assertTrue(strFood.contains("BUDS"));
         //because 30 total birds with same diet
-        assertEquals(true,strFood.contains("30"));
+        assertTrue(strFood.contains("30"));
 
 
 
@@ -218,16 +218,40 @@ public class ConservatoryTest {
 
         String strFood = conservatory.calculateFood();
 
-        assertEquals(true,strFood.contains("NUTS"));
-        assertEquals(true,strFood.contains("OTHER_BIRDS"));
-        assertEquals(true,strFood.contains("SEEDS"));
+        assertTrue(strFood.contains("NUTS"));
+        assertTrue(strFood.contains("OTHER_BIRDS"));
+        assertTrue(strFood.contains("SEEDS"));
         //because 6 birds have same diet
-        assertEquals(true,strFood.contains("6"));
+        assertTrue(strFood.contains("6"));
 
     }
 
-    //=================================== Testing getAviaryList =======================================
+    //=================================== Testing rescueBird =======================================
 
+    @Test
+    public void RescueBirdTest() {
+        ConservatoryClass conservatory = new ConservatoryClass();
+
+        ArrayList<FOOD> foodPref = new ArrayList<>();
+        foodPref.add(FOOD.BERRIES);
+        foodPref.add(FOOD.BUDS);
+
+        BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "not extinct");
+        assertEquals(0, conservatory.getNumBirds());
+        assertEquals(0, conservatory.getNumAviaries());
+
+        conservatory.rescueBird(larry);
+        assertEquals(1, conservatory.getNumBirds());
+        assertEquals(1, conservatory.getNumAviaries());
+
+        String LookUpLarry = conservatory.guestLookup("Common Pigeon");
+        assertTrue(LookUpLarry.contains("Common Pigeon"));
+        assertTrue(LookUpLarry.contains("Aviary #1"));
+    }
+
+
+
+        //=================================== Testing getAviaryList =======================================
 
     @Test
     public void TestGetAviariesList() {
@@ -271,9 +295,9 @@ public class ConservatoryTest {
         for(int i = 0; i<99; i++){
             conservatory.rescueBird(larry);
         }
-        assertEquals(false,conservatory.isFull());
+        assertFalse(conservatory.isFull());
         conservatory.rescueBird(larry);
-        assertEquals(true,conservatory.isFull());
+        assertTrue(conservatory.isFull());
 
     }
 
@@ -305,7 +329,7 @@ public class ConservatoryTest {
         for(int i = 0; i<21; i++){
             conservatory.rescueBird(Sarah);
         }
-        assertEquals(false,conservatory.isFull());
+        assertFalse(conservatory.isFull());
         assertEquals(88,conservatory.getNumBirds());
         conservatory.rescueBird(larry);
 
@@ -341,9 +365,9 @@ public class ConservatoryTest {
         for(int i = 0; i<95; i++){
             conservatory.rescueBird(larry);
         }
-        assertEquals(false,conservatory.aviaryListFull());
+        assertFalse(conservatory.aviaryListFull());
         conservatory.rescueBird(larry);
-        assertEquals(true,conservatory.aviaryListFull());
+        assertTrue(conservatory.aviaryListFull());
 
     }
 
@@ -518,18 +542,14 @@ public class ConservatoryTest {
             foodPref.add(FOOD.BUDS);
 
 
-
             BirdClass larry = new Pigeon("Common Pigeon", 2, false, foodPref, "not extinct");
             assertEquals(0,conservatory.getNumBirds());
             assertEquals(0,conservatory.getNumAviaries());
-
 
             conservatory.rescueBird(larry);
 
             assertEquals(1,conservatory.getNumBirds());
             assertEquals(1,conservatory.getNumAviaries());
-
-
 
         }
 
